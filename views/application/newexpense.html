@@ -1,0 +1,66 @@
+<div class="modal-title" >
+	<h3>New Expense</h3>
+</div>
+
+<div class="modal-body" id="modal-body">
+	<div class="row">
+		<div class="col-md-12 col-lg-12 col-sm-12">
+			<form class="form-horizontal">
+
+				<div class="form-group">
+						<label for="newexptype" class="col-md-4 control-label"> Expense Type:</label>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<select class="form-control" name="type" id="newexptype"  ng-model="Appexpense_type">
+						  <option ng-repeat="x in expensetypelist" >{{x.expense_type_desc}}</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+						<label for="newexpdesc" class="col-md-4 control-label"> Expense Description:</label>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<textarea class="form-control" id="newexpdesc" type="text" ng-model="Appexpense_desc"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+						<label for="newexpstat" class="col-md-4 control-label"> Expense Status:</label>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+							<select class="form-control" id="newexpstat" name="type"  ng-model="Appexpense_status">
+							  <option ng-repeat="x in expenseststatuslist" >{{x.expense_status_desc}}</option>
+							</select>
+					</div>
+				</div>
+				<div class="form-group">
+						<label for="newexpamt" class="col-md-4 control-label"> Expense Amount:</label>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+							<input class="form-control" id="newexpamt" type="text" ng-currency ng-model="Appexpense_amount">
+					</div>
+
+				</div>
+
+				<div class="form-group">
+						<label for="newexpfarm" class="col-md-4 control-label"> Farm:</label>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+                        <select class="form-control" id="newexpfarm" name="type" ng-model="farm_id"  value ="{{x.farm_id}}" ng-options="x as (x.farm_id + ' - ' + x.farm_name) for x in farmidlist" >
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+						<label for="newexpapp" class="col-md-4 control-label"> Application ID:</label>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<select class="form-control" name="type" id="newexpapp" ng-disabled="isAppIDReadonly" ng-model="appID">
+						  <option ng-repeat="x in applist">{{x}}</option>
+						</select>
+					</div>
+				</div>
+
+
+			</form>
+		</div>
+
+	</div>
+</div>
+<div class="modal-footer">
+	 <button class="btn btn-danger pull-right" type="button" ng-click="close()">Cancel</button>
+	 <button class="btn btn-primary pull-right" type="button" ng-click="submitAppExpense()">Save</button>
+</div>

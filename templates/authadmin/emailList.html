@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h3 class="modal-title" >Email List:</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div  class="row top-buffer">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <p>{{display_delimited_emails}}</p>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <label class="radio-inline inline-padding"><input type="radio" ng-model="delim_value" ng-change="change_delim('semicolon')" value="semicolon">Delimit with semicolon</label>
+            <label class="radio-inline inline-padding"><input type="radio" ng-model="delim_value" ng-change="change_delim('comma')" value="comma">Delimit with comma</label>
+        </div>
+        <div class="col-md-4">
+            <p class="bg-success" ng-show="textCopied">&nbspThe list was copied to the clipboard. </p>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <p class="bg-danger" ng-show="clipboardNotSupported"> &nbspYour browser does not support this function.</p>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="copyToClipboard()">Copy List to Clipboard</button>
+    <button class="btn btn-warning" type="button" ng-click="close()">Close</button>
+</div>

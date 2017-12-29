@@ -1,0 +1,105 @@
+<h4>{{question}}</h4>
+
+<div ng-switch="questionDetails.type">
+
+    <div ng-switch-when="radio">
+        <h4>Dude, it's a radio button question!</h4>
+        <h4>{{questionDetails.msg}}</h4>
+        <h4>{{questionDetails.text}}</h4>
+        <div class="radio" ng-repeat="answer in questionDetails.offeredAnswers">
+            <label>
+                <input type="radio" ng-model="questionResponse.selectedAnswer" ng-value="answer.id" name="answer-for-question-{{questionDetails.id}}"
+                       ng-change="selectedAnswerChanged()" >
+                {{answer.value}}
+            </label>
+        </div>
+        <div>
+            <button class="btn btn-default" type="button" ng-click="submitRadio()">Submit</button>
+            <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+
+    </div>
+
+    <div ng-switch-when="checkbox">
+        <h4>Dude, it's a check box question!</h4>
+        <h4>{{questionDetails.msg}}</h4>
+        <h4>{{questionDetails.text}}</h4>
+        <div class="checkbox" ng-repeat="answer in questionDetails.offeredAnswers">
+                <label>
+                    <input type="checkbox" name="answer-for-question-{{answer.id}}" value="answer.id" ng-click="toggleSelectedAnswer(answer)">{{answer.value}}
+                </label>
+        </div>
+        <div>
+            <button class="btn btn-default" type="button" ng-click="submitCheckbox()">Submit</button>
+            <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+
+    </div>
+
+    <div ng-switch-when="selection">
+        <h4>Dude, it's a selection question!</h4>
+        <h4>{{questionDetails.msg}}</h4>
+        <h4>{{questionDetails.text}}</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <label class="control-label input-sm" for="multiselect_from">{{questionDetails.from_msg}}:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                    <select name="from" id="multiselect_from" class="form-control input-sm" size="5" multiple="multiple" ng-model="itemSelection.itemsFrom">
+                        <option ng-repeat="sel in questionDetails.offeredAnswers | get_unselected" value="{{sel.id}}" >{{sel.value}}</option>
+                    </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2">
+                <button type="button" id="multiselect_downAll" ng-click="selectAll()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-down"></i><i class="glyphicon glyphicon-arrow-down"></i></button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" id="multiselect_downSelected" ng-click="selectLimited()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-down"></i></button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" id="multiselect_upSelected" ng-click="unselectLimited()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-up"></i></button>
+            </div>
+            <div class="col-md-2">
+                <button type="button" id="multiselect_upAll" ng-click="unselectAll()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-up"></i><i class="glyphicon glyphicon-arrow-up"></i></button>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label class="control-label input-sm" for="multiselect_to">{{questionDetails.to_msg}}:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <select name="from" id="multiselect_to" class="form-control input-sm" size="5" multiple="multiple" ng-model="itemSelection.itemsTo">
+                    <option ng-repeat="sel in questionDetails.offeredAnswers | get_selected" value="{{sel.id}}" >{{sel.value}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <button class="btn btn-default" type="button" ng-click="submitSelection()">Submit</button>
+                    <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

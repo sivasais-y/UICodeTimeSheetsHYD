@@ -1,0 +1,113 @@
+[
+    {
+        "document_guid": "4c21b619-422b-4ab9-969b-80cc85446757",
+        "document_name": "eFarm Final Report Template",
+        "document_fileext": "pdf",
+        "document_content_type": "application/pdf",
+        "document_type_desc": "Survey",
+        "document_status_desc": "Review",
+        "public_access_flg": false,
+        "active_flg": true,
+        "tags": [
+            {
+                "document_guid": "4c21b619-422b-4ab9-969b-80cc85446757",
+                "doc_tag_desc": "Stewardship - Concern"
+            },
+            {
+                "document_guid": "4c21b619-422b-4ab9-969b-80cc85446757",
+                "doc_tag_desc": "Stewardship - Inspector Name"
+            }
+        ],
+        "created_date": "2017-10-23T17:43:57.623000Z",
+        "created_user": "Klaube, Chris",
+        "last_edited_date": "2017-10-23T17:45:15.729000Z",
+        "last_edited_user": "Klaube, Chris"
+    },
+    {
+        "document_guid": "597c6bf1-d74c-4b8e-99a6-85b565c0c0d6",
+        "document_name": "eFarm Final Report Template",
+        "document_fileext": "pdf",
+        "document_content_type": "application/pdf",
+        "document_type_desc": "Deed",
+        "document_status_desc": "Incoming",
+        "public_access_flg": true,
+        "active_flg": true,
+        "tags": [],
+        "created_date": "2017-10-23T20:28:59.164000Z",
+        "created_user": "Klaube, Chris",
+        "last_edited_date": "2017-10-23T20:28:59.181000Z",
+        "last_edited_user": "Klaube, Chris"
+    },
+    {
+        "document_guid": "3bf2c287-ce76-4b0f-b158-90043da16b77",
+        "document_name": "New Text Document",
+        "document_fileext": "txt",
+        "document_content_type": "text/plain",
+        "document_type_desc": "Deed",
+        "document_status_desc": "Incoming",
+        "public_access_flg": true,
+        "active_flg": true,
+        "tags": [
+            {
+                "document_guid": "3bf2c287-ce76-4b0f-b158-90043da16b77",
+                "doc_tag_desc": "Stewardship - Concern"
+            },
+            {
+                "document_guid": "3bf2c287-ce76-4b0f-b158-90043da16b77",
+                "doc_tag_desc": "Stewardship - Inspector Name"
+            }
+        ],
+        "created_date": "2017-10-23T17:40:35.444000Z",
+        "created_user": "Klaube, Chris",
+        "last_edited_date": "2017-10-23T17:40:35.456000Z",
+        "last_edited_user": "Klaube, Chris"
+    },
+    {
+        "document_guid": "4fd8b9f3-209f-4d34-9009-99ff49fe7930",
+        "document_name": "Newdocument_name",
+        "document_fileext": "docx",
+        "document_content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "document_type_desc": "Deed",
+        "document_status_desc": "Review",
+        "public_access_flg": false,
+        "active_flg": true,
+        "tags": [
+            {
+                "document_guid": "4fd8b9f3-209f-4d34-9009-99ff49fe7930",
+                "doc_tag_desc": "Stewardship - House Replacement"
+            },
+            {
+                "document_guid": "4fd8b9f3-209f-4d34-9009-99ff49fe7930",
+                "doc_tag_desc": "Stewardship - Septic"
+            }
+        ],
+        "created_date": "2017-10-23T16:21:00.612000Z",
+        "created_user": "Klaube, Chris",
+        "last_edited_date": "2017-10-23T17:19:46.902000Z",
+        "last_edited_user": "Klaube, Chris"
+    },
+    {
+        "document_guid": "a3d123c5-5491-422e-a15c-a5831193431d",
+        "document_name": "eFarms",
+        "document_fileext": "pdf",
+        "document_content_type": "application/pdf",
+        "document_type_desc": "Recorded deed",
+        "document_status_desc": "Resolution - Closed Session",
+        "public_access_flg": true,
+        "active_flg": true,
+        "tags": [
+            {
+                "document_guid": "a3d123c5-5491-422e-a15c-a5831193431d",
+                "doc_tag_desc": "Stewardship - Inspector Name"
+            },
+            {
+                "document_guid": "a3d123c5-5491-422e-a15c-a5831193431d",
+                "doc_tag_desc": "Stewardship - Concern"
+            }
+        ],
+        "created_date": "2017-10-23T17:41:51.806000Z",
+        "created_user": "Klaube, Chris",
+        "last_edited_date": "2017-10-23T17:45:02.124000Z",
+        "last_edited_user": "Klaube, Chris"
+    }
+]

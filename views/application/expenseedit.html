@@ -1,0 +1,76 @@
+<div class="modal-title" >
+	<h3>Edit Expense</h3>
+</div>
+
+<div class="modal-body" id="modal-body" >
+  <div class="row">
+   <div class="col-md-8 col-lg-8 col-sm-8" >
+       <form class="form-horizontal">
+           <div class="form-group">
+                <label for="type" class="col-md-4 control-label">Expense Type:</label>
+               <div class="col-md-8 col-sm-8 col-xs-12">
+                <input type="text" id="type" class="form-control"  ng-model="selectedexpensedetails.expense_type" >
+               </div>
+           </div>
+
+           <div class="form-group">
+                <label for="amount" class="col-md-4 control-label">Expense Amount:</label>
+               <div class="col-md-8 col-sm-8 col-xs-12">
+                <input type="text" ng-currency id="amount" class="form-control"  ng-model="selectedexpensedetails.expense_amount" >
+               </div>
+           </div>
+
+            <div class="form-group">
+                <label for="status1" class="col-md-4 control-label">Status:</label>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+               <select class="form-control" name="type" id="status1" ng-model="selectedexpensedetails.expense_status_desc">
+                      <option ng-repeat="x in expenseststatuslist" value="{{x.expense_status_desc}}" ng-selected="x.expense_status_desc == selectedexpensedetails.expense_status_desc">{{x.expense_status_desc}}</option>
+               </select>
+                </div>
+           </div>
+
+           <div class="form-group">
+                <label for="desc" class="col-md-4 control-label">Description:</label>
+               <div class="col-md-8 col-sm-8 col-xs-12">
+               <textarea type="text" id="desc" class="form-control"  ng-model="selectedexpensedetails.expense_description" ></textarea>
+               </div>
+           </div>
+
+           <div class="form-group">
+                <label for="costshare" class="col-md-4 control-label">Farm:</label>
+               <div class="col-md-8 col-sm-8 col-xs-12">
+                <input type="text" id="costshare" class="form-control"  ng-model="selectedexpensedetails.farm_id" >
+               </div>
+           </div>
+
+           <div class="form-group">
+                <label for="costshare1" class="col-md-4 control-label">Application:</label>
+               <div class="col-md-8 col-sm-8 col-xs-12">
+                <input type="text" id="costshare1" class="form-control"  ng-model="selectedexpensedetails.application_id" >
+               </div>
+           </div>
+   </form>
+  </div>
+  </div>
+
+     <div class="row"  style="padding: 10px;border-top: 1px solid #000">
+        <div class="col-md-8 col-lg-8 col-sm-8" >
+            <form class="form-horizontal">
+                <div class="form-group">
+                  <div class="bs-grid-border">
+                      <label for="table" class="control-label">Cost Share:</label>
+                      <div ui-grid="gridExpenseCostshare" id="table" class="col-sm-6 expenseGrid" ui-grid-save-state ui-grid-edit ui-grid-selection ui-grid-cellNav ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning ui-grid-auto-resize ui-grid-expandable></div>
+                  </div>
+                        <button type="button" ng-click="addNewRow()" class="glyphicon glyphicon-plus"></button>
+                        <button type="button" ng-click="deleteRow()" class="glyphicon glyphicon-trash"></button>
+            </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-success" type="button" ng-click="submitEditExpense()">Submit</button>
+    <button class="btn btn-danger" type="button" ng-click="close()">Cancel</button>
+</div>

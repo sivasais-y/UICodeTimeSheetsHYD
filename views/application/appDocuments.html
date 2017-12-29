@@ -1,0 +1,115 @@
+<div class="containers appDocs" id="applicationDocsDIV" ng-controller="AppDocsController" >
+    <div class="noError" ng-if="!IDfailed">
+        <div class="col-md-12">
+            <style>
+                ul.dropdown-menu[uib-typeahead-popup] {
+                    max-height: 300px;
+                    overflow: auto;
+                }
+            </style>
+            <!-- Notes accordian -->
+            <uib-accordion>
+                <div uib-accordion-group is-open="true" is-disabled="true"  class="panel-default notes-groups">
+                    <uib-accordion-heading>
+                        <div style="height:30px">
+                            <span style="margin-top:5px;">Documents</span>
+                            <div class="btn-group pull-right" uib-dropdown>
+                                <span id="split-button" type="button" class="btn btn-primary" style="margin:0 !important">Sort</span>
+                                <button type="button" class="btn btn-primary" uib-dropdown-toggle>
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Split button!</span>
+                                </button>
+                                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button"  ng-init="sortOrder = false">
+                                    <li role="menuitem" ng-click="sortOrder = true"><a href="#">Latest First</a></li>
+                                    <li role="menuitem" ng-click="sortOrder = false"><a href="#">Oldest First</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary pull-right" ng-click="uploadFile($event)" style="margin-left:10px">
+                                <i class="fa fa-plus"></i>  Upload File
+                            </button>
+                            <div class="input-group" style="margin:-17px 10px 0">
+                                <input typeahead-min-length="0" type="text" placeholder="Search using Tags" ng-model="search.documentTag" ng-model-options="modelOptions"
+                                   uib-typeahead="tag for tag in docTagsList | filter:$viewValue" class="form-control pull-right" style="cursor: text; width: 300px; text-align: left;">
+
+                                <div class="input-group-addon" ng-click="search.documentTag = ''"><i class="fa fa-times"></i></div>
+                            </div>
+                            
+                        </div>
+                    </uib-accordion-heading>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="docsTRs">
+                            <tr class="docs doc-default" ng-repeat="document in appDocsData| filter : {tags : {doc_tag_desc : search.documentTag}} | orderBy:'created_date':sortOrder" ng-class="document.active_flg ? '' : 'disabled'">
+                                <td>
+                                    <span class="doc-ext" style="pointer-events: none">
+                                        <i class="fa doc-file-{{document.document_fileext}}"></i>
+                                    </span>
+                                </td>
+                                <td>
+                                    <h4 class="doc-name" document-name="{{document.document_name}}" document-content-type="{{document.document_content_type}}"><b>{{document.document_name}}</b></h4>
+
+                                    <small class="doc-type-status">
+                                        <span class="doc-type bg-info" style="pointer-events: none" document-type-desc="{{document.document_type_desc}}">
+                                            <b>Type</b>:
+                                            <i> {{document.document_type_desc}}</i>
+                                        </span>
+                                        <span class="doc-status bg-info" style="pointer-events: none" document-status-desc="{{document.document_status_desc}}">
+                                            <b>Status</b>:
+                                            <i> {{document.document_status_desc}}</i>
+                                        </span>
+                                    </small>
+                                </td>
+                                <td>
+                                    <!--                                    <a class="doc-link btn btn-success" document-guid="{{document.document_guid}}" href="/doc/{{document.document_guid}}" ng-click="downloadDoc(document.document_guid, document.document_name)" download="{{document.document_name}}" ng-class="document.public_access_flg ? '' : 'disabled'">
+                                                                            <i class="fa fa-download"></i>
+                                                                        </a>-->
+                                    <a class="doc-link btn btn-success" document-guid="{{document.document_guid}}" ng-click="downloadDoc(document.document_guid, document.document_name)" download="{{document.document_name}}" ng-class="document.public_access_flg ? '' : 'disabled'">
+                                        <i class="fa fa-download"></i>
+                                    </a>
+
+                                    <span class="doc-flag btn btn-warning" document-public-access-flg="{{document.public_access_flg}}" ng-if="!document.public_access_flg" style="pointer-events: none">
+                                        <i class="fa fa-expeditedssl"></i>
+                                    </span>
+                                </td>
+                                <td>
+                                    <small class="doc-tags" document-tags="{{document.tags}}" ng-if="document.tags.length > 0">
+                                        <b>Tags:</b> 
+                                        <ul class="doc-tags-ul">
+                                            <li ng-repeat="tag in document.tags">{{tag.doc_tag_desc}}</li>
+                                        </ul>
+                                    </small>
+                                </td>
+                                <td class=""> 
+                                    <div class="btns btn-default doc-dates" style="pointer-events: none" ng-if="document.created_user">
+                                        <i  class="fa fa-user-o" ></i> |
+                                        <span document-created-user="{{document.created_user}}" document-created-date="{{document.created_date}}">
+                                            {{ document.created_user}} <br /> {{ document.created_date | date }}
+                                        </span>                                        
+                                    </div>
+                                </td>
+                                <td>                                   
+                                    <span>
+                                        <button class="btn btn-info" ng-click="editDoc($event, document.document_guid)"><i class="fa fa-edit"></i></button>
+                                        <button class="btn btn-danger" ng-click="deleteDoc($event, document.document_guid)">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </uib-accordion>
+        </div>
+    </div>
+    <div class="ifError" ng-if="IDfailed">
+        <div class="col-sm-12 alert-warnings" id="errorDiv">
+            <img style="margin: auto" class="img-responsive" src="../app/images/error-404.png" alt="Error Page"/>
+            <h4 class="text-center alert alert-warning">
+                <span class="">ID entered is Invalid..</span>
+                <span class="">Please enter valid ID and Try again..</span>
+            </h4>
+        </div>
+    </div>
+
+</div>

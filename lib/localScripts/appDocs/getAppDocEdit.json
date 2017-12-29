@@ -1,0 +1,25 @@
+{
+    "document_guid": "4fd8b9f3-209f-4d34-9009-99ff49fe7930",
+    "document_name": "newdocument_name",
+    "document_fileext": "docx",
+    "document_content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "document_size": "14383",
+    "document_type_desc": "Deed",
+    "document_status_desc": "Review",
+    "public_access_flg": false,
+    "active_flg": true,
+    "tags": [
+        {
+            "document_guid": "4fd8b9f3-209f-4d34-9009-99ff49fe7930",
+            "doc_tag_desc": "Stewardship - House Replacement"
+        },
+        {
+            "document_guid": "4fd8b9f3-209f-4d34-9009-99ff49fe7930",
+            "doc_tag_desc": "Stewardship - Septic"
+        }
+    ],
+    "created_date": "2017-10-23T16:21:00.612000Z",
+    "created_user": "Klaube, Chris",
+    "last_edited_date": "2017-10-23T16:43:08.173000Z",
+    "last_edited_user": "Klaube, Chris"
+}

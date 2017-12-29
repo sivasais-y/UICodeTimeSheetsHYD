@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add Score</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="uploadDoc">
+
+                <div class="form-group" style="float: left;width: 100%">
+                    <label class="control-label col-sm-3" >Name:</label>
+                    <div class='col-sm-9' style="position:relative">
+                        <input type="text" class="form-control" ng-model="addScoreName" maxlength="60">
+                    </div>
+                </div>
+                
+                <div class="form-group" style="float: left;width: 100%">
+                    <label class="control-label col-sm-3" >Description:</label>
+                    <div class='col-sm-9' style="position:relative">
+                        <textarea class="form-control" rows="4" ng-model="addScoreDesc" maxlenght="300"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group" style="float: left;width: 100%">
+                    <label class="control-label col-sm-3" >Select Score Type:</label>
+                    <div class='col-sm-9' style="position:relative">
+                        <select class="form-control" id="appAddScoreType" ng-model="addScoreType" ng-options="type as type.score_type_desc for type in scoreTypes track by type.score_type_guid">
+                            <option value=""> None </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="addScoreSubmit()">Submit</button>
+    <button class="btn btn-warning" ng-click="addScoreCancel()">Close</button>
+</div>
+

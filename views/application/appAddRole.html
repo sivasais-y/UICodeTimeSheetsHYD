@@ -1,0 +1,19 @@
+
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Add Role</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Select a role from the below list</h4>
+                <div class="userGrid">
+                    <div id="grid1" ui-grid="rolesGrid" ui-grid-pagination ui-grid-selection class="grid"></div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="addRoleDetails()">Add Role</button>
+            <button class="btn btn-warning" ng-click="roleCancel()">Close</button>
+    </div>

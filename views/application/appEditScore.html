@@ -1,0 +1,126 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancelPutScore()">&times;</button>
+    <h4 class="modal-title" id="modal-title">{{editable ? 'Edit' : ''}} {{editAppScore.score_json.finalscore.scorename}}</h4>
+</div>
+<div class="modal-body" id="modal-body"> 
+    <div  ng-class="{'noneditableScoreForm': !editable}">
+    <div class="panel panel-success col-sm-12">
+        <div class="panel-headings">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" ng-model="putScoreName">                        
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="panel panel-success col-sm-12">
+        <div class="panel-headings"> 
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Description</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" ng-model="putScoreDescription"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-success col-sm-4">
+        <div class="panel-headings">
+            <div class="form-group">
+                <label class="control-label">Edited By</label>
+                <div class="">
+                    <input type="text" disabled="true" class="form-control" ng-value="scoreObj.last_edited_user">                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-success col-sm-4">
+        <div class="panel-headings">
+        <div class="form-group">
+                <label class="control-label">Status</label>
+                <div class="">
+                    <select class="form-control" ng-model="putScoreStatus" ng-options="status as status for status in scoreStatus">
+                        <option value="">None</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-success col-sm-4">
+        <div class="panel-headings">
+            <div class="form-group">
+                <label class="control-label">Created By</label>
+                <div class="">
+                    <input type="text" class="form-control" disabled="true" ng-value="scoreObj.created_user">                        
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="panel panel-primary" ng-class="{'noneditableScoreForm': !editable}">        
+        <!--div class="panel-heading"><h5 style="color:white;"><b>Quality Score</b></h5></div-->
+        <div class="panel-body category-div" ng-repeat="(key, value) in editAppScore.score_json.categories">
+            <div class="panel panel-info">
+                <div class="panel-heading"><h5><u>{{value.categoryname}}</u></h5></div>
+                <div class="panel-body">
+                    <small>{{category.description}}</small>
+                    <div class="factor-div" ng-repeat="sortkey in editScoreKeys[key]">
+                        <h5 class="text-warning"><b style="display: block">Factor - {{sortkey}} {{value.factors[sortkey].factorname}}</b><small>{{value.factors[sortkey].description}}</small></h5>
+                        <div class="form-group" id="{{input.id}}" ng-repeat="input in value.factors[sortkey].inputs | orderBy: 'name'">
+                            <label class="col-sm-6 control-label">{{input.name}}</label>
+                            <div class="col-sm-3" ng-if="input.inputtype == 'choice'">
+                                <select class="form-control" id="{{input.id}}" ng-model="putBody[input.id]" ng-init="putBody[input.id] = input.value"  ng-options="choice as choice for choice in input.choices">
+                                    <option value="">None</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3" ng-if="input.inputtype == 'proportion'">
+                                <input type="number" id="{{input.id}}" ng-model="putBody[input.id]" ng-init="putBody[input.id] = input.value" class="form-control" min="0">
+                            </div>
+                            <div class="col-sm-3" ng-if="input.inputtype == 'amount'">
+                                <input type="number" id="{{input.id}}" ng-model="putBody[input.id]" ng-init="putBody[input.id] = input.value" class="form-control" min="0">
+                            </div>
+                            <div class="col-sm-3" ng-if="input.inputtype == 'integer'">
+                                <input type="number" id="{{input.id}}" ng-model="putBody[input.id]" ng-init="putBody[input.id] = input.value" class="form-control" min="0">
+                            </div>
+                            <div class="col-sm-3" ng-if="input.inputtype == 'float'">
+                                <input type="number" id="{{input.id}}" ng-model="putBody[input.id]" ng-init="putBody[input.id] = input.value" class="form-control" min="0">
+                            </div>
+                            <div class="col-sm-3" ng-if="input.inputtype == 'currency'">
+                                <input type="number" id="{{input.id}}" ng-model="putBody[input.id]" ng-init="putBody[input.id] = input.value" class="form-control" min="0">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="number" id="{{input.id}}-score" ng-value="{{input.score}}" class="form-control" disabled="true">
+                            </div>
+                        </div>
+                        <hr class="col-sm-11"/>
+                        <h5 style="display:block;margin-top: 0;float: left;width: 100%; "><b>Sub-Scores</b></h5>
+                        <div class="form-group" ng-repeat="subScore in value.factors[sortkey].scores">
+                            <label class="col-sm-6 control-label ">{{subScore.scorename}}</label>
+                            <div class="col-sm-3">
+                                <input type="number" ng-value="{{subScore.score}}" class="form-control" disabled="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="panel panel-primary">
+        <div class="panel-heading"><b>Final Score</b></div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label class="col-sm-4 control-label text-right">{{editAppScore.score_json.finalscore.scorename}} :</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" id="appFinalScore" ng-value="editAppScore.score_json.finalscore.score" disabled="true">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <!--<button class="btn btn-primary" ng-click="editPutScore()">{{!editable ? 'Edit' : 'Make Readonly'}}</button>-->
+    <button class="btn btn-success" ng-click="submitPutScore()">{{!editable ? 'Edit' : 'Save'}}</button>
+    <button class="btn btn-warning" ng-click="cancelPutScore()">Close</button>
+</div>

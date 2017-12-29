@@ -1,0 +1,46 @@
+[
+    {
+        "todo_list_guid": "fb9db4de-28b9-41b5-9f83-e4c20a1414e1",
+        "todo_list_title": "CPIG2 test",
+        "todo_list_desc": "This is a template to do list test for all necessary todo items associated with Pinelands area acquisitions",
+        "application_type_guid": "a36a0f5f-35b4-4b2a-992b-06c499a86b39",
+        "todo_list_json": [
+            {
+                "application_guid": "",
+                "application_phase_guid": null,
+                "todo_item_due_date": null,
+                "todo_item_title": "Notify the Pinelands Commission",
+                "farm_guid": null,
+                "roles": [],
+                "todo_item_conditional_flg": false,
+                "todo_item_completed_flg": false,
+                "todo_item_desc": "Notify the Pinelands Commission of new acquisition activity",
+                "users": []
+            },
+            {
+                "application_guid": "",
+                "application_phase_guid": null,
+                "todo_item_due_date": null,
+                "todo_item_title": "Review location of Planning Zones",
+                "farm_guid": null,
+                "roles": [],
+                "todo_item_conditional_flg": false,
+                "todo_item_completed_flg": false,
+                "todo_item_desc": "Review the farm location to ensure it is within allowances of special planning zones",
+                "users": []
+            },
+            {
+                "application_guid": "",
+                "application_phase_guid": null,
+                "todo_item_due_date": null,
+                "todo_item_title": "Upload Pinelands Forms",
+                "farm_guid": null,
+                "roles": [],
+                "todo_item_conditional_flg": false,
+                "todo_item_completed_flg": false,
+                "todo_item_desc": "Complete and upload all necessary Pinelands area forms associated with the farm",
+                "users": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,166 @@
+<div class="containers appDocs" id="applicationDocsDIV">
+    <div class="noError" ng-if="!IDfailed">
+        <div class="col-md-12">
+            <h4><b>Application >> {{APPID}} >> Contacts</b></h4>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div  class="panel-heading" style="height:55px;">
+                            Contacts
+                            <a type="button" class="btn btn-danger pull-right" ng-click="deleteContact()"
+                               style="margin-left:15px;">
+                                Delete contact <i class="fa fa-trash"></i>
+                            </a>
+                            <a type="button" class="btn btn-success pull-right"  ng-click="addNewContact()"
+                               style="margin-left:15px;">
+                                Add contact <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <div class="peanl-body">
+                            <div class="row">
+                                <div class="col-sm-12" style="height: 500px;overflow-y: auto;">
+                                    <table class="table table-bordered table-striped" id="table1" >
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Contact</th>
+                                                <th>Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="appContactsRow" ng-repeat="contact in appContacts" ng-click="onContactRowClick($index, contact)">
+                                                <td><input type="radio" name="selectContactsRow" ng-model="selectContact" ng-value="$index"></td>
+                                                <td>{{contact.first_name + ', ' + contact.last_name}}</td>
+                                                <td>{{contact.contact_type_desc}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div  class="panel-heading">
+                            Contact Details
+                        </div>
+                        <div class="peanl-body">
+                            <table class="table table-bordered table-striped">
+                                <!--                                <thead>
+                                                                <th>
+                                                                    Fields
+                                                                </th>
+                                                                <th>
+                                                                    Values
+                                                                </th>
+                                                                </thead>-->
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <b>First name</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.first_name}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Last name</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.last_name}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Title</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.title}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Organization</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.organization}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Address</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.address}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>City</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.city}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>State</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.state}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Zip</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.zip}}
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <b>Phone Primary</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.phone_primary}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Email Primary</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.email_primary}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <b>Person Type Desc</b>
+                                        </td>
+                                        <td>
+                                            {{selectedContact.person_type_desc}}
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ifError" ng-if="IDfailed">
+        <div class="col-sm-12 alert-warnings" id="errorDiv">
+            <img style="margin: auto" class="img-responsive" src="../app/images/error-404.png" alt="Error Page"/>
+            <h4 class="text-center alert alert-warning">
+                <span class="">ID entered is Invalid..</span>
+                <span class="">Please enter valid ID and Try again..</span>
+            </h4>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,200 @@
+[
+    {
+        "application_type_guid": "ee9eec5f-fd1e-40ef-8a0a-13c9dd38a7e8",
+        "application_type_id": 101,
+        "application_description": "",
+        "application_name": "Agricultural Development Area Update",
+        "fiscal_reports_id": "",
+        "program_category_code": "PLN",
+        "program_category_desc": "Planning"
+    },
+    {
+        "application_type_guid": "4dfc3993-9b02-4792-9c90-986af5b987d5",
+        "application_type_id": 301,
+        "application_description": "",
+        "application_name": "Agricultural Labor Housing Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "147f0c64-02f0-4f5d-bafd-02370626743c",
+        "application_type_id": 102,
+        "application_description": "",
+        "application_name": "Annual Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "PLN",
+        "program_category_desc": "Planning"
+    },
+    {
+        "application_type_guid": "1801571e-1bb8-4a56-a374-552234cec6d3",
+        "application_type_id": 302,
+        "application_description": "",
+        "application_name": "Cell Tower Permit Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "7d966c5e-34e1-4060-8dd6-0b0babf6554a",
+        "application_type_id": 303,
+        "application_description": "",
+        "application_name": "Division of Premises Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "5e87d049-f942-4cc8-a47d-543b8538ba0f",
+        "application_type_id": 201,
+        "application_description": "",
+        "application_name": "Donation",
+        "fiscal_reports_id": "",
+        "program_category_code": "ACQ",
+        "program_category_desc": "Acquisition"
+    },
+    {
+        "application_type_guid": "cc8d08b1-c248-40e7-8430-945c1e9e6863",
+        "application_type_id": 401,
+        "application_description": "",
+        "application_name": "Eight Year Farmland Preservation",
+        "fiscal_reports_id": "",
+        "program_category_code": "OTH",
+        "program_category_desc": "SADC Other Grant"
+    },
+    {
+        "application_type_guid": "03040263-3fd1-4737-be51-6b419fe24c66",
+        "application_type_id": 402,
+        "application_description": "",
+        "application_name": "Eight Year Municipally Approved",
+        "fiscal_reports_id": "",
+        "program_category_code": "OTH",
+        "program_category_desc": "SADC Other Grant"
+    },
+    {
+        "application_type_guid": "b675873a-31bf-49ec-8dc1-bf4fa5243cec",
+        "application_type_id": 304,
+        "application_description": "",
+        "application_name": "Exercise RDSO",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "b027c47e-514c-498f-99f8-188815df22ca",
+        "application_type_id": 305,
+        "application_description": "",
+        "application_name": "House Replacement Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "291025bb-0c97-4994-8e1f-9f2187035e4d",
+        "application_type_id": 202,
+        "application_description": "",
+        "application_name": "Independent Purchase",
+        "fiscal_reports_id": "",
+        "program_category_code": "ACQ",
+        "program_category_desc": "Acquisition"
+    },
+    {
+        "application_type_guid": "a36a0f5f-35b4-4b2a-992b-06c499a86b39",
+        "application_type_id": 203,
+        "application_description": "",
+        "application_name": "Individual Farm Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "ACQ",
+        "program_category_desc": "Acquisition"
+    },
+    {
+        "application_type_guid": "a5677ba6-6e7b-4a24-aa3e-fca7217d48af",
+        "application_type_id": 204,
+        "application_description": "",
+        "application_name": "Non Profit Individual Farm Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "ACQ",
+        "program_category_desc": "Acquisition"
+    },
+    {
+        "application_type_guid": "cfa10fd2-9bc9-40df-b407-8adfde8e7b18",
+        "application_type_id": 306,
+        "application_description": "",
+        "application_name": "Renewable Energy Permit- Biomass",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "69931e72-a58c-4470-b4c9-f2379b26d606",
+        "application_type_id": 307,
+        "application_description": "",
+        "application_name": "Renewable Energy Permit- Solar",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "8ed15467-76e1-407f-a9f5-fb2121ef93c8",
+        "application_type_id": 308,
+        "application_description": "",
+        "application_name": "Renewable Energy Permit- Wind",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "9c9a565a-9d8e-4a7c-9440-4faaa2f592de",
+        "application_type_id": 309,
+        "application_description": "",
+        "application_name": "Rural Micro Enterprise Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "741b0e11-f888-47e5-96cc-5796d260dc45",
+        "application_type_id": 205,
+        "application_description": "",
+        "application_name": "SADC State Acquisition Individual Application",
+        "fiscal_reports_id": "",
+        "program_category_code": "ACQ",
+        "program_category_desc": "Acquisition"
+    },
+    {
+        "application_type_guid": "75a68285-2ea7-496e-a6fe-85a278fb58c9",
+        "application_type_id": 310,
+        "application_description": "",
+        "application_name": "Site Visit- Baseline",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "ed1061de-cf1b-4f51-80ad-01dff7350006",
+        "application_type_id": 311,
+        "application_description": "",
+        "application_name": "Site Visit- Monitoring",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "ceb95557-80c1-4fd8-ac61-e1cf0ce18ad1",
+        "application_type_id": 312,
+        "application_description": "",
+        "application_name": "Site Visit- Other",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    },
+    {
+        "application_type_guid": "4d717fe8-c5d9-42b6-9aa7-06ec7fe4fdd4",
+        "application_type_id": 313,
+        "application_description": "",
+        "application_name": "Site Visit- Violation Inspection",
+        "fiscal_reports_id": "",
+        "program_category_code": "STW",
+        "program_category_desc": "Stewardship"
+    }
+]

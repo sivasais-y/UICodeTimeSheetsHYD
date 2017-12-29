@@ -1,0 +1,255 @@
+<div class="containers appToDo" id="applicationToDoDIV">
+    <div class="noError" ng-if="!IDfailed">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">ToDo Items</h3>
+            </div>
+            <div class="panel-body table-responsive">
+                <button class="btn btn-primary" ng-click='loadToDoItem()' style="float: right;margin-left: 5px">Load ToDo List</button>
+                <button class="btn btn-danger" ng-click='deleteToDoItems()' style="float: right;margin-left: 5px">Delete ToDo Item</button>
+                <button class="btn btn-success" ng-click='addToDoItem()' style="float: right">Add ToDo Item</button>
+                <div class="clearfix"></div>
+                <hr />
+                <uib-tabset active="active">
+                    <uib-tab index="0" heading="All Items">
+                        <div class="toDoItemsGrid">
+                            <div id="grid1" ui-grid="toDoItemsGridAll" ui-grid-pagination ui-grid-selection class="grid"></div>
+                        </div>
+                    </uib-tab>
+                    <uib-tab index="1" heading="Assigned To Me">
+                        <div class="toDoItemsGrid2">
+                            <div id="grid2" ui-grid="toDoItemsGridToMe" ui-grid-pagination ui-grid-selection class="grid"></div>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+//                $('#applicationToDoDIV').mCustomScrollbar({
+//                    'theme': 'minimal-dark'
+//                });
+            });
+        </script>
+        <script type="text/ng-template" id="editToDoItem.html">
+            <div class="modal-header">
+            <h3 class="modal-title">ToDo Item</h3>
+            </div>
+            <div class="modal-body">
+            <div id="toDoInfo">
+            <form class="form-horizontals">
+            <input type='hidden' ng-model='editToDo.ItemGUID' ng-init='editToDo.ItemGUID=appToDoSingleItem.todo_item_guid'>
+            <input type='hidden' ng-model='editToDo.appID' ng-init='editToDo.appID=appToDoSingleItem.application_id'>
+            <input type='hidden' ng-model='editToDo.assigner' ng-init='editToDo.assigner=appToDoSingleItem.assigner'>
+            <input type='hidden' ng-model='editToDo.farmID' ng-init='editToDo.farmID=appToDoSingleItem.farm_id'>
+            <input type='hidden' ng-model='editToDo.creatorGUID' ng-init='editToDo.creatorGUID=appToDoSingleItem.created_user_guid'>
+            <input type='hidden' ng-model='editToDo.createdDate' ng-init='editToDo.createdDate=appToDoSingleItem.created_date'>
+            <div class="col-sm-3">
+            <label>Status:</label> {{appToDoSingleItem.todo_item_completed_flg == true ? 'Completed' : 'Incomplete'}}
+            <input type='hidden' ng-model='editToDo.status' ng-init='editToDo.status=appToDoSingleItem.todo_item_completed_flg'>
+            </div>
+            <div class="col-sm-3">
+            <label>Completed By:</label> {{appToDoSingleItem.completed_user}}
+            <input type='hidden' ng-model='editToDo.completedUser' ng-init='editToDo.completedUser=appToDoSingleItem.completed_user'>
+            <input type='hidden' ng-model='editToDo.completedUserGUID' ng-init='editToDo.completedUserGUID=appToDoSingleItem.completed_user_guid'>
+            </div>
+            <div class="col-sm-3">
+            <label>Completed Date:</label> {{appToDoSingleItem.completed_date}}
+            <input type='hidden' ng-model='editToDo.completedDate' ng-init='editToDo.completedDate=appToDoSingleItem.completed_date'>
+            </div>
+            <div class="col-sm-3">
+            <label>Assigner:</label> {{appToDoSingleItem.assigner}}
+            <input type='hidden' ng-model='editToDo.assigner' ng-init='editToDo.assigner=appToDoSingleItem.assigner'>
+            </div><hr style="margin:10px auto;width:85%"/>
+            <div class="form-group col-sm-12">
+            <label class="control-label col-sm-2" >Title :</label>
+            <div class='col-sm-10' style="position:relative">
+            <input type='text' class="form-control" ng-model='editToDo.title' ng-init="editToDo.title= appToDoSingleItem.todo_item_title"/>
+            </div>
+            </div>
+            <div class="form-group col-sm-12">
+            <label class="control-label col-sm-2" >Description :</label>
+            <div class='col-sm-10' style="position:relative">
+            <textarea class="form-control" ng-model='editToDo.desc' ng-init="editToDo.desc=appToDoSingleItem.todo_item_desc"></textarea>
+            </div>
+            </div>
+            <div class="form-group col-sm-4">
+            <label class="control-label " >Conditional :</label>
+            <div class='' style="position:relative">
+            <input type='checkbox' class='conditionalBox' ng-model='editToDo.conditional' ng-init='editToDo.conditional=appToDoSingleItem.todo_item_conditional_flg'/>
+            <span id="helpBlock2" class="help-block conditional">"Note: items flagged as conditional will restrict the application from moving beyond the chosen 'Due Phase"</span>
+            </div>
+            </div>
+
+            <div class="form-group col-sm-4">
+            <label class="control-label " >Due Date :</label>
+            <div class='input-group' style="position:relative">
+            <input type="text" readonly class="form-control" ng-model-options="{timezone: timezone}" uib-datepicker-popup="MM.dd.yyyy" ng-model="editToDo.dueDate" ng-init='editToDo.dueDate=dt' datepicker-options="dateOptions"  is-open="openEditDueDate" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openEditDueDate = true">
+                <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </div>
+            </div>
+            <div class="form-group col-sm-4">
+            <label class="control-label " >Phase Due:</label>
+            <div class='' style="position:relative">
+            <select class="form-control" ng-model='editToDo.phaseDate' ng-options='phase as phase.application_phase_name for phase in phaseList track by phase.application_phase_guid' ng-init='editToDo.phaseDate.application_phase=appToDoSingleItem.application_phase;editToDo.phaseDate.application_phase_guid=appToDoSingleItem.application_phase_guid' ng-selected='appToDoSingleItem.application_phase_guid'>
+            <option value="">None</option>
+            </select>
+            </div>
+            </div>
+            <div class="form-group col-sm-6">
+            <label class="control-label col-sm-12" >Assigned Users :
+            <button class="btn btn-success pull-right" ng-click='addUser()'><i class='fa fa-plus'></i></button>
+            </label>
+            <span class='clearfix'></span>
+            <div class='' style="position:relative">
+            <ul id='usersList'>
+            <li ng-repeat='user in appToDoSingleItem.users'>
+            <span class='userName'>{{user.salutation}} {{user.first_name}} {{user.last_name}}</span>
+            <span class='deleteUser btn-danger' ng-click='deleteUser($index)'><i class='fa fa-trash'></i></span>
+            <input type='hidden' ng-model='editToDo.user[$index].guid' ng-init='editToDo.user[$index].guid=user.auth_user_guid'>
+            <input type='hidden' ng-model='editToDo.user[$index].salutation' ng-init='editToDo.user[$index].salutation=user.salutation'>
+            <input type='hidden' ng-model='editToDo.user[$index].first_name' ng-init='editToDo.user[$index].first_name=user.first_name'>
+            <input type='hidden' ng-model='editToDo.user[$index].last_name' ng-init='editToDo.user[$index].last_name=user.last_name'>
+            <input type='hidden' ng-model='editToDo.user[$index].title' ng-init='editToDo.user[$index].tile=user.title'>
+            <input type='hidden' ng-model='editToDo.user[$index].organization' ng-init='editToDo.user[$index].organization=user.organization'>
+            </li>
+            </ul>
+            </div>
+            </div>
+            <div class="form-group col-sm-6">
+            <label class="control-label col-sm-12 " >Assigned Roles :
+            <button class="btn btn-success pull-right" ng-click='addRole()'><i class='fa fa-plus'></i></button>
+            </label>
+            <span class='clearfix'></span>
+            <div class='' style="position:relative">
+            <ul id='rolesList'>
+            <li ng-repeat='role in appToDoSingleItem.roles'>
+            <span class='userName'>{{role.auth_role_name}}</span>
+            <span class='deleteRole btn-danger' ng-click='deleteRole($index)'><i class='fa fa-trash'></i></span>
+            <input type='hidden' ng-model='editToDo.role[$index].guid' ng-init='editToDo.role[$index].guid =role.auth_role_guid'>
+            <input type='hidden' ng-model='editToDo.role[$index].name' ng-init='editToDo.role[$index].name =role.auth_role_name'>
+            </li>
+            </ul>
+            </div>
+            </div>
+
+            </form>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-success" ng-click="markItem(appToDoSingleItem.todo_item_guid)">Mark Completed</button>
+            <button class="btn btn-primary" ng-click="saveItem()">Save</button>
+            <button class="btn btn-danger" ng-click="deleteItem(appToDoSingleItem.todo_item_guid)">Delete</button>
+            <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </div>
+        </script>
+        <script type="text/ng-template" id="createToDoItem.html">
+            <div class="modal-header">
+            <h3 class="modal-title">ToDo Item</h3>
+            </div>
+            <div class="modal-body">
+            <div id="addToDoInfo">
+            <form class="form-horizontals">
+            <div class="form-group col-sm-12 required">
+            <label class="control-label col-sm-2" >Title :</label>
+            <div class='col-sm-10' style="position:relative">
+            <input type='text' ng-required='true' id="toDoItemTitle" class="form-control" ng-model="toDoItem.title"/>
+            </div>
+            </div>
+            <div class="form-group col-sm-12 required">
+            <label class="control-label col-sm-2" >Description :</label>
+            <div class='col-sm-10' style="position:relative">
+            <textarea ng-required='true' id="toDoItemDesc" class="form-control" ng-model="toDoItem.desc"></textarea>
+            </div>
+            </div>
+            <div class="form-group col-sm-4">
+            <label class="control-label " >Conditional :</label>
+            <div class='' style="position:relative">
+            <input type='checkbox' id="toDoItemCondition" class='conditionalBox' ng-model='toDoItem.condition' value='1'/>
+            <span id="helpBlock2" class="help-block conditional">"Note: items flagged as conditional will restrict the application from moving beyond the chosen 'Due Phase"</span>
+            </div>
+            </div>
+
+            <div class="form-group col-sm-4 required">
+            <label class="control-label " >Due Date :</label>
+            <div class='' style="position:relative">
+            <div class='input-group' style="position:relative">
+            <input type="text" readonly id="toDoItemDueDate" class="form-control" uib-datepicker-popup="dd.MM.yyyy" ng-model="toDoItem.dueDate" datepicker-options="dateOptionsAddItem"  is-open="addOpenDate" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="addOpenDate=true">
+                <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+            </div>
+            </div>
+            </div>
+            <div class="form-group col-sm-4">
+            <label class="control-label " >Phase Due :</label>
+            <div class='' style="position:relative">
+            <select class="form-control" ng-model='toDoItem.phaseDate' ng-options='phase as phase.application_phase_name for phase in phaseList track by phase.application_phase_guid' ng-init='toDoItem.phaseDate=null;toDoItem.phaseGUID=null'>
+            <option value="">None</option>
+            </select>
+            </div>
+            </div>
+            <div class="form-group col-sm-6">
+            <label class="control-label col-sm-12" >Assigned Users :
+            <span class="btn btn-success pull-right" ng-click='addUser()'><i class='fa fa-plus'></i></span></label>
+            <span class='clearfix'></span>
+            <div class='' style="position:relative">
+            <ul id='usersListCreate'>
+            <li ng-repeat='user in toDoItem.users'>
+            <span class='userName'>{{user.salutation}} {{user.first_name}} {{user.last_name}}</span>
+            <span class='deleteUser btn-danger' ng-click='deleteUser($index)'><i class='fa fa-trash'></i></span>
+            <input type='hidden' ng-model='toDoItem.user[$index].guid' ng-init='toDoItem.user[$index].guid=user.auth_user_guid'>
+            <input type='hidden' ng-model='toDoItem.user[$index].salutation' ng-init='toDoItem.user[$index].salutation=user.salutation'>
+            <input type='hidden' ng-model='toDoItem.user[$index].first_name' ng-init='toDoItem.user[$index].first_name=user.first_name'>
+            <input type='hidden' ng-model='toDoItem.user[$index].last_name' ng-init='toDoItem.user[$index].last_name=user.last_name'>
+            <input type='hidden' ng-model='toDoItem.user[$index].title' ng-init='toDoItem.user[$index].tile=user.title'>
+            <input type='hidden' ng-model='toDoItem.user[$index].organization' ng-init='toDoItem.user[$index].organization=user.organization'>
+            </li>
+            </ul>
+            </div>
+            </div>
+            <div class="form-group col-sm-6">
+            <label class="control-label col-sm-12" >Assigned Roles :
+            <span class="btn btn-success pull-right" ng-click='addRole()'><i class='fa fa-plus'></i></span></label>
+            <span class='clearfix'></span>
+            <div class='' style="position:relative">
+            <ul id='rolesListCreate'>
+            <li ng-repeat='role in toDoItem.roles'>
+            <span class='userName'>{{role.auth_role_name}}</span>
+            <span class='deleteRole btn-danger' ng-click='deleteRole($index)'><i class='fa fa-trash'></i></span>
+            <input type='hidden' ng-model='toDoItem.role[$index].guid' ng-init='toDoItem.role[$index].guid =role.auth_role_guid'>
+            <input type='hidden' ng-model='toDoItem.role[$index].name' ng-init='toDoItem.role[$index].name =role.auth_role_name'>
+            </li>
+            </ul>
+            </div>
+            </div>
+
+            </form>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-success" ng-click="createItem()">Save</button>
+            <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+            </div>
+        </script>
+
+    </div>
+    <div class="ifError" ng-if="IDfailed">
+        <div class="col-sm-12 alert-warnings" id="errorDiv">
+            <img style="margin: auto" class="img-responsive" src="../app/images/error-404.png" alt="Error Page"/>
+            <h4 class="text-center alert alert-warning">
+                <span class="">ID entered is Invalid..</span>
+                <span class="">Please enter valid ID and Try again..</span>
+            </h4>
+        </div>
+    </div>
+
+</div>

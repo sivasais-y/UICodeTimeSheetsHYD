@@ -1,0 +1,27 @@
+
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add New Contact</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-sm-2">Select Contact Type</label>
+            <div class="col-sm-4">
+                <select class="form-control" ng-model="appNewContactType" name="appNewContactType" required="" ng-options="contactType as contactType.contact_type_desc for contactType  in appContactTypes">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h4>Select a user from the below list</h4>
+            <div class="userGrid">
+                <div id="grid1" ui-grid="contactsGrid" ui-grid-pagination ui-grid-selection class="grid"></div>                    
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="addNewContact()">Add User</button>
+    <button class="btn btn-warning" ng-click="cancelContact()">Close</button>
+</div>

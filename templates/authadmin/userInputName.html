@@ -1,0 +1,31 @@
+<form name="forms.userFormTop" role="form" class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-sm-1 input-sm" for="salutation">Salutation:</label>
+        <div class="col-sm-2">
+            <select class="form-control input-sm" id="salutation" ng-model="user.salutation">
+                <option ng-repeat="sal in salutations" value="{{sal.value}}">{{sal.label}}</option>
+            </select>
+        </div>
+            <span ng-class="{ 'has-error' : forms.userFormTop.first_name.$invalid }">
+                <label class="control-label col-sm-1 input-sm" for="firstName">First Name:</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control input-sm" name="first_name" id="firstName" ng-model="user.first_name" required>
+                <span ng-show="forms.userFormTop.first_name.$invalid"
+                      class="help-block">Your first name is required.</span>
+                </div>
+            </span>
+            <span ng-class="{ 'has-error' : forms.userFormTop.last_name.$invalid }">
+                <label class="control-label col-sm-1 input-sm" for="lastName">Last Name:</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control input-sm" name="last_name" id="lastName" placeholder="" ng-model="user.last_name" required>
+                    <span ng-show="forms.userFormTop.last_name.$invalid"
+                          class="help-block">Your last name is required.</span>
+                </div>
+            </span>
+        <label class="control-label col-sm-1 input-sm" for=title">Suffix:</label>
+        <div class="col-sm-1">
+            <input type="text" class="form-control input-sm" name="title" id="title" ng-model="user.title">
+        </div>
+    </div>
+</form>
+

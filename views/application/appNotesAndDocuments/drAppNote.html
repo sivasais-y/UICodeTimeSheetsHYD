@@ -1,0 +1,43 @@
+<div class="note">
+    <div class="row">
+        <div class="col-md-12">
+            <span class="update-details">
+                <i  class="fa fa-user-o" style="margin: 2px 3px"></i>
+                <span>
+                    {{appNDCTRL.note.last_edited_user}} | {{appNDCTRL.note.last_edited_date | date }}
+                </span>
+            </span>
+
+        </div>
+    </div>
+    <div class="row" style="margin-top:5px">
+        <div class="col-md-12">
+            <div class="note-description" style="margin-bottom:10px;">
+                <span id="note-{{appNDCTRL.note.note_guid}}" class="note-text-span" href="#" editable-textarea="appNDCTRL.note.note_text" e-rows="5" e-cols="100"
+                   e-form="textBtnForm"
+                   onbeforesave="appNDCTRL.saveNoteText($data)">
+                    {{appNDCTRL.note.note_text}}
+                  </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <span class="pull-right">
+                <button class="btn btnNotes btn-danger">
+                        <i ng-disable="!appNDCTRL.sadcFlg" class="fa fa-trash" style="margin: 2px 3px" ng-click="appNDCTRL.deleteNote()"></i>
+                </button>
+                <button class="btn btnNotes btn-success">
+                <i ng-disable="!appNDCTRL.sadcFlg" class="fa fa-pencil" style="margin: 2px 3px"
+                   ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible"></i>
+                </button>
+                <button class="btn btnNotes btn-info">
+                <i ng-disable="!appNDCTRL.sadcFlg" class="fa fa-cloud-download" style="margin: 2px 3px"
+                   ng-click="appNDCTRL.downloadPDFNote(appNDCTRL.note.note_guid)"></i> 
+                </button>
+                
+            </span>
+        </div>
+    </div>
+</div>

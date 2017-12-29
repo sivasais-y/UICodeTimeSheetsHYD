@@ -1,0 +1,19 @@
+
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Add User</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Select a user from the below list</h4>
+                <div class="userGrid">
+                    <div id="grid1" ui-grid="usersGrid" ui-grid-pagination ui-grid-selection class="grid"></div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="addUserDetails()">Add User</button>
+            <button class="btn btn-warning" ng-click="userCancel()">Close</button>
+    </div>

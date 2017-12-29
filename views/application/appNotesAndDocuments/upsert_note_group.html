@@ -1,0 +1,75 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{appUNGMC.isNewNoteGroup ? 'New Note Topic' : 'Edit Topic'}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form form-horizontal" role="form" name="upsertNoteGroupForm" novalidate>
+
+                <div class="form-group col-sm-10">
+                    <label class="control-label">Topic</label>
+                    <div class="">
+                        <input type="text" name="groupTitle" class="form-control"
+                               ng-model="appUNGMC.noteGroup.note_group_title" placeholder="Title" required>
+                    </div>
+                    <div class="validation-error" ng-show="(upsertNoteGroupForm.groupTitle.$touched || appUNGMC.submitted) &&
+                                    upsertNoteGroupForm.groupTitle.$error.required">
+                        <p>Please fill this field.</p>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-2" >
+                    <label class="control-label">SADC Only</label>
+                    <div class="">
+                        <input type="checkbox" ng-model="appUNGMC.noteGroup.sadc_flg">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12" ng-if="appUNGMC.isNewNoteGroup">
+                    <label class="control-label">Initial Note</label>
+                    <div class="">
+                        <textarea class="form-control" name="noteText"
+                                  ng-model="appUNGMC.noteGroup.note_text"
+                                  placeholder="Note description goes here"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-12" style="text-align: left">Tags</label>
+
+                    <div class="col-sm-10">
+                        <select class="form-control" name="singleSelect" ng-model="appUNGMC.selectedTag">
+                            <option value="{{tag.tag_desc}}" ng-repeat="tag in appUNGMC.allAvailalbeTags">{{ tag.tag_desc}}</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <button class="btn btn-primary" ng-click="appUNGMC.addNoteGroupTag()">
+                            <i class="fa fa-plus" title="Add tag"></i>
+                        </button>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="validation-error" ng-show="tagsError">
+                        <p>Please select at-least one tag.</p>
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">  
+                    <div class="">
+                        <ul class="list-group" style="box-shadow: none">
+                            <li class="list-group-item" ng-repeat="tag in appUNGMC.noteGroup.tags" style="display: inline-block; position: relative;padding:10px 5px;margin: 2px 4px">
+                                {{tag.tag_desc}}
+                                <button class="btn btn-sm btn-danger pull-right" ng-click="appUNGMC.deleteNoteGroupTag($index)" style="border-radius: 50px;position: absolute;top: -14px;right: 0">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disable="upsertNoteGroupForm.$invalid"
+            ng-click="appUNGMC.save()">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="appUNGMC.cancel()">Cancel</button>
+</div>

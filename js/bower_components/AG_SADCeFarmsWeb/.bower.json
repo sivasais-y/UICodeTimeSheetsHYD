@@ -1,0 +1,39 @@
+{
+  "name": "AG_SADCeFarmsWeb",
+  "authors": [
+    "jrdebruyne"
+  ],
+  "description": "Front End test platform for client side web for AG_SADCeFarms",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-mousewheel": ">=3.0.6",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "angular": "~1.5.9",
+    "angular-resource": "~1.5.9",
+    "angular-ui-router": "^0.3.2",
+    "angular-mocks": "~1.5.9",
+    "angular-ui-grid": "^4.0.2",
+    "angular-sanitize": "~1.5.11",
+    "ui-bootstrap": "angular-ui-bootstrap#^2.4.0",
+    "angular-bootstrap": "^2.4.0",
+    "angular-ui-mask": "^1.8.7",
+    "angular-clipboard": "^1.5.0",
+    "lodash": "3.10.1",
+    "toastr": "2.1.2",
+    "malihu-custom-scrollbar-plugin": "3.1.5"
+  },
+  "_source": "C:\\opt\\webdocs\\AG_SADCeFarmsWeb\\bower.json",
+  "_target": "*",
+  "_originalSource": ".\\bower.json"
+}

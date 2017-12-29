@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h4 class="modal-title" >Manage User</h4>
+</div>
+<div class="modal-body" id="user-edit">
+
+    <div class="row">
+        <!--<div class="col-sm-1"></div>-->
+        <div class="col-sm-12">
+            <div ng-include="'templates/authadmin/userInputName.html'"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <uib-accordion>
+                <div uib-accordion-group class="panel-default" is-open="u_panel_open">
+                    <uib-accordion-heading>
+                        User Information:<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': u_panel_open, 'glyphicon-chevron-right': !u_panel_open}"></i>
+                    </uib-accordion-heading>
+                    <div ng-include="'templates/authadmin/userInputDetails.html'"></div>
+                </div>
+                <div class="row">
+
+                </div>
+
+                <div uib-accordion-group class="panel-default"  is-open="r_panel_open">
+                    <uib-accordion-heading>
+                        Role Information:<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': r_panel_open, 'glyphicon-chevron-right': !r_panel_open}"></i>
+                    </uib-accordion-heading>
+                    <div ng-include="'templates/authadmin/roleManagement.html'"></div>
+                </div>
+            </uib-accordion>
+
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" type="button" ng-click="Submit()" ng-disabled="forms.userFormMain.$invalid || forms.userFormTop.$invalid">Submit</button>
+    <button class="btn btn-warning" type="button" ng-click="Cancel()">Cancel</button>
+</div>
+

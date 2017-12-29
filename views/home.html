@@ -1,0 +1,322 @@
+
+
+<div ng-controller="homeCtrl">
+    <div class="container">
+        <!--        <form style="width:400px;margin: auto">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-success pull-right" onclick="submitForm()">Submit</button>
+                </form>-->
+        <form name="candidate_register">
+            <div class="row row_btm_spcs">
+                <div class="col-sm-6 col-lg-4">
+                    <label for="trust_dropdown">Trust Name</label> <span class="red_star"> *</span>
+                    <select id="selectTrust" class="trust_dropdown form-control">
+                        <option value=""> Select your trust name </option> 
+                        <!--                                        <option id="select_4" value="option3"> Add New </option>-->
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div id="add_trust_field">
+                    <div class="col-sm-6 col-lg-4">
+                        <label for="trust_name">Specify Trust name</label><span class="red_star"> *</span>
+                        <input class="form-control" name="trust_name" value="" id="trust_name" type="text" onblur="trustname(trust_name)" placeholder="Enter your trust name">    
+                        <span class="errmsg"></span> 
+                        <div class="errorMsg"></div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <label for="trust_reg_no">Trust Registration No</label>
+                        <input class="form-control" name="trust_reg_no" value="" id="trust_reg_no" type="text" onblur="trustregno(trust_reg_no)" placeholder="Enter your trust registration number">    
+                        <span class="errmsg"></span> 
+                        <div class="errorMsg"></div>
+                    </div>
+                    <!--<div class="col-sm-6 col-lg-4">
+                                                            <label for="trust_address">Trust Address</label><span class="red_star"> *</span>
+                                                            <textarea class="form-control" name="trust_address" id="trust_address" onblur="trustaddress(trust_address)" placeholder="Enter your Trust Address"> </textarea>
+                                                            <span class="errmsg errmsgs"></span> 
+                                                            <div class="errorMsg"></div>
+                                                            </div>
+                    -->
+                    <div class="col-sm-6 col-lg-4">
+                        <label for="trust_address">Trust Address</label><span class="red_star"> *</span>
+                        <textarea class="form-control" name="trust_address" autocomplete="off" id="trust_address" maxlength="255" onblur="trustaddress(trust_address)" placeholder="Enter your address"></textarea>
+                        <span class="errmsg errmsgs"></span> 
+                        <div class="errorMsg"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="school_name">School Name</label><span class="red_star"> *</span>
+                    <input class="form-control" name="school_name" value="" id="school_name" type="text" maxlength="255" onblur="schoolname(school_name)" placeholder="Enter your school name">    
+                    <span class="errmsg"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="affiliation_id">Affiliation Id</label><span class="red_star"> *</span>
+                    <input class="form-control" name="affiliation_id" value="" autocomplete="off" id="affiliation_id" type="text" maxlength="45" onblur="affiliationid(affiliation_id)" placeholder="Enter your Affiliation Id" >
+                    <span class="errmsg"></span> 
+                    <div id="lastname" class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="school_code">School Code</label><span class="red_star"> *</span>
+                    <input class="form-control" name="school_code" value="" autocomplete="off" id="school_code" type="text" maxlength="45" onblur="schoolcode(school_code)" placeholder="Enter your School Code" >
+                    <span class="errmsg"></span> 
+                    <div id="lastname" class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label for="school_website">School Website</label><span class="red_star"> *</span>
+                    <input class="form-control" name="school_website" value="" autocomplete="off" id="school_website" type="text" onblur="isdom(school_website)" placeholder="Enter your School Website URL">    
+                    <span class="errmsg"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label>Upload Logo</label><span class="red_star"> *</span>
+                    <input class="form-control" type="file" name="photo" id="upload_logo" accept="image/*">
+                    <span class="errmsg"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label for="addressline_one">Address Line 1</label><span class="red_star"> *</span>
+                    <textarea class="form-control" name="addressline_one" id="addressline_one" maxlength="100" onblur="addresslineone(addressline_one)"  placeholder="Enter your address"></textarea>
+                    <span class="errmsg errmsgs"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="addressline_two">Address Line 2</label>
+                    <!--                                    <span class="red_star"> *</span>-->
+                    <textarea class="form-control" name="addressline_two" id="addressline_two" maxlength="100" onblur="addresslinetwo(addressline_two)" autocomplete="yes" placeholder="Enter your address"></textarea>
+                    <span class="errmsg"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="locationarea_dropdown">Location / Area</label> <span class="red_star"> *</span>
+                    <select id="selectLocation" class="locationarea_dropdown form-control">
+                        <option value="">Select your location / area</option> 
+                        <option value="option1"> Option 1 </option>
+                        <option value="option2"> Option 2 </option>
+                        <option value="option3"> Option 3 </option>
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="country_dropdown">Country</label> <span class="red_star"> *</span>
+                    <select id="selectCountry" name="selectCountry" class="country_dropdown form-control" >
+                        <option value="">Select your country</option> 
+                        <!--                                        <option value="option1"> Option 1 </option>
+                                                                <option value="option2"> Option 2 </option>
+                                                                <option value="option3"> Option 3 </option>-->
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="state_dropdown">State</label> <span class="red_star"> *</span>
+                    <select id="selectState" class="state_dropdown form-control">
+                        <option value="">Select your State</option> 
+                        <!--                                        <option value="option1"> Option 1 </option>
+                                                                <option value="option2"> Option 2 </option>
+                                                                <option value="option3"> Option 3 </option>-->
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="districtcity_dropdown">District / City</label> <span class="red_star"> *</span>
+                    <select id="selectDistrict" class="districtcity_dropdown form-control">
+                        <option value="">Select your District / City</option> 
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="thaluka_dropdown"> Thaluka </label> <span class="red_star"> *</span>
+                    <select id="selectTehsil" class="thaluka_dropdown form-control">
+                        <option value="">Select your Thaluka</option>                           
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="hobli_dropdown"> Hobli </label> 
+                    <!--                                    <span class="red_star"> *</span>-->
+                    <select id="selectSubDiv" class="hobli_dropdown form-control">
+                        <option value="">Select your Hobli</option>                                
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="villagearea_dropdown"> Village / Area </label> 
+                    <!--                                    <span class="red_star"> *</span>-->
+                    <select id="selectVillage" class="villagearea_dropdown form-control">
+                        <option value="">Select your Village / Area</option>                               
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="pin_code">Pincode</label><span class="red_star"> *</span>
+                    <input class="form-control" name="pin_code" value="" id="pin_code" autocomplete="off" maxlength="6" type="text" onblur="ispincode(pin_code)" placeholder="Enter your area pincode">    
+                    <div class="errorMsg"></div>
+                    <span class="errmsg"></span>
+                    <div id="uploadFile_div"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="contact">Contact number 1</label><span class="red_star"> *</span>
+                    <input class="form-control" name="contact" value="" id="contact" autocomplete="off" maxlength="13" type="text" onblur="contactno(contact)" placeholder="Enter your contact number">    
+                    <div class="errorMsg"></div>
+                    <span class="errmsg"></span>
+                    <div id="uploadFile_div"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="phone_num">Contact number 2</label>
+                    <!--                                    <span class="red_star"> *</span>-->
+                    <input class="form-control" name="phone_num" value="" id="phone_num" autocomplete="off" maxlength="13" type="text" onblur="mobileno(phone_num)" placeholder="Enter your contact number">    
+                    <div class="errorMsg"></div>
+                    <span class="errmsg"></span>
+                    <div id="uploadFile_div"></div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <label for="phone_numbe">Mobile number</label><span class="red_star"> *</span>
+                    <input class="form-control" name="phone_numbe" value="" id="phone_numbe" autocomplete="off" maxlength="10" type="text" onblur="mobileno(phone_numbe)" placeholder="Enter your mobile number">    
+                    <div class="errorMsg"></div>
+                    <div id="uploadFile_div"></div>
+                    <span class="errmsg"></span> 
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label for="email_address">School Email id</label><span class="red_star"> *</span>
+                    <input class="form-control" name="email_address" value="" autocomplete="off" id="email_address" type="text" onblur="isEmail(email_address)" placeholder="Enter your active email id">    
+                    <span class="errmsg"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label for="education_dropdown"> Education Board Name </label> <span class="red_star"> *</span>
+                    <select id="selectBoard" class="education_dropdown form-control">
+                        <option value="">Select Education Board Name</option>                                  
+                    </select>
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label for="tags">Total Number of Students </label><span class="red_star"> *</span>
+                    <input id="tot_no_students" class="form-control" name="tags" value="" autocomplete="on" type="text" onblur="tags(tot_students)" placeholder="Enter your total no of Students">
+                    <span class="errmsg"></span>
+                    <div class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label for="school_person">School Contact Person Name</label><span class="red_star"> *</span>
+                    <input class="form-control" name="school_person" value="" id="school_person" type="text" maxlength="50" onblur="school_person(school_person_name)" placeholder="Enter School Contact Person Name">    
+                    <span class="errmsg"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <label for="email_address_school">School Contact Person Email id</label><span class="red_star"> *</span>
+                    <input class="form-control" name="email_address_school" value="" autocomplete="off" id="email_address_school" type="text" onblur="isEmail(email_address_school)" placeholder="Enter School Contact Person email id">    
+                    <span class="errmsg"></span> 
+                    <div class="errorMsg"></div>
+                </div>
+
+                <div class="col-sm-6 col-lg-12">
+                    <label for="school_gps">School GPS</label><span class="red_star"> *</span>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                            <!--<label for="latitude">latitude</label><span class="red_star"> *</span>-->
+                            <input class="form-control" name="latitude" value="" autocomplete="off" id="latitude" type="text" onblur="islatitude(latitude)" placeholder="Please enter the latitude value" maxlength="5" onkeypress="return validateFloatKeyPress(this, event);">    
+                            <span class="errmsg"></span> 
+                            <div class="errorMsg"></div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <!--<label for="longitude">longitude</label><span class="red_star"> *</span>-->
+                            <input class="form-control" name="longitude" value="" autocomplete="off" id="longitude" type="text" onblur="islongitude(longitude)" placeholder="Please enter the longitude value" maxlength="5" onkeypress="return validateFloatKeyPress(this, event);">    
+                            <span class="errmsg"></span> 
+                            <div class="errorMsg"></div>
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-12 border_btn_tps"></div>
+            <input id="userType" name="user_type" type="hidden" value="1">                               
+            <div class="row school_registration_form_Submit">
+                <div class="col-sm-12 col-lg-12"><button class="btn btn-default reg_btn_change_color" onclick="submitForm()" id="reg_school"> <i class="fa fa-paper-plane" aria-hidden="true">&nbsp;</i> Submit</button></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function submitForm(){
+//        var formData = {
+//        'eMail': $('#exampleInputEmail1').val(),
+//                'password': $('#exampleInputPassword1').val()
+//        };
+
+        var formData = JSON.stringify({
+
+        "requestType":"create",
+                "schoolDetails":{
+                "id": "s3",
+                        "trustId":$('#selectTrust').val(),
+                        "name":$('#trust_name').val(),
+                        "affiliationId":$('#affiliation_id').val(),
+                        "registrationCode":"56",
+                        "addressLine1":"a1",
+                        "addressLine2":"a2",
+                        "location":"sd",
+                        "country":"country",
+                        "state":"state",
+                        "district":"d",
+                        "tehsil":"te",
+                        "pincode":"123",
+                        "contactNo1":"3333",
+                        "mobileNo":"456",
+                        "emailId":"s@s.com",
+                        "totalNoOfStudents":"8",
+                        "contactPersonName":"admin3",
+                        "contactPersonEmailId":"admin3@admin.com",
+                        "gpsLatitude":"12.12",
+                        "gpsLongitude":"12.11",
+                        "boardDetails":[
+                        {
+                        "id": "3"
+                        },
+                        {
+                        "id": "4"
+                        }
+                        ]
+
+
+                }
+        });
+        var authorizationToken = localStorage.getItem('authToken');
+        $.ajax({
+        url: '',
+                method: 'POST',
+                beforeSend: function(request) {
+                request.setRequestHeader("Authorization", authorizationToken);
+                },
+                data: formData,
+                success: function(res){
+                alert(res);
+                },
+                error: function(err){
+                alert(err);
+                }
+        });
+        }
+    </script>
+</div>

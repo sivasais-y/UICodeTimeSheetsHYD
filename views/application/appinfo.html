@@ -1,0 +1,84 @@
+<div class="containers appInfo" id="applicationInfoDIV" >
+    <div class="noError" ng-if="!IDfailed">
+        <h3>{{appInfo.program_type}}</h3>
+        <h5><u>Application ID:</u> {{appInfo.application_id}}</h5>
+        <hr />
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><b>Info</b></h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><b>Application Category:</b> {{appInfo.application_category}}</li>
+                    <li class="list-group-item"><b>Application Type:</b> {{appInfo.application_type}}</li>
+                    <li class="list-group-item"><b>Description:</b> </li>
+                    <li class="list-group-item"><b>Jurisdiction:</b> {{appInfo.municipality}}</li>
+                    <li class="list-group-item"><b>Phase:</b> {{appInfo.application_phase}}</li>
+                    <li class="list-group-item"><b>Initiated On:</b> {{appInfo.application_date}}</li>
+                    <li class="list-group-item"><b>Initiated By:</b> {{appInfo.created_user_guid_name}}</li>
+                    <li class="list-group-item" style="cursor: pointer" ng-click="redirectFarm(appInfo.farm_id)">
+                        <b>Farm:</b> {{appInfo.farm_id}} / {{appInfo.farm_name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><b>Status</b></h3>
+            </div>
+            <div class="panel-body table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Task ID</th>
+                            <th>Task</th>
+                            <th>Status</th>
+                            <th>Completed At</th>
+                            <th>Completed By</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="task in appInfo.completed_tasks">
+                            <td><span class="badge" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-plus"></i></span></td>
+                            <td>{{task.task_id}}</td>
+                            <td>{{task.task_name}}</td>
+                            <td>{{task.task_status}}</td>
+                            <td>{{task.task_date}}</td>
+                            <td>{{task.completed_by}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    ...
+                </div>
+            </div>
+        </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#applicationInfoDIV').mCustomScrollbar({
+                'theme': 'minimal-dark'
+            });
+        });
+    </script>
+
+    </div>
+<div class="ifError" ng-if="IDfailed">
+    <div class="col-sm-12 alert-warnings" id="errorDiv">
+            <img style="margin: auto" class="img-responsive" src="../app/images/error-404.png" alt="Error Page"/>
+            <h4 class="text-center alert alert-warning">
+                <span class="">Application ID entered is Invalid..</span>
+                <span class="">Please enter valid ID and Try again..</span>
+            </h4>
+        </div>
+    </div>
+
+</div>

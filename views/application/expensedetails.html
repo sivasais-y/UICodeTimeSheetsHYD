@@ -1,0 +1,98 @@
+<div class="row">
+
+    <div class="row">
+      <div class="col-md-8">
+        <button type="button" ui-sref="app.application.expenses" class="btn btn-primary pull-left">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            Back to Expenses
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-primary pull-right"  ng-click="EditExpense()">
+          Edit Expense <span class="glyphicon glyphicon-edit"></span>
+        </button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12 pull-left">
+            <h4 align="left"> Expense details</h4>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-md-4 col-lg-4 col-sm-4">
+            <form class="form-horizontal">
+                <div class="row">
+                  <div class="col-md-12">
+                      <label for="type" class="control-label">Expense Type:</label>
+                      <span id="type" class="ravicheckbox" ng-bind="selectedexpensedetails.expense_type"></span>
+                      <br>
+                      <label for="amount" class="control-label">Expense Amount:</label>
+                      <span  id="amount" class="ravicheckbox" ng-bind="selectedexpensedetails.expense_amount | currency"></span>
+                      <br>
+                      <label for="status" class="control-label">Status:</label>
+                      <span  id="status" class="ravicheckbox" ng-bind="selectedexpensedetails.expense_status_desc"></span>
+                      <br>
+                      <label for="application" class="control-label">Application:</label>
+                      <span id="application" class="ravicheckbox" ng-bind="selectedexpensedetails.application_guid"></span>
+                      <br>
+                      <label for="date" class="control-label">Date:</label>
+                      <span id="date" class="ravicheckbox" ng-bind="selectedexpensedetails.created_date  | date:'longDate'"></span>
+                  </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-sm-4">
+            <form class="form-horizontal">
+                <div class="row">
+                  <div class="col-md-12">
+                      <label for="desc" class="control-label">Description:</label>
+                      <span type="text" id="desc" class="ravicheckbox" ng-bind="selectedexpensedetails.expense_description"></span>
+                      <br>
+                      <label for="farmid" class="control-label">Farm ID:</label>
+                      <span type="text" id="farmid" class="ravicheckbox" ng-bind="selectedexpensedetails.farm_id"></span>
+                      <br>
+                      <label for="farmname" class="control-label">Farm Name:</label>
+                      <span type="text" id="farmname" class="ravicheckbox" ng-bind="selectedexpensedetails.farm_name"></span>
+                      <br>
+                      <label for="appid" class="control-label">Application ID:</label>
+                      <span type="text" id="appid" class="ravicheckbox" ng-bind="selectedexpensedetails.application_id"></span>
+                  </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 bs-grid-border">
+                <img src="images/loading.gif" class="loading-icon" ng-show="loading_data" />
+                <h4>Cost Share Breakdown</h4>
+                <div ui-grid="gridExpenseCostshare" class="fundsGrid" ui-grid-save-state ui-grid-selection ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination ui-grid-pinning ui-grid-expandable></div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <h4>Payments</h4>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 bs-grid-border">
+                <img src="images/loading.gif" class="loading-icon" ng-show="loading_data" />
+                <div ui-grid="gridExpensePayments" class="fundsGrid" ui-grid-save-state ui-grid-selection ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination ui-grid-pinning ui-grid-expandable></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

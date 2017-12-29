@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet">        
+        <link rel="stylesheet" href="css/bootstrap-social.css">
+        <link rel="stylesheet" href="js/bower_components/angular-ui-grid/ui-grid.css">
+        <link rel="stylesheet" href="js/bower_components/toastr/toastr.min.css">
+        <link rel="stylesheet" href="css/gridtest.css">
+        <link rel="stylesheet" href="css/mystyles.css">
+        <link rel="stylesheet" href="css/project.css">
+        <link rel="stylesheet" href="css/appStyles.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        
+    </head>
+
+    <body ng-app="myApp">
+        <div class="menuH">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Brand</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active" ui-sref-active="active"><a class="nav-link" ui-sref="home">Home</a></li>
+                                <li ui-sref-active="active"><a class="nav-link" ui-sref="practice">Practice</a></li>
+                                <li ui-sref-active="active"><a class="nav-link" ui-sref="toDoItems">App ToDoItems</a></li>
+                                <li ui-sref-active="active"><a class="nav-link" ui-sref="notes">App Notes</a></li>
+                                <li ui-sref-active="active"><a class="nav-link" ui-sref="documents">App Documents</a></li>
+                                <li ui-sref-active="active"><a class="nav-link" ui-sref="scores">App Scores</a></li>
+                                <li ui-sref-active="active"><a class="nav-link" ui-sref="timeSheets">Time Sheets</a></li>
+                                <li ui-sref-active="active"><a class="nav-link" ui-sref="timeSheetDetails">Time Sheet Details</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+        <div class="contentWrapper">
+            <div class="container-fluid">
+                <ui-view></ui-view>
+            </div>
+        </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="js/jquery-3.2.1.min.js" ></script>
+        <script src="js/angular.js"></script>
+        <script src="js/angular-ui-router.js"></script>
+        <script src="js/angular-sanitize.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-2.3.1.min.js"></script>
+        <script src="js/underscore.js"></script>
+        <script src="js/bower_components/angular-ui-grid/ui-grid.js"></script>
+        <script src="js/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="js/bower_components/toastr/toastr.min.js"></script>
+
+        <script src="lib/app.js"></script>
+        <script src="lib/common_services.js"></script>
+        <script src="lib/controllers/indexCtrl.js"></script>
+        <script src="lib/controllers/practiceCtrl.js"></script>
+        <script src="lib/controllers/homeCtrl.js"></script>
+        <script src="lib/controllers/appdashboard/controllers/AppToDoItemsController.js"></script>
+        <script src="lib/controllers/appdashboard/controllers/AppNotesDocsController.js"></script>
+        <script src="lib/controllers/appdashboard/controllers/AppDocsController.js"></script>
+        <script src="lib/controllers/appdashboard/controllers/AppScoresController.js"></script>
+        <script src="lib/controllers/appdashboard/services/applicationservices.js"></script>
+        <script src="lib/controllers/timesheets/controllers/AppTimeSheetsController.js"></script>
+        <script src="lib/controllers/timesheets/controllers/AppTimeSheetDetailsController.js"></script>
+        <script src="lib/controllers/timesheets/controllers/AppEditTimeSheetController.js"></script>
+        <script src="lib/controllers/timesheets/services/timeSheetServices.js"></script>
+        <script src="lib/services/indexService.js"></script>
+        <script src="lib/services/practiceServices.js"></script>
+    </body>
+</html>

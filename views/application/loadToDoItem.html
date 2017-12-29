@@ -1,0 +1,17 @@
+<div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Load ToDo List</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+
+        <div class="row">
+            <div class="col-md-12">
+                <select class="form-controls col-sm-6 col-sm-offset-3" ng-options='loadToDoList as loadToDoList.todo_list_title for loadToDoList in loadToDoData track by loadToDoList.todo_list_guid' ng-model="loadToDo">
+                    
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="loadSelectedToDo()">Load ToDo List</button>
+            <button class="btn btn-warning" ng-click="loadCancel()">Cancel</button>
+    </div>

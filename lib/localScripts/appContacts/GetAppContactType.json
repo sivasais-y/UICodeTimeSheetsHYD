@@ -1,0 +1,65 @@
+[
+    {
+        "contact_type_desc": "Appraiser"
+    },
+    {
+        "contact_type_desc": "Appraiser 1"
+    },
+    {
+        "contact_type_desc": "Appraiser 2"
+    },
+    {
+        "contact_type_desc": "Bid Appraiser"
+    },
+    {
+        "contact_type_desc": "Bid Surveyor"
+    },
+    {
+        "contact_type_desc": "Bid Title Company"
+    },
+    {
+        "contact_type_desc": "Contract Purchaser"
+    },
+    {
+        "contact_type_desc": "Easement Holder"
+    },
+    {
+        "contact_type_desc": "Farmer"
+    },
+    {
+        "contact_type_desc": "Landowner"
+    },
+    {
+        "contact_type_desc": "Landowner Representative"
+    },
+    {
+        "contact_type_desc": "Mediator"
+    },
+    {
+        "contact_type_desc": "Neighbor"
+    },
+    {
+        "contact_type_desc": "Primary Contact"
+    },
+    {
+        "contact_type_desc": "Program Partner"
+    },
+    {
+        "contact_type_desc": "Project Manager"
+    },
+    {
+        "contact_type_desc": "Review Appraiser"
+    },
+    {
+        "contact_type_desc": "Site Visit Contact"
+    },
+    {
+        "contact_type_desc": "Surveyor"
+    },
+    {
+        "contact_type_desc": "Title Company"
+    },
+    {
+        "contact_type_desc": "Township Official"
+    }
+]

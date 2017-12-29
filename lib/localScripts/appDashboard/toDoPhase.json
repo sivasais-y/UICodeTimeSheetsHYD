@@ -1,0 +1,10 @@
+[{
+        "application_phase_guid": "15ab05b7-1492-45ba-96aa-00bcc235d85c",
+        "application_phase_name": "Initial Phase",
+        "phase_seq": 1
+    },
+    {
+        "application_phase_guid": "7f436194-0704-462d-bb6e-d63a1b32a6a2",
+        "application_phase_name": "Complete Questionnaire",
+        "phase_seq": 2
+    }]

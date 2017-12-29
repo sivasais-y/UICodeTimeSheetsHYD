@@ -1,0 +1,200 @@
+<div class="containers" id="applicationFormDIV">
+    <div class="noError" ng-if="!IDfailed">
+        <div class="col-sm-12 appIntro">
+            <h2>{{appTitle}}</h2>
+            <p class="alert alert-info" ng-bind-html="appIntro"></p>
+        </div>
+        <div class="col-sm-12" id="appFormSections">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default" ng-repeat="divSection in appForm">
+                    <div class="panel-heading form-section" role="tab" id="heading{{$index}}">
+                        <a data-parent="#accordion" onclick='showPanel(this);' data-target='#collapse{{$index}}'>
+                            <h4 class="panel-title">
+                                {{divSection.question_section_title}}
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="collapse{{$index}}" sectionGUID="{{divSection.question_section_guid}}" class="panel-collapse {{sectionClass}} collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
+                        <div class="panel-body">
+                            <div class='section_help' ng-if='divSection.question_section_help'>{{divSection.question_section_help}}</div>
+                            <div class="innerSections" ng-repeat="question in divSection.questions">
+                                <input type="hidden" id='quesId-{{question.question_id}}' data-questionIndex='{{$index}}' data-sectionIndex='{{$parent.$index}}'>
+                                <div class="questionInfo required-{{question.required}}">
+                                    <h4 ng-if="question.question_heading"><u>{{question.question_heading}}</u></h4>
+                                    <div class="queSectionInfo" ng-if="question.question_text">
+                                        <b>{{question.question_text}}</b>
+                                        <span class="badge" ng-if="question.question_help_text"
+                                              ng-click='showHelpInfo($event)'>i</span>
+                                        <div class="showOnClick alert alert-warning" style="display: none;"
+                                             ng-bind-html="question.question_help_text"></div>
+                                    </div>
+                                </div>
+                                <div class="questionFields required-{{question.required}}">
+
+                                    <div class="row inputFields" ng-if="question.question_type == 'InputForm'">
+                                        <div class="" ng-repeat="field in question.input">
+                                            <div class="form-group col-sm-6 required-{{field.required}}">
+                                                <label class="control-label" for='{{field.fieldname}}'>{{field.fieldname}} :</label>
+                                                <div style="position:relative">
+                                                    <span class='inputPrefix' ng-if='field.fieldid=="phone" || field.fieldid=="fax"'>+1</span>
+                                                    <input type='{{field.fieldtype}}' maxlength="{{field.fieldsize}}"
+                                                           ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['input'][field.fieldid]"
+                                                           class="form-control" ng-keypress='checkValid($event)' id='{{field.fieldid}}' placeholder='Enter {{field.fieldname}}'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row singleSelect" ng-if="question.question_type == 'SingleSelect'">
+                                        <div class="" ng-repeat="field in question.input">
+                                            <div class="form-group col-sm-1 required-{{question.required}}">
+                                                <label class="radio-inline">
+                                                    <input type="radio" ng-required="!formData[divSection.question_section_guid][question.question_guid][question.question_id]['input']"
+                                                           ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['input']"
+                                                           value="{{field}}"> {{field}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row MultiSelect" ng-if="question.question_type == 'MultipleSelect'">
+                                        <div class="" ng-repeat="field in question.input">
+                                            <div class="form-group col-sm-4 required-{{question.required}}">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['input'][$index]"
+                                                           ng-true-value="'{{field.replace('\'', '\\\'')}}'" value="{{field}}"> {{field}}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row TextArea" ng-if="question.question_type == 'TextInput'">
+                                        <div class="form-group col-sm-12 required-{{question.required}}">
+                                            <textarea class="form-control"ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['input']"
+                                                      rows="5" style="max-width: 100%"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row tableFixed" ng-if="question.question_type == 'TableFixed' || question.question_type == 'TableVariable'">
+                                        <div class='col-sm-12 required-{{question.required}}'>
+                                            <table id="tableId{{question.question_id}}" class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th class='text-center' ng-repeat='column in question.input.columns'>
+                                                            {{column.name}}
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr onclick="selectTR(this)" ng-repeat='row in question.input.data track by $index'
+                                                        ng-init="formData[divSection.question_section_guid][question.question_guid][question.question_id]['input'] = []">
+                                                        <td ng-repeat='column in question.input.columns'>
+                                                            <input type="hidden" class="tblRowIndex" value="{{$parent.$index}}">
+                                                            <input type='{{column.type}}' tabindex='{{tabindex}}' class="form-control disabled-{{column.editable}}"
+                                                                   ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['input'][$parent.$index][column.id]"
+                                                                   ng-init="formData[divSection.question_section_guid][question.question_guid][question.question_id]['input'][$parent.$index][column.id]=row[column.id];tabindex=column.editable?1:-1"
+                                                                   id='{{column.id}}[{{$parent.$index}}][{{$index}}]' value='{{row[column.id]}}'>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                           <button class="btn btn-primary" ng-click="addRow(question,question.input.data)" ng-if="question.question_type == 'TableVariable'">Add Row</button>
+                                            <button class="btn btn-danger" ng-click="deleteRow(question,'tableId'+question.question_id)" ng-if="question.question_type == 'TableVariable'">Delete Row</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dependent Questions -->
+                                    <div class="dependentQuestion" ng-show='formData[divSection.question_section_guid][question.question_guid][question.question_id]["input"] == "Yes"' ng-repeat="depd_que in question.dependent_questions">
+                                        <label class="control-label">{{depd_que.question_text}}</label>
+
+                                        <div class="inputFields" ng-if="depd_que.question_type == 'InputForm'">
+                                            <div class=" required-{{depd_que.required}}" ng-repeat="depd_field in depd_que.input">
+                                                <div class="form-group col-sm-6">
+                                                    <label for='{{depd_field.fieldname}}'>{{depd_field.fieldname}} :</label>
+                                                    <input type='{{depd_field.fieldtype}}' required='{{depd_field.required}}' ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['dependent_question'][depd_que.question_guid][field.fieldid]" class="form-control" id='{{depd_field.fieldid}}' placeholder='{{depd_field.fieldname}}'>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="singleSelect" ng-if="depd_que.question_type == 'SingleSelect'">
+                                            <div class=" required-{{depd_que.required}}" ng-repeat="depd_field in depd_que.input">
+                                                <div class="form-group col-sm-1">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['dependent_question'][depd_que.question_guid]['input']"  value="{{depd_field}}"> {{depd_field}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="MultiSelect" ng-if="depd_que.question_type == 'MultipleSelect'">
+                                            <div class=" required-{{depd_que.required}}" ng-repeat="field in depd_que.input">
+                                                <div class="form-group col-sm-4">
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['dependent_question'][depd_que.question_guid]['input']" ng-true-value="'{{depd_field.replace('\'', '\\\'')}}'"  value="{{depd_field}}"> {{depd_field}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="TextArea" ng-if="depd_que.question_type == 'TextInput' || depd_que.question_type == 'TextArea'">
+                                            <div class="form-group required-{{depd_que.required}} col-sm-12">
+                                                <textarea ng-model="formData[divSection.question_section_guid][question.question_guid][question.question_id]['dependent_question'][depd_que.question_guid]['input']"  class="form-control" rows="5" style="max-width: 100%"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="fileinput fileinput-new" data-provides="fileinput" ng-if="depd_que.allow_uploads">
+                                            <input type="file" multiple fileread="formData[divSection.question_section_guid][question.question_guid][question.question_id]['dependent_question'][depd_que.question_guid]['docs']" /></span>
+                                            <span class="fileinput-filename"></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- File Upload -->
+                                    <div class="fileinput fileinput-new" data-provides="fileinput" ng-if="question.allow_uploads">
+                                        <input type="file" multiple fileread="formData[divSection.question_section_guid][question.question_guid][question.question_id]['docs']" /></span>
+                                        <span class="fileinput-filename"></span>
+                                    </div>
+                                    <hr style="float:left;width:100%"/>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <button class="btn btn-success" ng-click="submitForm(divSection.question_section_guid)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+                            setTimeout(function() {
+                                $('#collapse0').addClass('in');
+                                $('#heading0').removeClass('sectionDisabled');
+                            }, 1000);
+
+
+                            $(document).ready(function() {
+                                $('input.disabled-false').attr('readonly', 'true');
+                                $('#applicationFormDIV').mCustomScrollbar({
+                                    'theme': 'minimal-dark'
+                                });
+                            });
+
+                             function selectTR(ele){
+                                if(!$(event.target).is('input')){
+                                    $(ele).toggleClass('selected');
+                                }
+                            }
+
+                            function showPanel(val) {
+                                var parent = $(val).attr('data-parent');
+                                var target = $(val).attr('data-target');
+
+                                $(parent).find('.panel-collapse.collapse').removeClass('in');
+                                $(parent).find(target).toggleClass('in');
+                                console.log(parent, target);
+                            }
+
+        </script>
+    </div>
+    <div class="ifError" ng-if="IDfailed">
+        <div class="col-sm-12 alert-warnings" id="errorDiv">
+            <img style="margin: auto" class="img-responsive" src="../app/images/error-404.png" alt="Error Page"/>
+            <h4 class="text-center alert alert-warning">
+                <span class="">Application ID entered is Invalid..</span>
+                <span class="">Please enter valid ID and Try again..</span>
+            </h4>
+        </div>
+    </div>
+</div>

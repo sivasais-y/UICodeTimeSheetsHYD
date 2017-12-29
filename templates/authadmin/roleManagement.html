@@ -1,0 +1,130 @@
+<!--Begin Role Form-->
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-xs btn-default" ng-show="roleFilter.partner"
+                    ng-click="clearPartnerFilter()" uib-tooltip="Clear Filter"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <label class="control-label input-sm" for="partner_field">Filter by Partner:</label>
+            <select class="form-control input-sm" id="partner_field" ng-model="roleFilter.partner">
+                <option value="">Select a Partner</option>
+                <option ng-repeat="partner in rolePartners" value="{{partner.partner_guid}}">{{partner.partner_name}}</option>
+            </select>
+
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-xs btn-default" ng-show="roleFilter.county"
+                    ng-click="clearCountyFilter()" uib-tooltip="Clear Filter"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <label class="control-label input-sm" for="county">Filter by County:</label>
+            <select class="form-control input-sm" id="county" ng-model="roleFilter.county">
+                <option value="">Select a County</option>
+                <option ng-repeat="county in roleCounties" value="{{county.county_code}}">{{county.county_label}}</option>
+            </select>
+
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-xs btn-default" ng-show="roleFilter.municipality"
+                    ng-click="clearMunicipalityFilter()" uib-tooltip="Clear Filter"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <label class="control-label input-sm" for="muni">Filter by Municipality:</label>
+            <select class="form-control input-sm" id="muni" ng-model="roleFilter.municipality">
+                <option value="">Select a Municipality</option>
+                <option ng-repeat="muni in roleMunicipalities" value="{{muni.muni_code}}">{{muni.name}}, {{muni.county}} County</option>
+            </select>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-xs btn-default" ng-show="roleFilter.tier"
+                    ng-click="clearTierFilter()" uib-tooltip="Clear Filter"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <label class="control-label input-sm" for="tier">Filter by Tier:</label>
+            <select class="form-control input-sm" id="tier" ng-model="roleFilter.tier">
+                <option value="">Select a Tier</option>
+                <option ng-repeat="tier in roleTiers" value="{{tier.tier_desc}}">{{tier.tier_desc}}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-xs btn-default" ng-show="roleFilter.group"
+                    ng-click="clearGroupFilter()" uib-tooltip="Clear Filter"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <label class="control-label input-sm" for="group">Filter by Group:</label>
+            <select class="form-control input-sm" id="group" ng-model="roleFilter.group">
+                <option value="">Select a Group</option>
+                <option ng-repeat="group in roleGroups" value="{{group.tier_group_desc}}">{{group.tier_group_desc}}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-xs btn-default" ng-show="roleFilter.subgroup"
+                    ng-click="clearSubgroupFilter()" uib-tooltip="Clear Filter"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <label class="control-label input-sm" for="subgroup">Filter by Subgroup:</label>
+            <select class="form-control input-sm" id="subgroup" ng-model="roleFilter.subgroup">
+                <option value="">Select a Subgroup</option>
+                <option ng-repeat="subgroup in roleSubgroups" value="{{subgroup.tier_subgroup_desc}}">{{subgroup.tier_subgroup_desc}}</option>
+            </select>
+
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="clearFilter" ng-click="clearFilter()" class="btn btn-primary btn-sm">Clear All Filters</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <label class="control-label input-sm" for="multiselect">Available Roles:</label>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <select name="from" id="multiselect" class="form-control input-sm" size="5" multiple="multiple" ng-model="roleSelection.rolesFrom">
+                <option ng-repeat="role in roles | get_unselected | role_filter:roleFilter" value="{{role.auth_role_guid}}" >{{role.auth_role_name}}</option>
+            </select>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="multiselect_downAll" ng-click="selectAll()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-down"></i><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="multiselect_downSelected" ng-click="selectLimited()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-down"></i></button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="multiselect_upSelected" ng-click="unselectLimited()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-up"></i></button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" id="multiselect_upAll" ng-click="unselectAll()" class="btn btn-block btn-sm"><i class="glyphicon glyphicon-arrow-up"></i><i class="glyphicon glyphicon-arrow-up"></i></button>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <label class="control-label input-sm" for="multiselect_to">Selected Roles:</label>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <select name="from" id="multiselect_to" class="form-control input-sm" size="5" multiple="multiple" ng-model="roleSelection.rolesTo">
+                <option ng-repeat="selectedRole in roles | get_selected" value="{{selectedRole.auth_role_guid}}" >{{selectedRole.auth_role_name}}</option>
+            </select>
+
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+<!--End Role Form-->

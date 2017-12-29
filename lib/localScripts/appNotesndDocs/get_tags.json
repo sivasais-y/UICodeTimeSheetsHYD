@@ -1,0 +1,170 @@
+[
+    {
+        "tag_desc": "Appraisal - Public Water not in service area",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - Sale of Subject consideration",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - Access Constraints",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - contamination soil",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - contamination ground water",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - ",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - major subdivision approval not considered",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - minor subdivision approval considered",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - major subdivision approval considered",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - hypothetical subdivision",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - subdivision method",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Appraisal - minor subdivision approval not considered",
+        "tag_category": "Appraisal"
+    },
+    {
+        "tag_desc": "Stewardship - Biomass",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Personal Wireless (cell tower)",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Division of Premises",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Sold Premises",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Agricultural Labor Unit",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - RDSO (Residual Dwelling Site Opportunity)",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Federally Funded",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Driveway Request",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Driveway Request Approved",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Driveway Request Denied",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Septic",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - House Replacement",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - County",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Impervious Cover Limit",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Review of Activities",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - RME (Rural Microenterprise)",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Heritage/Historic Preservation Easement",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Wind",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Solar",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Inspector Name",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Easement Holder",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Resolution Conditions Precedent",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Concern",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - DOE Violation Resolved",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - DOE Violation Outstanding",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Erosion Issue unresolved",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Erosion Issue resolved",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Conservation Plan Complete",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Conservation Plan Incomplete",
+        "tag_category": "Stewardship"
+    },
+    {
+        "tag_desc": "Stewardship - Conservation Plan Implemented",
+        "tag_category": "Stewardship"
+    }
+]

@@ -1,0 +1,19 @@
+{
+        "todo_list_title": "Acquisition Highlands Checklist",
+        "todo_list_desc": "This is a template to do list for all necessary todo items associated with Highlands planning area acquisitions",
+        "application_type_guid": "291025bb-0c97-4994-8e1f-9f2187035e4d",
+        "todo_list_json": [
+            {
+                "todo_item_title": "Notify the Pinelands Commission",
+                "todo_item_desc": "Notify the Pinelands Commission of new acquisition activity"
+            },
+            {
+                "todo_item_title": "Review location of Planning Zones",
+                "todo_item_desc": "Review the farm location to ensure it is within allowances of special planning zones"
+            },
+            {
+                "todo_item_title": "Upload Pinelands Forms",
+                "todo_item_desc": "Complete and upload all necessary Pinelands area forms associated with the farm"
+            }
+        ]
+    }

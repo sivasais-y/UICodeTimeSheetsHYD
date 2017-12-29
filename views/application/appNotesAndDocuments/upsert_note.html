@@ -1,0 +1,32 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add New Note</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+    	<div class="col-md-12">
+    		<form class="form form-horizontal" role="form" name="upsertNoteForm" novalidate>
+				<div class="form-group">
+                    <div class="row">
+                            <label class="control-label col-md-3">Note Description</label>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <textarea class="form-control" name="noteText"
+                                       ng-model="appUNMCTRL.note.note_text"
+                                          placeholder="Card description goes here"></textarea>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6 validation-error"
+                            ng-show="(upsertNoteForm.noteText.$touched || appUNMCTRL.submitted) &&
+                            upsertNoteForm.noteText.$error.required">
+                            <p>Please fill this field.</p>
+                        </div>
+                    </div>
+                    </div>
+    		</form>
+    	</div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="appUNMCTRL.save()">Save Note</button>
+    <button class="btn btn-warning" type="button" ng-click="appUNMCTRL.cancel()">Cancel</button>
+</div>

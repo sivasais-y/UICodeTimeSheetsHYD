@@ -1,0 +1,242 @@
+[
+    {"todo_item_guid": "957d5a84-7b2f-4576-9ae7-89ffbef18665",
+   "todo_item_title": "Notify the Pinelands Commission",
+   "todo_item_desc": "Notify the Pinelands Commission of new acquisition activity",
+   "todo_item_due_date": "2017-10-08",
+   "todo_item_conditional_flg": false,
+   "todo_item_completed_flg": false,
+   "farm_key": null,
+   "application_key": 1,
+   "farm_id": "",
+   "application_id": "A-203-000001",
+   "application_phase_guid": null,
+   "application_phase": null,
+   "created_user_guid": null,
+   "created_date": "2017-08-31T12:07:48.883000Z",
+   "completed_date": null,
+   "completed_user_guid": null,
+   "completed_user": "",
+   "assigner": "",
+   "users": [],
+   "roles": []},{
+    "todo_item_guid": "7cc15a8d-f89f-4c4a-8386-513da74d06e5",
+    "todo_item_title": "Review Planning Data4",
+    "todo_item_desc": "Review Planning Data4",
+    "todo_item_due_date": "2017-08-26T08:19:23.883632Z",
+    "todo_item_conditional_flg": false,
+    "todo_item_completed_flg": false,
+    "farm_guid": "43B6AC2A-10E6-E00F-E053-0A54960A8401",
+    "farm_id": "",
+    "application_guid": "452054e7-efcc-4044-9ae0-8bac5140cf5b",
+    "application_id": "",
+    "application_phase_guid": "15ab05b7-1492-45ba-96aa-00bcc235d85c",
+    "application_phase": "Initial Phase",
+    "created_user_guid": "43B6AC29-FD42-E00F-E053-0A54960A8401",
+    "created_date": "2017-07-26T08:19:23.883632Z",
+    "completed_date": null,
+    "completed_user_guid": null,
+    "completed_user": "",
+    "assigner": "Cramer, Geoffrey",
+    "users": [
+            {
+                "auth_user_guid": "43B6AC29-FF66-E00F-E053-0A54960A8401",
+                "salutation": "Ms.",
+                "first_name": "Beverly",
+                "last_name": "Arnold",
+                "title": "",
+                "organization": ""
+            }
+        ],
+    "roles": [
+        {
+            "auth_role_guid": "f60c628e-dd6d-48ed-bdbc-8121c8021742",
+            "auth_role_name": "SADC STAFF - PLANNING - SPECIALIST"
+        }
+    ]
+},{
+        "todo_item_guid": "6e4221d6-859f-472f-b6e2-bb164a199c50",
+        "todo_item_title": "Review Planning Data",
+        "todo_item_desc": "Review Planning Data",
+        "todo_item_due_date": null,
+        "todo_item_conditional_flg": false,
+        "todo_item_completed_flg": false,
+        "farm_guid": "43B6AC2A-10E6-E00F-E053-0A54960A8401",
+        "farm_id": "",
+        "application_guid": "452054e7-efcc-4044-9ae0-8bac5140cf5b",
+        "application_id": "",
+        "application_phase_guid": null,
+        "application_phase": null,
+        "created_user_guid": "43B6AC29-FD42-E00F-E053-0A54960A8401",
+        "created_date": null,
+        "completed_date": null,
+        "completed_user_guid": null,
+        "completed_user": "",
+        "assigner": "Cramer, Geoffrey",
+        "users": [],
+        "roles": [
+            {
+                "auth_role_guid": "f60c628e-dd6d-48ed-bdbc-8121c8021742",
+                "auth_role_name": "SADC STAFF - PLANNING - SPECIALIST"
+            }
+        ]
+    },
+    {
+        "todo_item_guid": "7cc15a8d-f89f-4c4a-8386-513da74d06e5",
+        "todo_item_title": "Review Planning Data4",
+        "todo_item_desc": "Review Planning Data4",
+        "todo_item_due_date": null,
+        "todo_item_conditional_flg": false,
+        "todo_item_completed_flg": false,
+        "farm_guid": "43B6AC2A-10E6-E00F-E053-0A54960A8401",
+        "farm_id": "",
+        "application_guid": "452054e7-efcc-4044-9ae0-8bac5140cf5b",
+        "application_id": "",
+        "application_phase_guid": null,
+        "application_phase": null,
+        "created_user_guid": "43B6AC29-FD42-E00F-E053-0A54960A8401",
+        "created_date": null,
+        "completed_date": null,
+        "completed_user_guid": null,
+        "completed_user": "",
+        "assigner": "Cramer, Geoffrey",
+        "users": [],
+        "roles": [
+            {
+                "auth_role_guid": "f60c628e-dd6d-48ed-bdbc-8121c8021742",
+                "auth_role_name": "SADC STAFF - PLANNING - SPECIALIST"
+            }
+        ]
+    },
+    {
+        "todo_item_guid": "622d9045-915e-43f8-be97-66bb5f1bd59a",
+        "todo_item_title": "Review Planning Data3",
+        "todo_item_desc": "Review Planning Data3",
+        "todo_item_due_date": null,
+        "todo_item_conditional_flg": false,
+        "todo_item_completed_flg": false,
+        "farm_guid": "43B6AC2A-10E6-E00F-E053-0A54960A8401",
+        "farm_id": "",
+        "application_guid": "452054e7-efcc-4044-9ae0-8bac5140cf5b",
+        "application_id": "",
+        "application_phase_guid": null,
+        "application_phase": null,
+        "created_user_guid": "43B6AC29-FD42-E00F-E053-0A54960A8401",
+        "created_date": null,
+        "completed_date": null,
+        "completed_user_guid": null,
+        "completed_user": "",
+        "assigner": "Cramer, Geoffrey",
+        "users": [],
+        "roles": [
+            {
+                "auth_role_guid": "f60c628e-dd6d-48ed-bdbc-8121c8021742",
+                "auth_role_name": "SADC STAFF - PLANNING - SPECIALIST"
+            }
+        ]
+    },
+    {
+        "todo_item_guid": "5916ad25-2162-457b-9617-50f3b0b40e94",
+        "todo_item_title": "Review Planning Data3",
+        "todo_item_desc": "Review Planning Data3",
+        "todo_item_due_date": null,
+        "todo_item_conditional_flg": false,
+        "todo_item_completed_flg": false,
+        "farm_guid": "43B6AC2A-10E6-E00F-E053-0A54960A8401",
+        "farm_id": "",
+        "application_guid": "452054e7-efcc-4044-9ae0-8bac5140cf5b",
+        "application_id": "",
+        "application_phase_guid": null,
+        "application_phase": null,
+        "created_user_guid": "43B6AC29-FD42-E00F-E053-0A54960A8401",
+        "created_date": null,
+        "completed_date": null,
+        "completed_user_guid": null,
+        "completed_user": "",
+        "assigner": "Cramer, Geoffrey",
+        "users": [],
+        "roles": [
+            {
+                "auth_role_guid": "f60c628e-dd6d-48ed-bdbc-8121c8021742",
+                "auth_role_name": "SADC STAFF - PLANNING - SPECIALIST"
+            }
+        ]
+    },
+    {
+        "todo_item_guid": "f0ea69c9-e5e5-4037-8e61-518c16fc405c",
+        "todo_item_title": "Review Questionnaire",
+        "todo_item_desc": "Review Questionnaire",
+        "todo_item_due_date": null,
+        "todo_item_conditional_flg": false,
+        "todo_item_completed_flg": true,
+        "farm_guid": "43B6AC2A-10E6-E00F-E053-0A54960A8401",
+        "farm_id": "",
+        "application_guid": "452054e7-efcc-4044-9ae0-8bac5140cf5b",
+        "application_id": "",
+        "application_phase_guid": null,
+        "application_phase": null,
+        "created_user_guid": null,
+        "created_date": "2017-07-26T08:19:23.883632Z",
+        "completed_date": null,
+        "completed_user_guid": null,
+        "completed_user": "",
+        "assigner": "",
+        "users": [],
+        "roles": [
+            {
+                "auth_role_guid": "a6018f41-4e81-4063-9d36-9a07eb27a51d",
+                "auth_role_name": "ADMIN - OGIS - ADMIN"
+            },
+            {
+                "auth_role_guid": "a6018f41-4e81-4063-9d36-9a07eb27a51d",
+                "auth_role_name": "ADMIN - OGIS - PARTNER"
+            }
+        ]
+    },
+    {
+        "todo_item_guid": "cfad56b0-55e9-4b09-90b1-9cc5536727bc",
+        "todo_item_title": "Upload Federal Grant Documents",
+        "todo_item_desc": "Upload Federal Grant Documents",
+        "todo_item_due_date": null,
+        "todo_item_conditional_flg": false,
+        "todo_item_completed_flg": false,
+        "farm_guid": "43B6AC2A-10E6-E00F-E053-0A54960A8401",
+        "farm_id": "",
+        "application_guid": "452054e7-efcc-4044-9ae0-8bac5140cf5b",
+        "application_id": "",
+        "application_phase_guid": null,
+        "application_phase": null,
+        "created_user_guid": "43B6AC29-FD42-E00F-E053-0A54960A8401",
+        "created_date": "2017-07-26T08:19:23.863619Z",
+        "completed_date": null,
+        "completed_user_guid": null,
+        "completed_user": "",
+        "assigner": "Cramer, Geoffrey",
+        "users": [
+            {
+                "auth_user_guid": "43B6AC29-FF66-E00F-E053-0A54960A8401",
+                "salutation": "Ms.",
+                "first_name": "Beverly",
+                "last_name": "Arnold",
+                "title": "",
+                "organization": ""
+            },
+            {
+                "auth_user_guid": "43B6AC29-FF66-E00F-E053-0A54960A8401",
+                "salutation": "Mr.",
+                "first_name": "Siva",
+                "last_name": "Sai",
+                "title": "",
+                "organization": ""
+            },
+            {
+                "auth_user_guid": "43B6AC29-FF66-E00F-E053-0A54960A8401",
+                "salutation": "Mr.",
+                "first_name": "Sai",
+                "last_name": "Siva",
+                "title": "",
+                "organization": ""
+            }
+        ],
+        "roles": []
+    }
+]

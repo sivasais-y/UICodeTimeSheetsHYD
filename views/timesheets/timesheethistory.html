@@ -1,0 +1,639 @@
+
+<header id="header" data-current-skin={{mactrl.currentSkin}}
+	data-ng-include="'template/header.html'"
+	data-ng-controller="headerCtrl as hctrl"></header>
+
+<section id="main">
+	<aside id="sidebar" data-ng-include="'template/sidebar-left.html'"
+		data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+
+	<aside id="chat" data-ng-include="'template/chat.html'"
+		data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
+
+	<section id="content">
+		<div class="container c-alt">
+			<div class="card" data-ng-controller="timesheethistory">
+				<div class="card-header">
+					<h2>
+						Time Sheet History<small> </small>
+					</h2>
+					<div class='row'>
+						<div class='col-md-3'>
+							<div class="form-group">
+								<div class="fg-line">
+									<div class="date-picker input-group dp-blue"
+										ng-class="{ 'is-opened': opened == true }">
+										<span class="input-group-addon"><i
+											class="zmdi zmdi-calendar ma-icon"></i></span>
+										<div class="fg-line"
+											ng-class="{ 'fg-toggled': opened == true }">
+											<input ng-click="open($event, 1)" type="text" readonly
+												class="form-control" uib-datepicker-popup="{{format}}"
+												show-weeks="false" ng-model="dtPopup" is-open="opened"
+												min-date="minDate" datepicker-options="dateOptions"
+												ng-required="true" close-text="Close"
+												placeholder="Select Date" />
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class="form-group">
+								<div class="fg-line">
+									<div class="date-picker input-group dp-blue"
+										ng-class="{ 'is-opened': opened2 == true }">
+										<span class="input-group-addon"><i
+											class="zmdi zmdi-calendar ma-icon"></i></span>
+										<div class="fg-line"
+											ng-class="{ 'fg-toggled': opened2 == true }">
+											<input ng-click="open($event, 2)" type="text" readonly
+												class="form-control" uib-datepicker-popup="{{format}}"
+												show-weeks="false" ng-model="dtPopup1" is-open="opened2"
+												min-date="minDate" datepicker-options="dateOptions"
+												ng-required="true" close-text="Close"
+												placeholder="Select Date" />
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class="form-group">
+
+								<button class="btn btn-info btn-icon waves-effect waves-circle"
+									ng-click="searchtimesheet()">
+									<i class="zmdi zmdi-search"></i>
+								</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='table-responsive'>
+					<!-- <div class="input-group">
+									<input class="form-control" ng-model="searchText"
+										placeholder="Search" type="search" ng-change="search()" /> <span
+										class="input-group-addon"> <span
+										class="glyphicon glyphicon-search"></span>
+									</span>
+								</div> -->
+					<table class="table  table-hover data-table myTable">
+						<thead>
+							<tr>
+								<!-- <th class="EmpId"><i class="zmdi zmdi-label zmdi-hc-fw">
+								</i><a href="" ng-click="sort('employeeId',$event)">Employee Id
+										<span class="{{Header[0]}}"></span>
+								</a></th> -->
+								<th class="name"><i
+									class="zmdi zmdi-assignment-account zmdi-hc-fw"></i><a
+									ng-click="sort('firstName')" href=""> First Name<span
+										class="{{Header[1]}}"></span>
+								</a></th>
+
+								<th class="Email"><i class="zmdi zmdi-city zmdi-hc-fw"></i><a
+									ng-click="sort('lastName')" href=""> Last Name <span
+										class="{{Header[2]}}"></span>
+								</a></th>
+								<th class="Email"><i class="zmdi zmdi-city zmdi-hc-fw"></i><a
+									ng-click="sort('weekStartDate')" href=""> From date <span
+										class="{{Header[3]}}"></span>
+								</a></th>
+								<th class="Email"><i class="zmdi zmdi-city zmdi-hc-fw"></i><a
+									ng-click="sort('weekEndDate')" href=""> To Date <span
+										class="{{Header[4]}}"></span>
+								</a></th>
+								<th class="Email"><i class="zmdi zmdi-city zmdi-hc-fw"></i><a
+									ng-click="sort('totalHours')" href=""> Total days <span
+										class="{{Header[5]}}"></span>
+								</a></th>
+								<th class="Email"><i class="zmdi zmdi-city zmdi-hc-fw"></i><a
+									ng-click="sort('timesheetStatus')" href=""> Status <span
+										class="{{Header[6]}}"></span>
+								</a></th>
+								<th class="Email"><i class="zmdi zmdi-city zmdi-hc-fw"></i><a
+									href=""> Details <span class="{{Header[6]}}"></span>
+								</a></th>
+								<th class="Email"><i class="zmdi zmdi-city zmdi-hc-fw"></i><a
+									href=""> Actions <span class=""></span>
+								</a></th>
+
+							</tr>
+						</thead>
+						<tbody>
+							<tr
+								ng-repeat="item in ItemsByPage[currentPage] | orderBy:columnToOrder:reverse">
+								<!-- <td>{{item.id.employeeId}}</td> -->
+								<td>{{item.firstName}}</td>
+								<td>{{item.lastName}}</td>
+								<td>{{item.id.weekStartDate| date : 'dd-MMM-yyyy'}}</td>
+								<td>{{item.weekEndDate| date : 'dd-MMM-yyyy'}}</td>
+								<td>{{item.totalHours}}</td>
+								<td>{{item.id.timesheetStatus}}</td>
+								<td>
+									<!-- <div class="col-sm-4" data-name="info-outline"
+										uib-tooltip="click here to see details"
+										ng-click="showDetails(item.id.employeeId,item.id.weekStartDate,item.id.weekEndDate)">
+										<p>
+											<i class="zmdi zmdi-info-outline zmdi-hc-fw"></i>
+										</p>
+									</div> -->
+									<div class="col-sm-4" data-name="info-outline"
+										style="cursor: pointer" data-toggle="modal"
+										data-target="#timesheetmodal"
+										ng-click="showDetails(item.id.timesheetSequence)">
+										<i class="zmdi zmdi-info-outline zmdi-hc-fw"></i>
+									</div>
+								</td>
+								<td><a  ng-if="item.id.timesheetStatus=='REJECTED' ||item.id.timesheetStatus=='PENDING'"  href="" ng-click='editTimesheet()'>Edit</a></td>
+
+
+							</tr>
+						</tbody>
+					</table>
+					<ul class="pagination pagination-sm">
+						<li ng-class="{active:0}"><a href="" ng-click="firstPage()">First</a></li>
+						<li ng-repeat="n in range(ItemsByPage.length)"><a href=""
+							ng-click="setPage()" ng-bind="n+1">1</a></li>
+						<li><a href="" ng-click="lastPage()">Last</a></li>
+					</ul>
+
+
+
+				</div>
+				
+				<!-- <div class="modal fade" id="timesheetDetails" tabindex="-1" role="dialog"
+					aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="exampleModalLabel">Modal</h4>
+							</div>
+							<div class="modal-body">Modal content</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="modal fade" id="timesheetmodal" tabindex="-1" style="max-height: 500px;" aria-labelledby="myModalLabel">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Time Sheet Details</h4>
+							</div>
+							<div class="modal-body"
+								style="max-height: 500px; overflow-y: auto">
+								<div class='card-body table-responsive'>
+									<table class="table table-hover">
+										<thead>
+											<tr class="bg-info">
+												<th>Employee ID</th>
+												<th>Start Date</th>
+												<th>End Date</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>{{timeSheetDetails.employeeId}}</th>
+												<th>{{timeSheetDetails.startDateOfWeek| date : 'dd-MMM-yyyy'}}</th>
+												<th>{{timeSheetDetails.endDateOfWeek| date : 'dd-MMM-yyyy'}}</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<br>
+								<div class='card-body table-responsive'>
+									<table class="table table-hover table-striped">
+										<thead>
+											<tr class="bg-info">
+												<th>Task Name</th>
+												<th>Project Name</th>
+												<th>Project Type</th>
+												<th>Customer</th>
+												<th>Department</th>
+												<th class="text-center" ng-repeat="item in weekDays">{{item.day}}<br />{{item.date}}
+												</th>
+												<th>Total Hours</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat="task in tasks">
+												<th>{{task.taskName}}</th>
+												<th>{{task.projectName}}</th>
+												<th>{{task.projectType}}</th>
+												<th>{{task.customerName}}</th>
+												<th>{{task.departmentId}}</th>
+												<td class="text-center" ng-repeat="dayHR in task.dates">{{dayHR?dayHR:0}}</td>
+												<td class="text-center">{{task.totalHours}}</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="5"
+													style="text-decoration: underline; font-weight: bold;">Total
+													Week Hours</td>
+												<td class="text-center"
+													style="text-decoration: underline; font-weight: bold;"
+													ng-repeat="item in weekDaysHR.dates">{{item}}</td>
+												<td class="text-center"
+													style="text-decoration: underline; font-weight: bold;">{{weekDaysHR.totalHours}}</td>
+											</tr>
+										</tfoot>
+									</table>
+
+
+
+								</div>
+								<div class="row" style='border: 1px grey solid !important'>
+
+									<div class='col-sm-4'>
+										<div class="form-group">
+											<span class="input-group-addon"> Comments: </span>
+
+										</div>
+									</div>
+									<div class='col-sm-4'>
+
+										<div class="fg-line" style="margin-top: 5px;">{{timesheetcomments}}</div>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-danger btn-icon-text waves-effect"
+									ng-click="clearTimeSheet()" data-dismiss="modal">
+									<i class="zmdi zmdi-close"></i> Close
+								</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="card"   ng-show = "IsVisible" data-ng-controller="timesheetcontroller">
+				<div class="card-header">
+					<h2>
+						Time Sheet Details <small></small>
+					</h2>
+					<div class="card-body card-padding">
+						<div class='card-body table-responsive'>
+							<table class='table'>
+								<thead>
+									<tr>
+										<th>Employee Id</th>
+										<th>Employee Name</th>
+										<th>Role</th>
+										<th>Designation</th>
+										<th>Department</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="fg-line">
+												<input type="text" class="form-control"
+													ng-model="employeeid" disabled>
+											</div>
+										</td>
+										<td>
+											<div class="fg-line">
+												<input type="text" class="form-control"
+													ng-model="employeename" disabled>
+											</div>
+										</td>
+										<td><div class="fg-line">
+												<input type="text" class="form-control"
+													ng-model='employeeType' disabled>
+											</div></td>
+										<td><div class="fg-line">
+												<input type="text" class="form-control"
+													ng-model='employeedesignation' disabled>
+											</div></td>
+										<td><div class="fg-line">
+												<input type="text" class="form-control"
+													ng-model='employeedepartment' disabled>
+											</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr>
+
+
+
+
+						<!-- timesheetContainer starts  -->
+						<div id="timesheetContainer">
+							<div class='row'>
+								<div class='col-md-3'>
+									<div class="form-group">
+										<div class="fg-line">
+											<div class="date-picker input-group dp-blue"
+												ng-class="{ 'is-opened': opened == true }">
+												<span class="input-group-addon"><i
+													class="zmdi zmdi-calendar ma-icon"></i></span>
+												<div class="fg-line"
+													ng-class="{ 'fg-toggled': opened == true }">
+													<input ng-click="open($event, 1)" type="text" readonly
+														class="form-control" uib-datepicker-popup="{{format}}"
+														show-weeks="false" ng-model="dtPopup" is-open="opened"
+														min-date="minDate" datepicker-options="dateOptions"
+														ng-required="true" close-text="Close"
+														placeholder="Week Start Date"
+														ng-change="changeweekselected()"
+														md-date-filter="onlyWeekendsPredicate" />
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class='col-md-3'>
+									<div class="form-group">
+										<div class="fg-line">
+											<div class="date-picker input-group dp-blue"
+												ng-class="{ 'is-opened': opened2 == true }">
+												<span class="input-group-addon"><i
+													class="zmdi zmdi-calendar ma-icon"></i></span>
+												<div class="fg-line"
+													ng-class="{ 'fg-toggled': opened2 == true }">
+													<input type="text" readonly placeholder="Week Start Date"
+														uib-datepicker-popup="{{format}}" class="form-control"
+														ng-model="dtPopup1" md-date-filter="onlyWeekendsPredicate" />
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class='col-md-4'>
+									<input type="text" style='color: green' class="form-control"
+										placeholder="" ng-model="weeksdetails" />
+								</div>
+								<div class='col-md-6'></div>
+
+							</div>
+							<br />
+							<!-- timesheet Content 1 starts  -->
+							<div id="downcontent">
+								<div class='row' id='timeHead'>
+
+
+									<div class='col-sm-1' style="padding-left: 5px">
+										<span style="color: black">All</span>
+
+									</div>
+
+
+									<div class='col-sm-1'>
+										<p>
+											<span style="color: green"><i
+												class="zmdi zmdi-alarm-add"></i><a
+												ng-click="addRow(task,daydetails)" style="cursor: pointer"><span
+													style="color: green"> Add</span></a></span>
+										</p>
+									</div>
+
+									<div class='col-sm-2'>
+										<p>
+											<span style="color: red"><i
+												class="zmdi zmdi-alarm-off"></i></span><a style="cursor: pointer"
+												ng-click="deleteRow()"><span style="color: red">
+													Delete</span></a>
+										</p>
+									</div>
+									<div class='col-sm-8'>
+										<p class='text-center'>
+											<i class="zmdi zmdi-alarm-add"></i> <span
+												style="color: black">Time</span>
+										</p>
+									</div>
+								</div>
+								<div class='rowtimesheet timesheetContent'>
+
+
+
+									<div class='row' id="newRowContent"
+										ng-repeat="divindex in divIterator">
+										<div id="timesheetData" style="height: 100px">
+											<div class='col-sm-6'>
+												<div class="col-sm-1" style="padding-left: 0">
+													<div class='form-group'>
+														<div class="fg-line">
+															<label class="checkbox " id='checkAll'> <input
+																type="checkbox" ng-model="ids[divindex]" >
+																<!-- <i
+															class="input-helper"></i> -->
+															</label>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-sm-3">
+
+													<div class="form-group">
+														<div class="fg-line">
+															<div class="select">
+																<select class="form-control" id="customer{{divindex-1}}"
+																	ng-model='task[divindex-1]["customer"]'
+																	ng-change="fillProject(task,divindex-1)">
+																	<option ng-repeat='customer in customers'
+																		value='{{customer.customerId}}'>{{customer.customerName}}</option>
+
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class='col-sm-3'>
+													<div class="form-group">
+														<div class="fg-line">
+															<div class="select">
+																<select class="form-control"
+																	id="department{{divindex-1}}"
+																	ng-model='task[divindex-1]["department"]'
+																	ng-change="fillProject(task,divindex-1)">
+																	<option ng-repeat='department in departments'
+																		value='{{department.departmentId}}'>{{department.parentDepartment.departmentName}}--->{{department.departmentName}}</option>
+
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+
+
+												<div class='col-sm-3'>
+													<div class="form-group">
+														<div class="fg-line">
+															<div class="select">
+																<select class="form-control" id="project{{divindex-1}}"
+																	ng-model='task[divindex-1]["projectId"]'>
+																	<option ng-repeat='project in projects[divindex-1]'
+																		value='{{project.projectid}}'>{{project.projectName}}</option>
+
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<div class='col-sm-2'>
+													<div class="form-group">
+														<div class="fg-line">
+															<div class="select">
+																<select class="form-control"
+																	id="taskdetails{{divindex-1}}"
+																	ng-model='task[divindex-1]["taskdetails"]'>
+																	<option ng-repeat='task in tasks[divindex-1]'
+																		value='{{task.taskId}}&&{{task.taskName}}'>{{task.taskName}}</option>
+
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class='col-sm-6'>
+												<div class='row' id='timeTable'>
+													<div class='col-sm-1' ng-repeat="week in weekdays">
+														{{week.day}}<br />
+														<div class="form-group">
+															<div class="fg-line">
+																<input type="text" class="form-control"
+																	ng-model="daydetails[divindex-1][week.date]"
+																	ng-change='onChangeHR($parent.$index, $index, week.date)'
+																	allow-decimal-numbers>
+															</div>
+														</div>
+													</div>
+
+
+													<div class='col-sm-5' ng-if='weekdays'>
+														{{totalhourhead}}<br />
+
+														<div class="form-group ">
+															<div class="fg-line">
+																<span> <input type="text" class="form-control"
+																	ng-model="rowTotals[divindex-1]" readonly></span>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+
+
+										</div>
+
+
+									</div>
+									<div class="row" id="timeTable"
+										style='border-color: red; border: 1px;'>
+										<div class='col-sm-6' ng-if='weekdays'
+											style='font-weight: 500; text-transform: uppercase;'>Total
+											Week Hours :</div>
+
+										<div class='col-sm-6' ng-if='weekdays'>
+											<div class='row'>
+												<div class='col-sm-1'
+													ng-repeat="colTotal in colTotals track by $index">
+
+													<div class="form-group">
+														<div class="fg-line">
+															<input type="text" class="form-control"
+																style="color: red; background-color: white;"
+																readonlystyle="color: red" ng-value="colTotal" readonly>
+														</div>
+													</div>
+												</div>
+
+
+												<div class='col-sm-5' ng-if='weekdays'>
+
+
+													<div class="form-group ">
+														<div class="fg-line">
+															<span> <input type="text" class="form-control"
+																readonlystyle="color: red" ng-model="weekTotal" readonly></span>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class='clearfix'></div>
+								<!-- timesheet Content 1 ends  -->
+								<hr />
+							</div>
+							<div class='row'>
+								<div class='col-sm-3'>
+									<div class="form-group">
+										<span class="input-group-addon"><i
+											class="zmdi zmdi-border-color zmdi-hc-fw"> </i>Comments : </span>
+										<div class="fg-line"></div>
+									</div>
+
+								</div>
+
+								<div class="col-sm-6">
+
+									<div class="form-group ">
+										<div class="fg-line">
+											<input type="text" class="form-control ng-isolate-scope"
+												ng-model="usercomments" value="">
+										</div>
+									</div>
+								</div>
+								<div class='col-sm-3'>
+									<div class="form-group">
+										<span>
+											<button class="btn btn-primary btn-icon-text waves-effect"
+												ng-click="saveTimeSheet(task,daydetails)">
+												<i class="zmdi zmdi-check-all"></i> Submit
+											</button>
+
+											<button class="btn btn-danger btn-icon-text waves-effect"
+												ng-click="clearTimeSheet()">
+												<i class="zmdi zmdi-close"></i> Clear
+											</button>
+										</span>
+									</div>
+								</div>
+
+							</div>
+							<!-- timesheetContainer ends  -->
+						</div>
+					</div>
+				</div>
+			</div>
+				<!-- <div id="recent-items-chart" class="flot-chart" data-line-chart></div> -->
+			</div>
+		</div>
+		
+	</section>
+</section>

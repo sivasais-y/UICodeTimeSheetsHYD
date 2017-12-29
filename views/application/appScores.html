@@ -1,0 +1,27 @@
+<div class="containers appScores" id="applicationScoresDIV">
+    <div class="noError" ng-if="!IDfailed">
+        <div class="gridAppScores">
+            <div class="pull-right">
+            <button class="btn btn-success" ng-click="addScore($event)">
+                                <i class="fa fa-plus"></i>  Add Score
+                            </button>
+<!--            <button class="btn btn-danger" ng-click="deleteScore($event)">
+                                <i class="fa fa-trash"></i>  Delete
+                            </button>-->
+            </div>
+            <div class="clearfix"></div>
+            <hr />
+            <div id="gridAppScores" ui-grid="gridAppScores" ui-grid-pagination ui-grid-selection class="grid"></div>
+        </div>
+    </div>
+    <div class="ifError" ng-if="IDfailed">
+        <div class="col-sm-12 alert-warnings" id="errorDiv">
+            <img style="margin: auto" class="img-responsive" src="../app/images/error-404.png" alt="Error Page"/>
+            <h4 class="text-center alert alert-warning">
+                <span class="">ID entered is Invalid..</span>
+                <span class="">Please enter valid ID and Try again..</span>
+            </h4>
+        </div>
+    </div>
+
+</div>

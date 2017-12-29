@@ -1,0 +1,102 @@
+[
+    {
+        "note_group_guid": "c1c7c6c4-f8f1-4a22-adda-aa188f90e4d6",
+        "note_group_title": "opic",
+        "sadc_flg": true,
+        "last_edited_date": "2017-10-26T19:52:50.991000Z",
+        "last_edited_user_guid": null,
+        "last_edited_user": "",
+        "notes": [
+            {
+                "note_guid": "162a5640-b097-4459-9981-4197a0125830",
+                "note_group_guid": "c1c7c6c4-f8f1-4a22-adda-aa188f90e4d6",
+                "note_text": "jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg",
+                "last_edited_date": "2017-11-13T19:14:34.600000Z",
+                "last_edited_user_guid": "7de4761a-d9aa-4462-bd67-39909bfbfa04",
+                "last_edited_user": "Klaube, Chris",
+                "note_group_title": "opic"
+            },
+            {
+                "note_guid": "b9b10876-fb49-489a-bf93-9ee6b4d7330f",
+                "note_group_guid": "c1c7c6c4-f8f1-4a22-adda-aa188f90e4d6",
+                "note_text": "e Desc",
+                "last_edited_date": "2017-10-31T14:46:01.461000Z",
+                "last_edited_user_guid": "7de4761a-d9aa-4462-bd67-39909bfbfa04",
+                "last_edited_user": "Klaube, Chris",
+                "note_group_title": "opic"
+            }
+        ],
+        "tags": []
+    },
+    {
+        "note_group_guid": "d5086c13-58ec-4585-9462-eda9bad2ad95",
+        "note_group_title": "test",
+        "sadc_flg": true,
+        "last_edited_date": "2017-11-13T18:44:33.506000Z",
+        "last_edited_user_guid": null,
+        "last_edited_user": "",
+        "notes": [
+            {
+                "note_guid": "c5960cc9-5214-40c3-a6ec-1496d7fe6f83",
+                "note_group_guid": "d5086c13-58ec-4585-9462-eda9bad2ad95",
+                "note_text": "testtesttesttesttesttesttesttest testtesttesttesttesttesttesttest testtesttesttesttesttesttesttesttesttesttest testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest",
+                "last_edited_date": "2017-11-13T18:44:33.492000Z",
+                "last_edited_user_guid": "7de4761a-d9aa-4462-bd67-39909bfbfa04",
+                "last_edited_user": "Klaube, Chris",
+                "note_group_title": "test"
+            },
+            {
+                "note_guid": "32503305-1f1d-4ad1-844b-a856bf689e23",
+                "note_group_guid": "d5086c13-58ec-4585-9462-eda9bad2ad95",
+                "note_text": "hg",
+                "last_edited_date": "2017-11-13T19:14:17.162000Z",
+                "last_edited_user_guid": "7de4761a-d9aa-4462-bd67-39909bfbfa04",
+                "last_edited_user": "Klaube, Chris",
+                "note_group_title": "test"
+            }
+        ],
+        "tags": [
+            {
+                "seq_id": 274,
+                "note_group_guid": "d5086c13-58ec-4585-9462-eda9bad2ad95",
+                "tag_desc": "Appraisal - "
+            },
+            {
+                "seq_id": 275,
+                "note_group_guid": "d5086c13-58ec-4585-9462-eda9bad2ad95",
+                "tag_desc": "Appraisal - major subdivision approval not considered"
+            }
+        ]
+    },
+    {
+        "note_group_guid": "d3b8536a-be59-4031-9b6f-98761a494ee4",
+        "note_group_title": "TEST",
+        "sadc_flg": true,
+        "last_edited_date": "2017-11-14T14:33:55.916000Z",
+        "last_edited_user_guid": null,
+        "last_edited_user": "",
+        "notes": [
+            {
+                "note_guid": "8aeeda9f-0a3f-4145-9695-596825617a3b",
+                "note_group_guid": "d3b8536a-be59-4031-9b6f-98761a494ee4",
+                "note_text": "test",
+                "last_edited_date": "2017-11-14T14:33:55.898000Z",
+                "last_edited_user_guid": "7de4761a-d9aa-4462-bd67-39909bfbfa04",
+                "last_edited_user": "Klaube, Chris",
+                "note_group_title": "TEST"
+            }
+        ],
+        "tags": [
+            {
+                "seq_id": 276,
+                "note_group_guid": "d3b8536a-be59-4031-9b6f-98761a494ee4",
+                "tag_desc": "Appraisal - "
+            },
+            {
+                "seq_id": 277,
+                "note_group_guid": "d3b8536a-be59-4031-9b6f-98761a494ee4",
+                "tag_desc": "Appraisal - hypothetical subdivision"
+            }
+        ]
+    }
+]

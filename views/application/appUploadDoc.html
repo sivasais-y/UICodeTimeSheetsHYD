@@ -1,0 +1,73 @@
+
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add / Upload Document</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="uploadDoc">
+                <form enctype=multipart/form-data>
+<!--                    <div class="form-group required col-sm-8">
+                        <label class="control-label" >Title :</label>
+                        <div class='' style="position:relative">
+                            <input type='text' ng-required='true' class="form-control" ng-model="uploadDoc.title"/>
+                        </div>
+                    </div>-->
+
+                    <div class="form-group col-sm-4">
+                        <label class="control-label " >Document Type:</label>
+                        <div class='' style="position:relative">
+                            <select id="appUploadDocType" class="form-control" ng-model='uploadDoc.docType' ng-init='uploadDoc.docType = null;'>
+                                <option value="">None</option>
+                                <option ng-value="type" ng-repeat="type in docTypeList">{{type}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label " >Document Status:</label>
+                        <div class='' style="position:relative">
+                            <select id="appUploadDocStatus" class="form-control" ng-model='uploadDoc.docStatus' ng-init='uploadDoc.docStatus = null;'>
+                                <option value="">None</option>
+                                <option ng-value="status" ng-repeat="status in docStatusList">{{status}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label " >Document Tags:</label>
+                        <div class='' style="position:relative">
+                            <select id="appUploadDocTags" class="form-control" ng-model="uploadDoc.documentTag" ng-change="includeTag($event)">
+                                <option value="">None</option>
+                                <option ng-value="tag" ng-repeat="tag in docTagsList">{{tag}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" id="uploadDocTags" ng-if="selectedTags.length >= 1">
+                    <!--<div class="col-sm-12" id="uploadDocTags" style="display: none">-->
+                        <span class="selectedTag" ng-click="activateTags(selectTag,$event)" ng-repeat="selectTag in selectedTags">{{selectTag}}</span>
+                        <span class="deleteTag btn" ng-click="excludeTags()"><i class="fa fa-trash"></i></span>
+                    </div>
+                    <div class="form-group col-sm-8">
+                        <label class="control-label " >Add File(s):</label>
+                        <div class='' style="position:relative">
+                            <input type="file" id="appUploadDoc" ng-model="uploadDoc.document" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label " >Public :</label>
+                        <div class='' style="position:relative">
+                            <input type='checkbox' class='docPublicBox' ng-model='uploadDoc.public' value='1'/>
+                            <span id="helpBlock2" class="help-block uploadDocPublic">"Note: If checked,this document will be made visible to public users "</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="uploadDocument()">Save</button>
+    <button class="btn btn-warning" ng-click="uploadCancel()">Cancel</button>
+</div>
+

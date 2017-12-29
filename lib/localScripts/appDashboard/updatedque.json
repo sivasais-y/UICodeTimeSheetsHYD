@@ -1,0 +1,1023 @@
+{
+    "questionnaire_json": {
+    "questionaire_title": "2016 County Planning Incentive Grant Annual Application",
+    "questionaire_introduction": "For information regarding the Planning Incentive Grant Program please reference the following statutes and regulations: <br/>Agriculture Retention and Development Act-N.J.S.A 4:1C-11, et seq <br/> Planning Incentive Grant Statute- N.J.S.A 4:1C-43.1 <br/> Farmland Preservation Program Regulations- N.J.A.C. 2:76-17",
+    "question_sections": [{
+            "question_section_guid": "5b271803-b681-4c09-8ce2-c7b06382313d",
+            "question_section_title": "Application Information",
+            "question_section_help": "",
+            "question_section_type": "form",
+            "question_section_permissions": [],
+            "questions": [{
+                    "question_id": "1",
+                    "question_guid": "d339e4bf-18fe-43a8-b97a-a2ea42d9c98c",
+                    "question_heading": "Primary Contact",
+                    "question_text": "",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "InputForm",
+                    "required": true,
+                    "input": [{
+                            "fieldid": "cadbadmin",
+                            "fieldname": "CADB Administrator",
+                            "fieldtype": "text",
+                            "fieldsize": 50,
+                            "required": true
+                        }, {
+                            "fieldid": "addr",
+                            "fieldname": "Address",
+                            "fieldtype": "text",
+                            "fieldsize": 50,
+                            "required": true
+                        }, {
+                            "fieldid": "city",
+                            "fieldname": "City",
+                            "fieldtype": "text",
+                            "fieldsize": 50,
+                            "required": true
+                        }, {
+                            "fieldid": "state",
+                            "fieldname": "State",
+                            "fieldtype": "text",
+                            "fieldsize": 50,
+                            "required": true
+                        }, {
+                            "fieldid": "zip",
+                            "fieldname": "Zip",
+                            "fieldtype": "text",
+                            "fieldsize": "5",
+                            "required": true
+                        }, {
+                            "fieldid": "email",
+                            "fieldname": "Email",
+                            "fieldtype": "text",
+                            "fieldsize": 50,
+                            "required": true
+                        }, {
+                            "fieldid": "phone",
+                            "fieldname": "Phone",
+                            "fieldtype": "text",
+                            "fieldsize": 10,
+                            "required": true
+                        }, {
+                            "fieldid": "fax",
+                            "fieldname": "Fax",
+                            "fieldtype": "text",
+                            "fieldsize": 10,
+                            "required": false
+                        }],
+                    "dependent_questions": []
+
+                }, {
+                    "question_id": "2",
+                    "question_guid": "8915b5fe-5a49-4028-b454-b020210b63f4",
+                    "question_heading": "Agricultural Development Areas",
+                    "question_text": "Is the county requesting SADC certification of an agricultural development area amendment as part of this application approval?",
+                    "question_help_text": "If YES, please attach the following:<br/> A copy of the adopted criteria for agricultural development area identification <br/>A copy of the CADB resolution of agricultural development area adoption <br/>Justification that the adopted agricultural development area meets the statutory criteria set forth at N.J.A.C. 2:76-1.3",
+                    "allow_notes": true,
+                    "allow_uploads": true,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": []
+
+                },
+                {
+                    "question_id": "3",
+                    "question_guid": "18378b93-cbaf-425b-9d25-77cb26c5a60a",
+                    "question_heading": "Project Areas:",
+                    "question_text": "",
+                    "question_help_text": "For each project area please attach a completed Project Area Summary Form.",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableVariable",
+                    "required": true,
+                    "input": {
+                        "columns": [{
+                                "name": "Project Area Name",
+                                "id": "pan",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Project Area Aggregate Size(Acres)",
+                                "id": "paas",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Project Area Density(%)",
+                                "id": "pad",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total # of Targeted Farms",
+                                "id": "ttf",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Acreage of Targeted Farms",
+                                "id": "tatf",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Targeted Farm Soil Productivity(%)",
+                                "id": "tfsp",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Estimated Cost For Targeted Farm Easement Purchase",
+                                "id": "tec",
+                                "editable": true,
+                                "visible": true
+                            }],
+                        "data": [{
+                                "pan": "",
+                                "paas": "",
+                                "pad": "",
+                                "ttf": "",
+                                "tatf": "",
+                                "tfsp": "",
+                                "tec": ""
+                            }]
+                    },
+                    "dependent_questions": []
+                }, {
+                    "question_id": "4",
+                    "question_guid": "c5d62868-c71a-4477-9e3b-6b416b609031",
+                    "question_heading": "Project Area Totals",
+                    "question_text": "",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableFixed",
+                    "required": true,
+                    "input": {
+                        "columns": [{
+                                "name": "Total Project Area Acreage",
+                                "id": "tpaa",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Total #  of Targeted Farms",
+                                "id": "totf",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Acreage of Targeted Farms",
+                                "id": "totalatf",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Total Estimated Cost",
+                                "id": "totalestcost",
+                                "editable": true,
+                                "visible": true
+                            }],
+                        "data": [{
+                                "tpaa": "",
+                                "totf": "",
+                                "totalatf": "",
+                                "totalestcost": ""
+
+                            }]
+                    },
+                    "dependent_questions": []
+                },
+                {
+                    "question_id": "5",
+                    "question_guid": "42dc3247-8174-4358-8202-f227089bdd4b",
+                    "question_heading": "Preservation Goals",
+                    "question_text": "What are your preservation goals?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableFixed",
+                    "required": true,
+                    "input": {
+                        "columns": [{
+                                "name": "Target",
+                                "id": "target",
+                                "editable": false,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Acres",
+                                "id": "acres",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Number of Farms",
+                                "id": "farms",
+                                "editable": true,
+                                "visible": true
+                            }],
+                        "data": [{
+                                "target": "One Year Target",
+                                "acres": "",
+                                "farms": ""
+                            }, {
+                                "target": "Five Year Target",
+                                "acres": "",
+                                "farms": ""
+                            }, {
+                                "target": "Ten Year Target",
+                                "acres": "",
+                                "farms": ""
+                            }]
+                    },
+                    "dependent_questions": []
+
+                }]
+        }, {
+            "question_section_guid": "465cd109-a52a-45ee-824c-fe797085a338",
+            "question_section_title": "County Policy Information",
+            "question_section_help": "A NO answer is acknowledgement that the county relies upon SADC policy or regulation. The word \"policy\" is intended broadly to include formal and informal policies, guidelines and rules established by the county.",
+            "question_section_type": "form",
+            "question_section_permissions": [],
+            "questions": [{
+                    "question_id": "6",
+                    "question_guid": "8327174d-af81-48ba-ac45-723593ae9c7d",
+                    "question_heading": "Minimum Eligibility Criteria:",
+                    "question_text": "Does the county have a minimum eligibility criteria or standards policy for solicitation and approval of applications for farmland preservation?",
+                    "question_help_text": "See SADC regulation N.J.A.C. 2:76-6.20",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "6A",
+                            "question_guid": "0aaccfdd-affe-4519-a330-bb850bee8e3a",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "7",
+                    "question_guid": "c1c63e33-3252-4b25-8db8-e88579a7a2b5",
+                    "question_heading": "County Ranking Criteria:",
+                    "question_text": "Does the county have a ranking criteria policy to prioritize farms for preservation funding?",
+                    "question_help_text": "See SADC regulation N.J.A.C. 2:76-6.16 & SADC Policy P-14E",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "7A",
+                            "question_guid": "e61337a9-387c-4c85-88ad-d2bff5ff89b9",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "8",
+                    "question_guid": "d08ba6da-443a-45dc-b8c3-afb6ce2a53f0",
+                    "question_heading": "Agricultural Labor Housing:",
+                    "question_text": "Does the county have a policy on agricultural labor housing for preserved farms?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "8A",
+                            "question_guid": "8bd1aec3-c17c-4483-8441-8debd3652530",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "9",
+                    "question_guid": "f353bf4a-7cbe-4965-8e4d-a6d9156fa20e",
+                    "question_heading": "House Replacement:",
+                    "question_text": "Does the county have a policy for replacement of a residence on preserved farmland?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "9A",
+                            "question_guid": "e001df76-a147-4e35-ac91-805b9ad519f6",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "10",
+                    "question_guid": "3fe8588d-7108-431b-a6e4-6bc54a640b5c",
+                    "question_heading": "Residual Dwelling Site Opportunity Allocation:",
+                    "question_text": "Does the county have a policy for the allocation of Residual Dwelling Site Opportunities?",
+                    "question_help_text": "See SADC regulation N.J.A.C. 2:76-6.17 and Policy P-28",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "10A",
+                            "question_guid": "c89c27a6-9bf5-4e87-8b77-859378429de5",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "11",
+                    "question_guid": "2017db02-1946-4112-918b-07f99cb8e5be",
+                    "question_heading": "Exercising a Residual Dwelling Site Opportunity:",
+                    "question_text": "Does the county have a policy for exercising Residual Dwelling Site Opportunities?",
+                    "question_help_text": "See SADC regulation N.J.A.C.2:76-6.17 and Policy P-31",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "11A",
+                            "question_guid": "58849d66-505e-48fc-9609-bdab54c22939",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "12",
+                    "question_guid": "0e02d785-f530-44dd-b08f-155068940c28",
+                    "question_heading": "Division of Premises:",
+                    "question_text": "Does the county have a policy regarding the division of permanently preserved farmland?",
+                    "question_help_text": "See SADC Policy P-30A",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "12A",
+                            "question_guid": "85d16502-c50d-406d-9dc7-9032b2506c0f",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "13",
+                    "question_guid": "4318ca7d-a340-47fd-a1b8-852928add17d",
+                    "question_heading": "Exemptions:",
+                    "question_text": "Does the county have a policy for the granting of severable and non-severable exceptions?",
+                    "question_help_text": "See SADC Policy P-29",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "13A",
+                            "question_guid": "30c516ae-ff7e-4d56-a185-d65f6f7e5db2",
+                            "question_heading": "",
+                            "question_text": "If Yes, has the policy been amended since last year's submittal?",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": ["Yes", "No"]
+                        }]
+
+                }, {
+                    "question_id": "14",
+                    "question_guid": "dd05358f-c238-4f90-ac2f-c4249d8ddd13",
+                    "question_heading": "Other Policies:",
+                    "question_text": "Does the county have other policies related to farmland preservation?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "14A",
+                            "question_guid": "7f5eb364-e936-4ffa-85e5-fde721670013",
+                            "question_heading": "",
+                            "question_text": "If Yes, please list and describe:",
+                            "question_help_text": "",
+                            "allow_notes": true,
+                            "allow_uploads": false,
+                            "question_type": "TextArea",
+                            "required": false,
+                            "input": []
+                        }]
+
+                }]
+        }, {
+            "question_section_guid": "42ac815b-90fd-4b04-bd91-6c8690293a0f",
+            "question_section_title": "Funding Information",
+            "question_section_help": "",
+            "question_section_type": "form",
+            "question_section_permissions": [],
+            "questions": [{
+                    "question_id": "15",
+                    "question_guid": "8be8a180-8764-4690-8466-d5a42956618b",
+                    "question_heading": "County Funding:",
+                    "question_text": "County dedicated open space/farmland preservation tax:",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "15A",
+                            "question_guid": "cdc5ff7d-c5a4-46d2-9f0f-16d218d635e1",
+                            "question_heading": "",
+                            "question_text": "How much was the dedicated open space/ farmland preservation tax?",
+                            "question_help_text": "Enter in cents per $100, ie 0.##/100",
+                            "allow_notes": false,
+                            "allow_uploads": false,
+                            "question_type": "TextInput",
+                            "required": false,
+                            "input": []
+                        }, {
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "15B",
+                            "question_guid": "49eef1d6-6cb7-4221-87a0-987504ed3c98",
+                            "question_heading": "",
+                            "question_text": "How much annual revenue was generated from the dedicated tax?",
+                            "question_help_text": "",
+                            "allow_notes": false,
+                            "allow_uploads": false,
+                            "question_type": "TextInput",
+                            "required": false,
+                            "input": []
+                        }, {
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "15C",
+                            "question_guid": "bdfb7f5a-f553-4337-87ed-e514dc3f7a4e",
+                            "question_heading": "",
+                            "question_text": "How much annual tax revenue is dedicated to farmland preservation?",
+                            "question_help_text": "",
+                            "allow_notes": false,
+                            "allow_uploads": false,
+                            "question_type": "TextInput",
+                            "required": false,
+                            "input": []
+                        }]
+
+                }, {
+                    "question_id": "16",
+                    "question_guid": "7b861a61-0652-441b-97eb-59c24e232709",
+                    "question_heading": "",
+                    "question_text": "Does the county have repeated annual appropriations dedicated to farmland preservation?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "16A",
+                            "question_guid": "0c1e64e6-e723-4966-8e7d-0fd0ac26e7d5",
+                            "question_heading": "",
+                            "question_text": "Please describe",
+                            "question_help_text": "",
+                            "allow_notes": false,
+                            "allow_uploads": false,
+                            "question_type": "SingleSelect",
+                            "required": false,
+                            "input": []
+                        }]
+
+                }, {
+                    "question_id": "17",
+                    "question_guid": "eabe2d2f-cb43-47a8-9575-baed8791e88d",
+                    "question_heading": "",
+                    "question_text": "Does the county have repeated issuance of bonded indebtedness?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "17A",
+                            "question_guid": "18a16b20-ba57-4a6b-bb8c-8c7fcf074ea9",
+                            "question_heading": "",
+                            "question_text": "Please describe",
+                            "question_help_text": "",
+                            "allow_notes": false,
+                            "allow_uploads": false,
+                            "question_type": "TextArea",
+                            "required": false,
+                            "input": []
+                        }]
+
+                }, {
+                    "question_id": "18",
+                    "question_guid": "a8acb7d1-3c69-4f7e-9535-464e07893a51",
+                    "question_heading": "",
+                    "question_text": "Does the county have any other funding resources?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Yes",
+                            "question_id": "18A",
+                            "question_guid": "005be991-46fb-4c81-beed-75e7091b0f9b",
+                            "question_heading": "",
+                            "question_text": "Please describe",
+                            "question_help_text": "",
+                            "allow_notes": false,
+                            "allow_uploads": false,
+                            "question_type": "TextArea",
+                            "required": false,
+                            "input": []
+                        }]
+
+                }, {
+                    "question_id": "19",
+                    "question_guid": "10db975b-2fdd-401b-82a0-0d9d422446bf",
+                    "question_heading": "",
+                    "question_text": "Total annual revenue dedicated to farmland preservation by the county?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": true,
+                    "question_type": "TextInput",
+                    "required": true,
+                    "input": [],
+                    "dependent_questions": []
+                }, {
+                    "question_id": "20",
+                    "question_guid": "77126c41-5945-4a6b-9cea-624f66766cba",
+                    "question_heading": "Municipal Funding:",
+                    "question_text": "",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableVariable",
+                    "required": true,
+                    "input": {
+                        "columns": [{
+                                "name": "Municipality",
+                                "id": "muni",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Tax Rate Per $100",
+                                "id": "taxrate",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Total Annual Revenue",
+                                "id": "totalrevenue",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Annual Revenue for Farmland Preservation",
+                                "id": "annualfarmland",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Repeated Annual Appropriations",
+                                "id": "annualapprop",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Repeated Issuance of Bonded Indebtedness",
+                                "id": "bondedindebt",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Revenue from Other Funding Sources",
+                                "id": "revenueother",
+                                "editable": true,
+                                "visible": true
+                            }],
+                        "data": [{
+                                "muni": "",
+                                "taxrate": "",
+                                "totalrevenue": "",
+                                "annualfarmland": "",
+                                "annualapprop": "",
+                                "bondedindebt": "",
+                                "revenueother": ""
+                            }]
+                    },
+                    "dependent_questions": []
+                }, {
+                    "question_id": "21",
+                    "question_guid": "63782e52-7bff-48fb-9348-22628d0282b3",
+                    "question_heading": "Municipal Funding Totals:",
+                    "question_text": "",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableFixed",
+                    "required": true,
+                    "input": {
+                        "columns": [{
+                                "name": "Total Annual Revenue Generated",
+                                "id": "totalrevenue",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Total Annual Revenue for Farmland Preservation",
+                                "id": "totalfarmland",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Repeated Annual Appropriations",
+                                "id": "totalapprop",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Total Issuance of Bonded Indebtedness",
+                                "id": "totalbonded",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Revenue from Other Sources",
+                                "id": "totalother",
+                                "editable": true,
+                                "visible": true
+                            }],
+                        "data": [{
+                                "totalrevenue": "",
+                                "totalfarmland": "",
+                                "totalapprop": "",
+                                "totalbonded": "",
+                                "totalother": ""
+                            }]
+                    },
+                    "dependent_questions": []
+                }, {
+                    "question_id": "22",
+                    "question_guid": "0199c569-5d97-4a62-9921-eb5b1009050e",
+                    "question_heading": "Cost Share Requirements:",
+                    "question_text": "Does the county require cost share contribution from sources other than the state on development easement acquisitions?",
+                    "question_help_text": "If YES, please attach a copy of the adopted CADB or Freeholder Board policy or resolution explaining the cost share requirements of the County. If no policy has yet been adopted please attach a description of the county’s current position with respect to cost share obligations.",
+                    "allow_notes": true,
+                    "allow_uploads": true,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": []
+                }, {
+                    "question_id": "23",
+                    "question_guid": "b332cad4-3260-41d0-b0d4-c7765ab5e377",
+                    "question_heading": "Installment Purchase Agreements:",
+                    "question_text": "Does the county permit the use of installment purchase agreements?",
+                    "question_help_text": "If the answer is YES, please attach a copy of the adopted CADB policy or resolution explaining the county installment purchase program. If no policy has yet been adopted please attach a description of the program.",
+                    "allow_notes": true,
+                    "allow_uploads": true,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": []
+                }, {
+                    "question_id": "24",
+                    "question_guid": "d429a440-0288-4cc1-9cf4-9830fa451cc1",
+                    "question_heading": "",
+                    "question_text": "Does the county currently use installment purchase agreements?",
+                    "question_help_text": "If the answer is YES, please attach a copy of the adopted CADB policy or resolution explaining the county installment purchase program. If no policy has yet been adopted please attach a description of the program.",
+                    "allow_notes": true,
+                    "allow_uploads": true,
+                    "question_type": "SingleSelect",
+                    "required": true,
+                    "input": ["Yes", "No"],
+                    "dependent_questions": []
+                }, {
+                    "question_id": "25",
+                    "question_guid": "bfabaa27-01c3-40b4-9a23-5f4cb1a6aa89",
+                    "question_heading": "",
+                    "question_text": "Installment Purchase Agreements are: (Check all that apply)",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "MultipleSelect",
+                    "required": false,
+                    "input": ["Always required", "Required on a case by case basis", "Available on a voluntary basis"],
+                    "dependent_questions": []
+                }, {
+                    "question_id": "26",
+                    "question_guid": "8f50b58a-1ceb-45ac-8fa7-faaa7e2b80dd",
+                    "question_heading": "Cost Projections Associated with One, Five and Ten Year Goals:",
+                    "question_text": "",
+                    "question_help_text": "These are associated with previously entered preservation goals",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableFixed",
+                    "required": true,
+                    "input": {
+                        "columns": [{
+                                "name": "Year",
+                                "id": "year",
+                                "editable": false,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Acquisition Goal (Acres)",
+                                "id": "acqgoal",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Projected Cost",
+                                "id": "totalcost",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Estimated Local Cost Share",
+                                "id": "estlocalshare",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Estimated County Cost Share",
+                                "id": "estcountyshare",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Estimated State Cost Share",
+                                "id": "eststateshare",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Other Contributors",
+                                "id": "othercontrib",
+                                "editable": true,
+                                "visible": true
+                            }],
+                        "data": [{
+                                "year": "1",
+                                "acqgoal": "",
+                                "totalcost": "",
+                                "estlocalshare": "",
+                                "estcountyshare": "",
+                                "eststateshare": "",
+                                "othercontrib": ""
+                            }, {
+                                "year": "5",
+                                "acqgoal": "",
+                                "totalcost": "",
+                                "estlocalshare": "",
+                                "estcountyshare": "",
+                                "eststateshare": "",
+                                "othercontrib": ""
+                            }, {
+                                "year": "10",
+                                "acqgoal": "",
+                                "totalcost": "",
+                                "estlocalshare": "",
+                                "estcountyshare": "",
+                                "eststateshare": "",
+                                "othercontrib": ""
+                            }]
+                    },
+                    "dependent_questions": []
+                }, {
+                    "question_id": "27",
+                    "question_guid": "15d37fcd-5ae9-41de-9515-fde4d77fd488",
+                    "question_heading": "Estimate of Easement Purchase Cost on All Targeted Farms:",
+                    "question_text": "",
+                    "question_help_text": "Add additional rows as needed",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableVariable",
+                    "required": true,
+                    "input": {
+                        "columns": [{
+                                "name": "Project Area ID",
+                                "id": "paguid",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Project Area Name",
+                                "id": "paname",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Acres",
+                                "id": "acres",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Average Easement Price Per Acre",
+                                "id": "avgacreprice",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            }, {
+                                "name": "Total Estimated Project Cost",
+                                "id": "totalestproject",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Estimated Municipal Funding",
+                                "id": "totalestmunicipal",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Estimated County Funding",
+                                "id": "totalestcounty",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Estimated State Funding",
+                                "id": "totaleststate",
+                                "editable": true,
+                                "visible": true
+                            }, {
+                                "name": "Total Estimated Funding from Other Sources",
+                                "id": "totalestother",
+                                "editable": true,
+                                "visible": true
+                            }],
+                        "data": [{
+                                "paguid": "",
+                                "paname": "",
+                                "acres": "",
+                                "avgacreprice": "",
+                                "totalestproject": "",
+                                "totalestmunicipal": "",
+                                "totalestcounty": "",
+                                "totaleststate": "",
+                                "totalestother": ""
+                            }]
+                    },
+                    "dependent_questions": []
+                },
+                {
+                    "question_id": "28",
+                    "question_guid": "3e4d5ee3-1398-4011-9c50-35d5108cd7c0",
+                    "question_heading": "Targeted Farm Totals:",
+                    "question_text": "",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "TableFixed",
+                    "required": true,
+                    "input": {
+                        "columns": [
+                            {
+                                "name": "Total Acreage",
+                                "id": "totalacreage",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            },
+                            {
+                                "name": "Total Estimated Cost for Targeted Farm Easement Purchase",
+                                "id": "totalestfarm",
+                                "editable": true,
+                                "visible": true
+                            },
+                            {
+                                "name": "Total Estimated Municipal Funding",
+                                "id": "totalestmunicipal",
+                                "editable": true,
+                                "visible": true,
+                                "type": "text"
+                            },
+                            {
+                                "name": "Total Estimated County Funding",
+                                "id": "totalestcounty",
+                                "editable": true,
+                                "visible": true
+                            },
+                            {
+                                "name": "Total Estimated State Funding",
+                                "id": "totaleststate",
+                                "editable": true,
+                                "visible": true
+                            },
+                            {
+                                "name": "Total Estimated Funding from Other Sources",
+                                "id": "totalestother",
+                                "editable": true,
+                                "visible": true
+                            }
+                        ],
+                        "data": [
+                            {
+                                "totalacreage": "",
+                                "totalestfarm": "",
+                                "totalestmunicipal": "",
+                                "totalestcounty": "",
+                                "totaleststate": "",
+                                "totalestother": ""
+                            }
+                        ]
+                    },
+                    "dependent_questions": []
+                },
+                {
+                    "question_id": "29",
+                    "question_guid": "ffe3fecc-2f9f-4cc9-9bef-1add2423d412",
+                    "question_heading": "",
+                    "question_text": "How was the cost of purchasing development easements on the targeted farms determined?",
+                    "question_help_text": "",
+                    "allow_notes": true,
+                    "allow_uploads": false,
+                    "question_type": "MultipleSelect",
+                    "required": false,
+                    "input": ["Existing appraisal data", "Appraisal of the entire project area", "other"],
+                    "dependent_questions": [{
+                            "dependent_on": "",
+                            "ask_if": "Other",
+                            "question_id": "29A",
+                            "question_guid": "5b292098-0dbb-447a-8c82-1767a4a5d7d3",
+                            "question_heading": "",
+                            "question_text": "Please describe",
+                            "question_help_text": "",
+                            "allow_notes": false,
+                            "allow_uploads": false,
+                            "question_type": "TextArea",
+                            "required": false,
+                            "input": []
+                        }]
+                }]
+        }]
+    }
+}

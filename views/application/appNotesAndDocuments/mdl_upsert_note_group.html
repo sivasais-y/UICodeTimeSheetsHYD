@@ -1,0 +1,82 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">New Note</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+    	<div class="col-md-12">
+    		<form class="form form-horizontal" role="form" name="upsertNoteGroupForm" novalidate>
+        		<div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-md-3">Topic</label>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="text" name="groupTitle" class="form-control"
+                                   ng-model="appUNGMC.noteGroup.note_group_title" placeholder="Card Title" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6 validation-error" 
+                            ng-show="(upsertNoteGroupForm.groupTitle.$touched || appUNGMC.submitted) &&
+                            upsertNoteGroupForm.groupTitle.$error.required">
+                            <p>Please fill this field.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row" ng-if="appUNGMC.isNewNoteGroup">
+                        <label class="control-label col-md-3">Note Description</label>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <textarea class="form-control" name="noteText"
+                                   ng-model="appUNGMC.noteGroup.note_text"
+                                      placeholder="Note description goes here"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-3">SADC Only</label>
+                        <div class="col-md-1">
+                            <input class="form-control"  type="checkbox"  ng-model="appUNGMC.noteGroup.sadc_flg">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-sm-3">Tags</label>
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <select name="singleSelect" ng-model="appUNGMC.selectedTag">
+                              <option value="{{tag.tag_desc}}" ng-repeat="tag in appUNGMC.allAvailalbeTags">{{ tag.tag_desc }}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-1 col-md-1 col-lg-1">
+                            <button class="btn btn-primary" ng-click="appUNGMC.addNoteGroupTag()">
+                                <i class="fa fa-plus" title="Add tag"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <ul class="list-group" style="max-height:150px; overflow:auto">
+                              <li class="list-group-item" ng-repeat="tag in appUNGMC.noteGroup.tags" style="height:53px;">
+                                  {{tag.tag_desc}}
+                                  <button class="btn btn-sm btn-danger pull-right" ng-click="appUNGMC.deleteNoteGroupTag($index)">
+                                      <i class="fa fa-trash"></i>
+                                  </button>
+                              </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+    		</form>
+    	</div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disable="upsertNoteGroupForm.$invalid"
+            ng-click="appUNGMC.save()">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="appUNGMC.cancel()">Cancel</button>
+</div>

@@ -1,0 +1,123 @@
+<div class="containers appDocs" id="applicationDocsDIV">
+    <div class="noError" ng-if="!IDfailed">
+        <div class="col-md-12">
+            <style>
+                ul.dropdown-menu[uib-typeahead-popup] {
+                    max-height: 300px;
+                    overflow: auto;
+                }
+            </style>
+            <!-- Documents accordion -->
+            <uib-accordion>
+                <div uib-accordion-group is-open="true" is-disabled="true"  class="panel-default notes-groups">
+                    <uib-accordion-heading>
+                        <div class="row">
+                            <h5 class="pull-left">Documents</h5>
+                            <button class="btn btn-primary pull-right" ng-click="uploadFile($event)">
+                                <i class="fa fa-plus"></i>  Upload File
+                            </button>
+                            <form class="form-inline pull-right" style="display:inline;margin-right: 15px;">
+                                <div class="form-group">
+                                    <div class="input-group" style="margin:0px 10px 0;">
+                                        <input typeahead-min-length="0" type="text" placeholder="Filter by Tags" ng-model="search.documentTag" ng-model-options="modelOptions"
+                                               uib-typeahead="tag for tag in docTagsList | filter:$viewValue" class="form-control pull-right" style="cursor: text; width: 400px; text-align: left;">
+                                        <div class="input-group-addon" ng-click="search.documentTag = ''"><i class="fa fa-times"></i></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="btn-group pull-right" uib-dropdown>
+                                        <span id="split-button" type="button" class="btn btn-primary" style="margin:0 !important">Sort By Date</span>
+                                        <button type="button" class="btn btn-primary" uib-dropdown-toggle>
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Split button!</span>
+                                        </button>
+                                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button"  ng-init="sortOrder = false">
+                                            <li role="menuitem" ng-click="sortOrder = true"><a href="#">Newest</a></li>
+                                            <li role="menuitem" ng-click="sortOrder = false"><a href="#">Oldest</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </uib-accordion-heading>
+
+                    <div class="table-responsive">
+                        <div class="docs doc-default" ng-repeat="document in appDocsData| filter : {tags : {doc_tag_desc : search.documentTag}} | orderBy:'created_date':sortOrder" ng-class="document.active_flg ? '' : 'disabled'">
+                            <div class="col-sm-1">
+                                <span class="doc-ext" style="pointer-events: none">
+                                    <i class="fa doc-file-{{document.document_fileext}}"></i>
+                                </span><br />
+                                <span class="doc-fileext label-info label">
+                                <b> {{document.document_fileext}}</b>
+                                </span>
+                            </div>
+                            <div class="col-sm-5">
+                                <h5 class="doc-name" document-name="{{document.document_name}}" document-content-type="{{document.document_content_type}}"><b>{{document.document_name}}</b></h5>
+                                                            
+                                <small class="doc-type-status">
+                                    <span class="doc-type" style="pointer-events: none" document-type-desc="{{document.document_type_desc}}">
+                                        <b>Type</b>:
+                                        <i> {{document.document_type_desc}}</i>
+                                    </span>
+                                    <span class="doc-status" style="pointer-events: none" document-status-desc="{{document.document_status_desc}}">
+                                        <b>Status</b>:
+                                        <i> {{document.document_status_desc}}</i>
+                                    </span>
+                                </small>
+                            </div>
+                            <div class="col-sm-3">
+                                <small class="doc-tags" document-tags="{{document.tags}}" ng-if="document.tags.length > 0">
+                                    <b>Tags:</b>
+                                    <ul class="doc-tags-ul">
+                                        <li ng-repeat="tag in document.tags">{{tag.doc_tag_desc}}</li>
+                                    </ul>
+                                </small>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="" style="pointer-events: none" ng-if="document.created_user">
+                                    <i  class="fa fa-user-o" ></i>
+                                    <span document-created-user="{{document.created_user}}" document-created-date="{{document.created_date}}">
+                                        {{ document.created_user}}
+                                    </span> || 
+                                    <i  class="fa fa-calendar-o" ></i>
+                                    <span document-created-user="{{document.created_user}}" document-created-date="{{document.created_date}}">
+                                        {{ document.created_date | date }}
+                                    </span>
+                                </div>
+                                <br />
+                                <a class="doc-link btn btn-success" document-guid="{{document.document_guid}}" ng-click="downloadDoc(document.document_guid, document.document_name)" download="{{document.document_name}}" ng-class="document.public_access_flg ? '' : 'disabled'">
+                                    <i class="fa fa-download"></i>
+                                </a>
+
+                                <span>
+                                    <button class="btn btn-info" ng-click="editDoc($event, document.document_guid)"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-danger" ng-click="deleteDoc($event, document.document_guid)">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </span>
+
+                                <span class="doc-flag btn btn-warning" document-public-access-flg="{{document.public_access_flg}}" ng-if="!document.public_access_flg" style="pointer-events: none">
+                                    <i class="fa fa-expeditedssl"></i>
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <hr style="margin:8px 0 10px"/>
+                        </div>
+                    </div>
+                </div>
+            </uib-accordion>
+        </div>
+    </div>
+    <div class="ifError" ng-if="IDfailed">
+        <div class="col-sm-12 alert-warnings" id="errorDiv">
+            <img style="margin: auto" class="img-responsive" src="../app/images/error-404.png" alt="Error Page"/>
+            <h4 class="text-center alert alert-warning">
+                <span class="">ID entered is Invalid..</span>
+                <span class="">Please enter valid ID and Try again..</span>
+            </h4>
+        </div>
+    </div>
+
+</div>

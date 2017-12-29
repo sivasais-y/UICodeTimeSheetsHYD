@@ -1,0 +1,26 @@
+{
+    "inactive_applications": [
+        {
+            "application_id": "A-203-000001",
+            "application_type": "Individual Farm Application",
+            "application_phase": "Initial Phase",
+            "application_status": "Completed",
+            "application_date": "2017-03-29",
+            "partner_name": "Sussex County",
+            "program_type": "County Planning Incentive Grant",
+            "last_edited_date": null
+        }
+    ],
+    "active_applications": [
+        {
+            "application_id": "A-203-000002",
+            "application_type": "Individual Farm Application",
+            "application_phase": "Initial Phase",
+            "application_status": "In Progress",
+            "application_date": "2017-03-29",
+            "partner_name": "Monmouth County",
+            "program_type": "County Planning Incentive Grant",
+            "last_edited_date": null
+        }
+    ]
+}

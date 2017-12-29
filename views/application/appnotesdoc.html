@@ -1,0 +1,100 @@
+<div class="row notes-and-documents" ng-if="!appNtndDc.showErrorMessage">
+    <div class="col-md-12">
+        <!-- Notes accordian -->
+        <uib-accordion>
+            <div uib-accordion-group is-open="true" is-disabled="true"  class="panel-default notes-groups" is-open="appNtndDc.notesAccordionOpenCloseStatus">
+                <uib-accordion-heading>
+                    <div style="height:30px">
+                        <span style="margin-top:5px;">Notes</span>
+                        <button class="btn btn-primary btn-small pull-right" style="margin-top:2px;padding:2px 6px;"
+                                ng-click="appNtndDc.addNewNoteGroup($event)">
+                            <i class="fa fa-plus"></i>  Start New Topic</button>
+                        <form class="form-inline pull-right" style="display:inline;margin-right: 15px;">
+                            <div class="form-group">
+                                <!--<input type="text" placeholder="search by tags"-->
+                                <!--class="form-control" ng-model="searchNoteGroup.tags.tag_desc">-->
+                                <!--                              <ui-select  ng-model="selectedTag" theme="bootstrap"
+                                                                         title="search by tags" style="width: auto" append-to-body="true" on-select="onTagSelected($item)">
+                                                                  <ui-select-match allow-clear="true" placeholder="search for tag">{{$select.selected.tag_desc}}</ui-select-match>
+                                                                  <ui-select-choices repeat="tag in appNtndDc.allAvailalbeTags | filter: {tag_desc: $select.search}">
+                                                                    <div ng-bind-html="tag.tag_desc | highlight: $select.search"></div>
+                                                                  </ui-select-choices>
+                                                                </ui-select>-->
+                                <div class="input-group" style="margin:0 10px 0">
+                                    <input typeahead-min-length="0" type="text" placeholder="Search using Tags" ng-model="search.notesTag" ng-model-options="modelOptions"
+                                           uib-typeahead="tag as tag.tag_desc for tag in appNtndDc.allAvailalbeTags | filter:{tag_desc:$viewValue}" class="form-control pull-right" style="cursor: text; width: 200px; text-align: left;">
+                                    
+                                    <div class="input-group-addon" ng-click="search.notesTag = ''"><i class="fa fa-times"></i></div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label style="font-weight:normal !important;"> Sort By: </label>
+                                <select class="form-control" ng-model="appNtndDc.noteGroupsSortByOption" ng-change="appNtndDc.noteGroupsSortBy()" style="padding:2px 5px;height:28px">
+                                    <option value="latest">Newest</option>
+                                    <option value="old">Oldest</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </uib-accordion-heading>
+
+                <!-- Note Group accordian -->
+                <uib-accordion ng-repeat="noteGroup in appNtndDc.noteGroups| filter:{tags:{ tag_desc: search.notesTag } || [] } ">
+                    <div uib-accordion-group class="panel-default notes-div" is-open="appNtndDc.notesAccordionArray[$index]" >
+                        <!-- note Group title -->
+                        <uib-accordion-heading>
+                            <div>
+                                <i class="fa" ng-class="{'fa-chevron-down': appNtndDc.notesAccordionArray[$index], 'fa-chevron-right': !appNtndDc.notesAccordionArray[$index] }"   ></i>
+                                <span class="heading" style="font-family:'Courier New';text-transform: uppercase">{{noteGroup.note_group_title}}</span>
+
+                                <i class="fa fa-expeditedssl" ng-if="noteGroup.sadc_flg"></i>
+                                <i  ng-disabled="!noteGroup.sadc_flg" class="fa fa-trash pull-right"
+                                    ng-click="appNtndDc.deleteNoteGroup($event, noteGroup.note_group_guid)"></i>
+                                <i  ng-disabled="!noteGroup.sadc_flg" class="fa fa-pencil pull-right"
+                                    ng-click="appNtndDc.editNoteGroup($event, $index)"></i>
+                                <i  ng-disabled="!noteGroup.sadc_flg" class="fa fa-plus pull-right"
+                                    ng-click="appNtndDc.addNewNote($event, noteGroup.note_group_guid)"></i>
+
+                                <span class="pull-right update-details" style="margin-left:5px; font-size:12px;padding:2px;">
+                                    <i  class="fa fa-user-o" ></i>
+                                    <span style="opacity:.6;">
+                                        {{ noteGroup.last_edited_user}} | {{ noteGroup.last_edited_date | date }}
+                                    </span>
+                                </span>
+
+                                <form class="form-inline pull-right" style="display:inline;margin-right: 15px;"
+                                      ng-if="appNtndDc.notesAccordionArray[$index]"
+                                      ng-click="$event.stopPropagation();$event.preventDefault();">
+                                    <div class="form-group" style="margin-top: -4px">
+                                        <label style="font-weight:normal !important;"> Sort By: </label>
+                                        <select class="form-control input-sm" ng-model="appNtndDc.notesSortByOption[$index]"
+                                                ng-change="appNtndDc.notesSortBy($index)" style="padding:2px 5px;height:28px">
+                                            <option value="latest">Newest</option>
+                                            <option value="old">Oldest</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </uib-accordion-heading>
+
+                        <h5>
+                            <strong> Tags :  <span  ng-repeat="tag in noteGroup.tags" class="label label-info right-margin" >{{ tag.tag_desc}}</span>  </strong>
+                        </h5>
+
+                        <!-- note group notes -->
+                        <drtv-note ng-repeat="note in noteGroup.notes" refresh-fn="appNtndDc.refreshNoteGroups()"
+                                   note="note" sadc-flg="noteGroup.sadc_flg">
+
+                        </drtv-note>
+                    </div>
+                </uib-accordion>
+            </div>
+        </uib-accordion>
+    </div>
+</div>
+<div class="row" ng-if="appNtndDc.showErrorMessage">
+    <div class="col-md-12">
+        <img ng-src="{{appNtndDc.errorImageURL}}">
+    </div>
+</div>

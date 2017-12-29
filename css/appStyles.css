@@ -1,0 +1,434 @@
+
+.dependentQuestion {
+    background: #eee;
+    float: left;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+/* -- Application CSS -- */
+
+.questionFields.required-true label.control-label:after {
+    content: "*";
+    padding-left: 5px;
+    color: #a94442;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.required-true h4:after {
+    content: "";
+    padding-left: 5px;
+    color: #a94442;
+    font-size: xx-large;
+    line-height: 15px;
+}
+
+input.inputError{
+    border-color: #a94442;
+}
+
+input.inputError:focus {
+    border-color: #a94442;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 0, 0, 0.6);
+}
+
+.sectionDisabled{
+    pointer-events: none;
+}
+
+.form-control.disabled-false {
+    pointer-events: none;
+    background: #eee;
+}
+
+span.inputPrefix {
+    position: absolute;
+    background: #eee;
+    height: 32px;
+    border-right: 1px solid #aaa;
+    padding: 4px 6px;
+    left: 1px;
+    top: 1px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+input#phone, input#fax {
+    padding-left: 34px;
+}
+
+#applicationFormDIV .panel-heading{
+    cursor: pointer;
+}
+
+/*#applicationFormDIV, #applicationInfoDIV, #applicationToDoDIV {
+    max-height: 92vh;
+    overflow: auto;
+}*/
+
+.appInfo h3, .appToDo h3{
+    text-align: left;
+}
+
+body{
+    padding-bottom: 20px;
+}
+.application-bar.appMenu {
+    background-color: #849621;
+    width: 100%;
+    border-radius: 4px;
+    border: 5px solid #617106;
+}
+
+.application-bar.appMenu a.selectLi {
+    background-color: #48D1CC;
+}
+
+.application-bar.appMenu a {
+    box-shadow: 0px 1px 2px #eee;
+}
+
+.modal-footer, .modal-body, .modal-content {
+    float: left;
+    width: 100%;
+}
+
+ul#rolesList, ul#usersList, ul#rolesListCreate, ul#usersListCreate {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0 0 10px;
+    list-style: none;
+    height: 150px;
+    overflow: auto;
+}
+
+ul#rolesList li:not(:last-child), ul#usersList li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+ul#rolesList li, ul#usersList li, ul#rolesListCreate li, ul#usersListCreate li {
+    padding: 5px 10px;
+}
+
+span.deleteUser.btn-danger, span.deleteRole.btn-danger {
+    padding: 2px 5px 2px 6px;
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+}
+
+textarea.form-control{
+    max-width: 100%;
+}
+
+span.userData, span.roleData {
+    background-color: #fbd48e;
+    /* box-shadow: 2px 2px 1px #999; */
+    padding: 5px 10px;
+    margin: 2px 5px;
+    /* border: 1px solid #aaa; */
+    display: inline-block;
+    color: #333;
+    border-radius: 50px;
+}
+
+.grid:not([ui-grid="toDoItemsGridToMe"]):not([ui-grid="toDoItemsGridAll"]){
+    height: 400px !important;
+}
+
+.grid[ui-grid="toDoItemsGridToMe"],.grid[ui-grid="toDoItemsGridAll"]{
+    height: 550px !important;
+}
+
+.grid[ui-grid="toDoItemsGridToMe"] .ui-grid-viewport,.grid[ui-grid="toDoItemsGridAll"] .ui-grid-viewport{
+    height: 450px !important;
+}
+
+/*.grid[ui-grid="toDoItemsGridToMe"],.grid[ui-grid="toDoItemsGridAll"]{
+    height: 500px;
+}*/
+
+/*.toDoItemsGrid .grid, .toDoItemsGrid2 .grid,
+.toDoItemsGrid .grid .ui-grid-contents-wrapper, .toDoItemsGrid2 .grid .ui-grid-contents-wrapper{
+    height: 400px !important;
+}
+
+.toDoItemsGrid .grid .ui-grid-render-container-body .ui-grid-viewport,
+.toDoItemsGrid2 .grid .ui-grid-render-container-body .ui-grid-viewport{
+    height: 300px !important;
+}*/
+
+
+.toDoItemsGrid .ui-grid-row,.toDoItemsGrid .ui-grid-cell,
+.toDoItemsGrid2 .ui-grid-row,.toDoItemsGrid2 .ui-grid-cell{
+    height: 48px !important;
+    cursor: pointer;
+}
+
+.authAdminItemRow.ui-grid-row, .authAdminItemRow.ui-grid-row .ui-grid-cell{
+    height: 50px !important;
+    cursor: pointer;
+}
+
+.ui-grid-row .ui-grid-cell[rowstatus='true'] {
+    background-color: green;
+    color: #fff;
+}
+
+.tab-content>.active {
+    padding: 10px;
+    background-color: transparent !important;
+    border-style: solid;
+    border-color: #ddd;
+    border-width: 0px 1px 1px;
+}
+
+.nav-tabs>li.active {
+    background-color: transparent !important;
+}
+
+a.accordion-toggle {
+    display: block;
+    outline: none !important;
+}
+
+span.btn.notesGroupLock {
+    border-radius: 50px;
+    padding: 0 5px;
+    margin-left: 5px;
+    margin-top: -3px;
+}
+
+span.btn.panelBTN {
+    margin-top: -8.5px;
+}
+.noteActions i.btn {
+    margin-top: -6px;
+    padding: 4px 5px;
+}
+
+.notesGroupActions i.btn {
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 6px;
+    margin-top: -8px;
+}
+
+span.notesGroupUserInfo {
+    border: 1px solid #eea53d;
+    padding: 5px;
+    margin-top: -5px;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #cc6900;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.noteDiv {
+    margin: 0px 0;
+    border-bottom: 1px solid #ddd;
+    float: left;
+    width: 100%;
+    padding: 0 5px 5px;
+}
+
+.noteDiv .noteHead {
+    color: #286090;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+input.conditionalBox,input.docPublicBox {
+    width: 30px;
+    height: 25px;
+}
+
+.help-block.conditional,.help-block.uploadDocPublic {
+    position: absolute;
+    top: -5px;
+    left: 34px;
+}
+
+.notesPanel .panel-body{
+    max-height: 550px;
+    overflow: auto;
+}
+
+.notesGroup .panel-body {
+    max-height: 420px;
+    overflow: auto;
+}
+
+.deleteConfirmation .modal-dialog.modal-md {
+    max-width: 50%;
+    margin-top: 70px;
+}
+
+.modal-body {
+    max-height: 60vh;
+    overflow: auto;
+}
+
+span.todoItemCondition {
+    width: 50px;
+    height: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+span.todoItemCondition-false {
+    background-image: url(../images/incomplete.jpg);
+}
+
+span.todoItemCondition-true {
+    background-image: url(../images/completed.jpg);
+}
+
+@media screen and (min-width: 768px) {
+    div[ui-view="header"] {
+        position: fixed;
+        height: 171px;
+        z-index: 99;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+    }
+
+    div[ui-view="content"] {
+        position: relative;
+        top: 171px;
+    }
+
+    div#sidebar.sidebar {
+        position: fixed;
+        z-index: 99;
+        height: calc(100vh-171px);
+    }
+}
+
+#sidebar a {
+    cursor: pointer;
+}
+
+.sidebar > .nav > li > a{
+    text-align: left !important;
+}
+
+#applicationDocsDIV .appDocsUserDetails .btn{
+    padding: 2px 10px;
+}
+
+h4.doc-name {
+    margin: 5px 0;
+}
+
+.doc-file-pdf:before {
+    content: "\f1c1";
+}
+
+.doc-file-docx:before {
+    content: "\f1c2";
+}
+
+.doc-file-png:before,.doc-file-jpg:before {
+    content: "\f1c5";
+}
+.doc-file-txt:before {
+    content: "\f0f6";
+} 
+
+.doc-flag.btn {
+    border-radius: 50px;
+    padding: 2px 6px;
+    font-size: 18px;
+}
+
+.doc-ext i.fa {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+tr.docs td {
+    padding: 25px 8px !important;
+}
+
+span.doc-status, span.doc-type {
+    padding: 2px 5px;
+    display: block;
+    border: 1px solid #34b0d5;
+    border-radius: 2px;
+    max-width: 240px;
+}
+
+span.doc-type{
+    margin: 0 0 -1px;
+}
+
+span.doc-status b, span.doc-type b {
+    width: 44px;
+    display: inline-block;
+}
+
+span.doc-status i, span.doc-type i {
+    font-style: normal;
+}
+
+ul.doc-tags-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: 346px;
+}
+
+ul.doc-tags-ul li {
+    display: block;
+    padding: 4px;
+    background-color: #eee;
+    border: 1px solid #fff;
+}
+
+#uploadDocTags span {
+    background-color: #eee;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 5px 5px;
+    display: inline-block;
+}
+
+#uploadDocTags span.activeTag {
+    background-color: #ffba99;
+}
+.btns.btn-default.doc-dates {
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 50px;
+}
+
+#docsTRs .btn {
+    margin-top: 30px;
+}
+
+.factor-div {
+    border-bottom: 2px dashed #cbe7f5;
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.factor-div .form-group {
+    margin-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+.factor-div:last-child {
+    border: 0;
+}

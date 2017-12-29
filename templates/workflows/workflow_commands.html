@@ -1,0 +1,5 @@
+<h4>{{commands}}</h4>
+
+<ul ng-repeat="q in questions" >
+    <li><a ng-click="askQuestion($index)">{{q.question}}</a></li>
+</ul>

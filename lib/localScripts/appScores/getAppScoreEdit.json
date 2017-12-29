@@ -1,0 +1,747 @@
+{
+    "score_guid": "a7735fa3-ca71-40d2-b624-5209b3379b4a",
+    "score_json": {
+        "finalscore": {
+            "scorename": "SADC Farm Quality Score",
+            "score": 63.870000000000005
+        },
+        "categories": {
+            "1": {
+                "categoryname": "A.Survivability Factors",
+                "factors": {
+                    "5.0": {
+                        "inputs": [
+                            {
+                                "name": "Is this application the CADB's highest ranked application for this County EP Round?",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_cadbranking",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "CADB Prioritization",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "CADB Prioritization Score",
+                                "score": 0
+                            }
+                        ]
+                    },
+                    "1.0": {
+                        "inputs": [
+                            {
+                                "name": "Prime Soils",
+                                "value": 0.3,
+                                "choices": [],
+                                "score": 4.5,
+                                "id": "inp_primesoils",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Statewide Important",
+                                "value": 0.1,
+                                "choices": [],
+                                "score": 1,
+                                "id": "inp_importantsoils",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Local Soils",
+                                "value": 0.5,
+                                "choices": [],
+                                "score": 2.5,
+                                "id": "inp_localsoils",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Unique & Used for Unique Purpose",
+                                "value": 0.1,
+                                "choices": [],
+                                "score": 1.25,
+                                "id": "inp_uniquesoils",
+                                "inputtype": "proportion"
+                            }
+                        ],
+                        "factorname": "Soils",
+                        "description": "A percentage figure for each of these four soil categories is calculated for both the individual application and the project area.",
+                        "scores": [
+                            {
+                                "scorename": "Soils Score",
+                                "score": 9.25
+                            }
+                        ]
+                    },
+                    "1.1": {
+                        "inputs": [
+                            {
+                                "name": "Permanent Pasture",
+                                "value": 0.5,
+                                "choices": [],
+                                "score": 1,
+                                "id": "inp_permanentpasture",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Cropland Pastured",
+                                "value": 0.2,
+                                "choices": [],
+                                "score": 3,
+                                "id": "inp_pastured",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Cropland Harvested",
+                                "value": 0.3,
+                                "choices": [],
+                                "score": 4.5,
+                                "id": "inp_harvested",
+                                "inputtype": "proportion"
+                            }
+                        ],
+                        "factorname": "Tillable Acres",
+                        "description": "Tillable acres which emphasize the importance of land use and productivity",
+                        "scores": [
+                            {
+                                "scorename": "Tillable Acres Score",
+                                "score": 8.5
+                            }
+                        ]
+                    },
+                    "4.2": {
+                        "inputs": [
+                            {
+                                "name": "Development Easement Purchase farms*",
+                                "value": 1,
+                                "choices": [],
+                                "score": 2,
+                                "id": "inp_easementfarms",
+                                "inputtype": "integer"
+                            },
+                            {
+                                "name": "Other permanently preserved farms",
+                                "value": 2,
+                                "choices": [],
+                                "score": 4,
+                                "id": "inp_otherpreservedfarms",
+                                "inputtype": "integer"
+                            },
+                            {
+                                "name": "8-year program farms",
+                                "value": 2,
+                                "choices": [],
+                                "score": 2,
+                                "id": "inp_8yearfarms",
+                                "inputtype": "integer"
+                            }
+                        ],
+                        "factorname": "Size & Density- Density",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Size & Density- Density Score",
+                                "score": 8
+                            },
+                            {
+                                "scorename": "Size & Density - Final Score",
+                                "score": 8.25
+                            }
+                        ]
+                    },
+                    "3.6": {
+                        "inputs": [
+                            {
+                                "name": "Trust Funds",
+                                "value": 10,
+                                "choices": [],
+                                "score": 10,
+                                "id": "inp_localsupporttrustfunds",
+                                "inputtype": "currency"
+                            },
+                            {
+                                "name": "Referendum",
+                                "value": 10,
+                                "choices": [],
+                                "score": 10,
+                                "id": "inp_localsupportreferendum",
+                                "inputtype": "currency"
+                            },
+                            {
+                                "name": "Other",
+                                "value": 10,
+                                "choices": [],
+                                "score": 10,
+                                "id": "inp_localsupportother",
+                                "inputtype": "currency"
+                            },
+                            {
+                                "name": "Bonds",
+                                "value": 10,
+                                "choices": [],
+                                "score": 10,
+                                "id": "inp_localsupportbonds",
+                                "inputtype": "currency"
+                            },
+                            {
+                                "name": "b. State Equalized Valuation of Muni",
+                                "value": 8000,
+                                "choices": [],
+                                "score": 8000,
+                                "id": "inp_statevaluation",
+                                "inputtype": "currency"
+                            },
+                            {
+                                "name": "Budget",
+                                "value": 10,
+                                "choices": [],
+                                "score": 10,
+                                "id": "inp_localsupportbudget",
+                                "inputtype": "currency"
+                            }
+                        ],
+                        "factorname": "Local Commitment- Community/Municipal Financial Support",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Local Commitment- Community/Municipal Financial Support Score",
+                                "score": 3
+                            }
+                        ]
+                    },
+                    "3.4": {
+                        "inputs": [
+                            {
+                                "name": "D. Previous approval of 8-year program",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_prev8year",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "E. Development easements in municipality",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 1,
+                                "id": "inp_deveasements",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "C. Supportive Governing Body actions",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 1,
+                                "id": "inp_govbodyactions",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "A. Active Municipal Liaison w/ CADB",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 1,
+                                "id": "inp_muniliason",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "B. Supportive Planning Board actions",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 1,
+                                "id": "inp_pbactions",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "Local Commitment- Municipal Commitment",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Local Commitment- Municipal Commitment Score",
+                                "score": 4
+                            }
+                        ]
+                    },
+                    "3.5": {
+                        "inputs": [
+                            {
+                                "name": "A. Municipality has adopted a right to farm ordinance?",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 4,
+                                "id": "inp_munirtf",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "B. Municipality requires developers and/or landowners to notify prospective purchasers of the existence of agricultural operation protections?",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_muniagnotif",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "Local Commitment- Right to Farm Ordinances",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Local Commitment- Right to Farm Ordinances Score",
+                                "score": 4
+                            }
+                        ]
+                    },
+                    "3.2": {
+                        "inputs": [
+                            {
+                                "name": "3.2 Sewer service or within hook-up distance to premises",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 3,
+                                "id": "inp_sewer",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "Local Commitment- Sewer",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Local Commitment- Sewer Score",
+                                "score": 3
+                            }
+                        ]
+                    },
+                    "3.3": {
+                        "inputs": [
+                            {
+                                "name": "3.3 Application is consistent with municipal, county and state plans",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 2,
+                                "id": "inp_localplans",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "Local Commitment- Plan Consistency",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Local Commitment- Plan Consistency Score",
+                                "score": 2
+                            }
+                        ]
+                    },
+                    "3.0": {
+                        "scores": [
+                            {
+                                "scorename": "Local Commitment Score",
+                                "score": 20
+                            }
+                        ]
+                    },
+                    "3.1": {
+                        "inputs": [
+                            {
+                                "name": "Three acre minimum w/ cluster or buffering",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 1,
+                                "id": "inp_threeacremin",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "Transfer of Development Rights (TDR)",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 1,
+                                "id": "inp_tdr",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "Sliding scale",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_slidingscale",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "Very low density zoning",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_lowdensity",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "Measures to discourage conflicting nonagricultural development",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_nonagmeasures",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "Local Commitment- Zoning",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Local Commitment- Zoning Score",
+                                "score": 5
+                            }
+                        ]
+                    },
+                    "4.1": {
+                        "inputs": [
+                            {
+                                "name": "b. County Average Farm Size (acres)",
+                                "value": 100,
+                                "choices": [],
+                                "score": 100,
+                                "id": "inp_averagefarmsize",
+                                "inputtype": "float"
+                            },
+                            {
+                                "name": "a. Size of Individual Application (acres)",
+                                "value": 5,
+                                "choices": [],
+                                "score": 5,
+                                "id": "inp_individualappsize",
+                                "inputtype": "float"
+                            }
+                        ],
+                        "factorname": "Size & Density- Size",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Size & Density- Size Score",
+                                "score": 0.25
+                            }
+                        ]
+                    },
+                    "2.1": {
+                        "inputs": [
+                            {
+                                "name": "B. Number of building lots in excess of the local zoning requirements",
+                                "value": 3,
+                                "choices": [],
+                                "score": -3,
+                                "id": "inp_buildingexception",
+                                "inputtype": "integer"
+                            },
+                            {
+                                "name": "D. Right to Farm Provisions to be in deed",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 1,
+                                "id": "inp_rtfprovision",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "C. Acreage of exception(s) exceeds 10% of the total acreage of the premises",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": -1,
+                                "id": "inp_areaexception",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "A. Number of exceptions subject to negative points (see Policy 14E)",
+                                "value": 2,
+                                "choices": [],
+                                "score": -4,
+                                "id": "inp_numexception",
+                                "inputtype": "integer"
+                            },
+                            {
+                                "name": "E. Location and use has a negative impact?",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_locationimpact",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "Negative Considerations for Exceptions",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Negative Considerations for Exceptions Score",
+                                "score": -7
+                            }
+                        ]
+                    },
+                    "2.0": {
+                        "inputs": [
+                            {
+                                "name": "Other:Residential",
+                                "value": 0.05,
+                                "choices": [],
+                                "score": 0,
+                                "id": "inp_residential",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Farmland (unrestricted)",
+                                "value": 0.05,
+                                "choices": [],
+                                "score": 0.30000000000000004,
+                                "id": "inp_farmunrestricted",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Deed restricted farmland(permanent)",
+                                "value": 0.5,
+                                "choices": [],
+                                "score": 10,
+                                "id": "inp_deedfarm",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Cemeteries",
+                                "value": 0.05,
+                                "choices": [],
+                                "score": 0.8,
+                                "id": "inp_cemeteries",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Highways (limited access), Railroads",
+                                "value": 0.05,
+                                "choices": [],
+                                "score": 0.5,
+                                "id": "inp_highways",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Military installations",
+                                "value": 0.05,
+                                "choices": [],
+                                "score": 0.7000000000000001,
+                                "id": "inp_military",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "8-year programs and EP applications",
+                                "value": 0.01,
+                                "choices": [],
+                                "score": 0.13,
+                                "id": "inp_eightyear",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Parks (high use)",
+                                "value": 0,
+                                "choices": [],
+                                "score": 0,
+                                "id": "inp_parkshighuse",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Streams (perennial) and wetlands",
+                                "value": 0.02,
+                                "choices": [],
+                                "score": 0.36,
+                                "id": "inp_streams",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Deed restricted wildlife areas, municipal, county or state-owned parcels",
+                                "value": 0.1,
+                                "choices": [],
+                                "score": 1.8,
+                                "id": "inp_deedwild",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Parks (limited public access)",
+                                "value": 0.02,
+                                "choices": [],
+                                "score": 0.28,
+                                "id": "inp_parkslimited",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Woodlands",
+                                "value": 0.05,
+                                "choices": [],
+                                "score": 0.30000000000000004,
+                                "id": "inp_woodlands",
+                                "inputtype": "proportion"
+                            },
+                            {
+                                "name": "Golf course (public)",
+                                "value": 0.05,
+                                "choices": [],
+                                "score": 0.7000000000000001,
+                                "id": "inp_golfcourse",
+                                "inputtype": "proportion"
+                            }
+                        ],
+                        "factorname": "Boundaries & Buffers",
+                        "description": "The weights reflect differences in both permanence and the buffers’ effectiveness in reducing the negative impacts of nonagricultural development.",
+                        "scores": [
+                            {
+                                "scorename": "Boundaries & Buffers Score",
+                                "score": 15.870000000000001
+                            }
+                        ]
+                    }
+                },
+                "description": "FACTORS WHICH DETERMINE THE DEGREE TO WHICH THE PURCHASE WOULD ENCOURAGE THE SURVIVABILITY OF THE MUNICIPALLY APPROVED PROGRAM IN PRODUCTIVE AGRICULTURE (N.J.S.A. 4:1C-31b. (2))",
+                "categoryid": "1"
+            },
+            "2": {
+                "categoryname": "B.Imminence of Change Factors",
+                "factors": {
+                    "6.2": {
+                        "inputs": [
+                            {
+                                "name": "Bankruptcy/Foreclosure?",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 2,
+                                "id": "inp_bankruptcy",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "Final Subdivision Approval?",
+                                "value": "Y",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 2,
+                                "id": "inp_subdivision",
+                                "inputtype": "choice"
+                            },
+                            {
+                                "name": "Estate Situation?",
+                                "value": "N",
+                                "choices": [
+                                    "Y",
+                                    "N"
+                                ],
+                                "score": 0,
+                                "id": "inp_estate",
+                                "inputtype": "choice"
+                            }
+                        ],
+                        "factorname": "Farm Specific Indicators",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "Farm Specific Indicators Score",
+                                "score": 9
+                            },
+                            {
+                                "scorename": "Imminence of Change Score",
+                                "score": 9
+                            }
+                        ]
+                    },
+                    "6.1": {
+                        "inputs": [
+                            {
+                                "name": "Relative Index Value for County Comparisons",
+                                "value": 3,
+                                "choices": [],
+                                "score": 3,
+                                "id": "inp_countycompindex",
+                                "inputtype": "float"
+                            },
+                            {
+                                "name": "Relative Index Value for Municipal Comparisons",
+                                "value": 2,
+                                "choices": [],
+                                "score": 2,
+                                "id": "inp_municompindex",
+                                "inputtype": "float"
+                            }
+                        ],
+                        "factorname": "Degree of Imminence of Farmland Conversion",
+                        "description": "",
+                        "scores": [
+                            {
+                                "scorename": "I. Degree of Imminence of Farmland Conversion Score",
+                                "score": 5
+                            }
+                        ]
+                    }
+                },
+                "description": "DEGREE OF IMMINENCE OF CHANGE OF THE LAND FROM PRODUCTIVE AGRICULTURE TO NONAGRICULTURAL USE (N.J.S.A. 4:1C-31b. ( )",
+                "categoryid": "2"
+            },
+            "3": {
+                "categoryname": "C.Summary",
+                "factors": {
+                    "7.0": {
+                        "scores": [
+                            {
+                                "scorename": "Preliminary Quality Score",
+                                "score": 63.870000000000005
+                            }
+                        ]
+                    }
+                },
+                "description": "PRELIMINARY SCORE",
+                "categoryid": "3"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+
+<div ng-controller="practiceCtrl">
+    <h3>{{title}}</h3>
+
+    <button class="btn btn-primary" ng-click="showModal()">Launch Modal</button>    
+</div>
+
+
+
+<script type="text/ng-template" id="modalTemplate.html">
+    <div class="modal-header">
+    <h4 class="modal-title text-center">{{msg}}</h4>
+    </div>
+    <div class="modal-body text-center">
+    {{helpText}}
+    </div>
+    <div class="modal-footer">
+    <button class="btn btn-success" ng-click='confirmModal()'>Yes</button>
+    <button class="btn btn-warning" ng-click='declineModal()'>No</button>
+    </div>
+</script>

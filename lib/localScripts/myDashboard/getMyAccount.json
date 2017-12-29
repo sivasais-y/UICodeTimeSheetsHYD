@@ -1,0 +1,64 @@
+{
+    "stats": [],
+    "userinfo": {
+        "auth_user_guid": "f6964311-8d3c-4405-b4eb-e2cd58b8b17b",
+        "salutation": "",
+        "first_name": "James",
+        "last_name": "DeBruyne",
+        "title": "",
+        "organization": "OGIS until I retire",
+        "address": "200 Riverview Plaza",
+        "address_2": "",
+        "city": "Trenton",
+        "state": "NJ",
+        "zip": "08625",
+        "zip4": "",
+        "email_primary": "james.debruyne@tech.nj.gov",
+        "email_alternate": "",
+        "phone_primary": "6096330000",
+        "phone_primary_ext": "",
+        "phone_alternate": "",
+        "phone_alternate_ext": "",
+        "auth_user_status_desc": "Registered",
+        "contact_type_desc": null,
+        "person_type_desc": "Other",
+        "role": [
+            {
+                "auth_role_guid": "dcfe4dd8-6de1-4ced-94f5-cfe0940bfb04",
+                "auth_role_name": "Camden County - PARTNER - PROGRAM PARTNER - COORDINATOR",
+                "county_code": "04",
+                "muni_code": null,
+                "tier_desc": "PARTNER",
+                "tier_group_desc": "PROGRAM PARTNER",
+                "tier_subgroup_desc": "COORDINATOR",
+                "partner_guid": "d0538dac-1317-4403-ad33-fc69f372e6d2",
+                "partner_name": "Camden County",
+                "partner_type": "County"
+            },
+            {
+                "auth_role_guid": "4fdf8749-f39b-4e5d-91b5-14fbb31a646e",
+                "auth_role_name": "SADC STAFF - FISCAL - STAFF",
+                "county_code": null,
+                "muni_code": null,
+                "tier_desc": "SADC STAFF",
+                "tier_group_desc": "FISCAL",
+                "tier_subgroup_desc": "STAFF",
+                "partner_guid": null,
+                "partner_name": null,
+                "partner_type": null
+            },
+            {
+                "auth_role_guid": "a6018f41-4e81-4063-9d36-9a07eb27a51d",
+                "auth_role_name": "SYSTEM ADMINISTRATOR - OGIS - ADMIN",
+                "county_code": null,
+                "muni_code": null,
+                "tier_desc": "SYSTEM ADMINISTRATOR",
+                "tier_group_desc": "OGIS",
+                "tier_subgroup_desc": "ADMIN",
+                "partner_guid": null,
+                "partner_name": null,
+                "partner_type": null
+            }
+        ]
+    }
+}
