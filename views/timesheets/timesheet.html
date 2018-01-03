@@ -132,7 +132,7 @@
                                     <div class='form-group'>
                                         <div class="fg-line">
                                             <label class="checkbox " id='checkAll'>
-                                                <input type="checkbox" ng-model="ids[divindex]">
+                                                <input type="checkbox" ng-model="ids[divindex]" ng-change="deleteThis(divindex-1)">
                                             </label>
                                         </div>
                                     </div>
