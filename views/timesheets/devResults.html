@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<script src="js/highcharts.js"></script>
+<script src="js/drilldown.js"></script>
+<style>
+    .grid1{
+        height: auto !important;
+    }
+</style>
+
+<div id="grid1" ui-grid="gridDeveloperOption" ui-grid-tree-view ui-grid-pagination ui-grid-selection class="grid1"></div>
+
+<hr />
+
+<div id="highCartsDevResults" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+
+
+
+
+<script ng-if="initScript">
+                    // Create the chart
+                    Highcharts.chart('highCartsDevResults', {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: 'Basic drilldown'
+                        },
+                        xAxis: {
+                            type: 'category'
+                        },
+
+                        legend: {
+                            enabled: false
+                        },
+
+                        plotOptions: {
+                            series: {
+                                borderWidth: 0,
+                                dataLabels: {
+                                    enabled: true
+                                }
+                            }
+                        },
+
+                        series: angular.element('#highCartsDevResults').scope().newSeries,
+                        drilldown: {
+                            series: angular.element('#highCartsDevResults').scope().newDrilldownSeries
+                        }
+                    });
+</script>

@@ -1,0 +1,1407 @@
+{
+    "gridData": {
+        "analysisDetails": {
+            "appDetails": [
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 7,
+                            "developer_name": "sangjin74."
+                        },
+                        {
+                            "devCount": 77,
+                            "developer_name": "ZZ009374"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "ZZ009608"
+                        },
+                        {
+                            "devCount": 42,
+                            "developer_name": "jtlee1"
+                        },
+                        {
+                            "devCount": 13,
+                            "developer_name": "jungbok.ki"
+                        },
+                        {
+                            "devCount": 49,
+                            "developer_name": "ZZ009169"
+                        },
+                        {
+                            "devCount": 877,
+                            "developer_name": "wh.ahn"
+                        },
+                        {
+                            "devCount": 776,
+                            "developer_name": "abdiel.im"
+                        },
+                        {
+                            "devCount": 9,
+                            "developer_name": "ZZ009711"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "sh90.han"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "ZZ009831"
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "1862",
+                        "totalFiles": "102"
+                    },
+                    "project_id": 158,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-0",
+                    "analysisDate": "2017-12-25 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 102,
+                            "depthName": "src",
+                            "coding_language": "java",
+                            "project_id": 159,
+                            "childDepth": [
+                                {
+                                    "file_count": 102,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "161",
+                                    "count": "1862",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "162",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "1862",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        }
+                    ],
+                    "id": "56",
+                    "applicationName": "[UI]DEV-LOCAL_RPT",
+                    "treelevel": "0"
+                },
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 4,
+                            "developer_name": "ronjino.sh"
+                        },
+                        {
+                            "devCount": 55,
+                            "developer_name": "ZZ10002"
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "59",
+                        "totalFiles": "15"
+                    },
+                    "project_id": 163,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-1",
+                    "analysisDate": "2017-12-25 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 15,
+                            "depthName": "uEngine-Standalone",
+                            "coding_language": "java",
+                            "project_id": 164,
+                            "childDepth": [
+                                {
+                                    "file_count": 15,
+                                    "depthName": "com",
+                                    "coding_language": "java",
+                                    "project_id": "166",
+                                    "count": "59",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "org",
+                                    "coding_language": "java",
+                                    "project_id": "167",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "59",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        }
+                    ],
+                    "id": "57",
+                    "applicationName": "[UI]DEV-TPS",
+                    "treelevel": "0"
+                },
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 99,
+                            "developer_name": "jtlee1"
+                        },
+                        {
+                            "devCount": 9,
+                            "developer_name": "jungbok.ki"
+                        },
+                        {
+                            "devCount": 46,
+                            "developer_name": "ZZ009169"
+                        },
+                        {
+                            "devCount": 923,
+                            "developer_name": "wh.ahn"
+                        },
+                        {
+                            "devCount": 637,
+                            "developer_name": "abdiel.im"
+                        },
+                        {
+                            "devCount": 12,
+                            "developer_name": "sh90.han"
+                        },
+                        {
+                            "devCount": 9,
+                            "developer_name": "jeongsub.s"
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "1735",
+                        "totalFiles": "91"
+                    },
+                    "project_id": 168,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-2",
+                    "analysisDate": "2017-12-25 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 91,
+                            "depthName": "src",
+                            "coding_language": "java",
+                            "project_id": 169,
+                            "childDepth": [
+                                {
+                                    "file_count": 91,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "171",
+                                    "count": "1735",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "172",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "1735",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        }
+                    ],
+                    "id": "58",
+                    "applicationName": "[UI]DEV-HQ_WP_KPI",
+                    "treelevel": "0"
+                },
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 71,
+                            "developer_name": "mw.ahn"
+                        },
+                        {
+                            "devCount": 86,
+                            "developer_name": "ry.song"
+                        },
+                        {
+                            "devCount": 92,
+                            "developer_name": "jungkyu1.k"
+                        },
+                        {
+                            "devCount": 81,
+                            "developer_name": "hc7.kim"
+                        },
+                        {
+                            "devCount": 68,
+                            "developer_name": "suho.ahn"
+                        },
+                        {
+                            "devCount": 18,
+                            "developer_name": "kchh"
+                        },
+                        {
+                            "devCount": 3,
+                            "developer_name": "hs0247.kim"
+                        },
+                        {
+                            "devCount": 7,
+                            "developer_name": "mh13.jeong"
+                        },
+                        {
+                            "devCount": 5,
+                            "developer_name": "mj0918.kim"
+                        },
+                        {
+                            "devCount": 5,
+                            "developer_name": "ZZ100353"
+                        },
+                        {
+                            "devCount": 5,
+                            "developer_name": "ZZ009351"
+                        },
+                        {
+                            "devCount": 12,
+                            "developer_name": "br22.park"
+                        },
+                        {
+                            "devCount": 86,
+                            "developer_name": "bs50.kang"
+                        },
+                        {
+                            "devCount": 3,
+                            "developer_name": "jihye83.le"
+                        },
+                        {
+                            "devCount": 14,
+                            "developer_name": "sunhun.na"
+                        },
+                        {
+                            "devCount": 3,
+                            "developer_name": "dcjames.pa"
+                        },
+                        {
+                            "devCount": 12,
+                            "developer_name": "hkahn.ahn"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "ZZ009225"
+                        },
+                        {
+                            "devCount": 6,
+                            "developer_name": "31822"
+                        },
+                        {
+                            "devCount": 2,
+                            "developer_name": "elfairy.go"
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "583",
+                        "totalFiles": "156"
+                    },
+                    "project_id": 174,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-3",
+                    "analysisDate": "2017-12-25 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 0,
+                            "depthName": "ACI_AMHSmgr",
+                            "coding_language": "java",
+                            "project_id": 175,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "177",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "178",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "ACI_DCOLmgr",
+                            "coding_language": "java",
+                            "project_id": 179,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "181",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "182",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "ACI_IFmgr",
+                            "coding_language": "java",
+                            "project_id": 183,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "185",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "186",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "ACI_RULEmgr",
+                            "coding_language": "java",
+                            "project_id": 187,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "189",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "190",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 156,
+                            "depthName": "RULEmgr",
+                            "coding_language": "java",
+                            "project_id": 191,
+                            "childDepth": [
+                                {
+                                    "file_count": 1,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "193",
+                                    "count": "8",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 155,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "194",
+                                    "count": "575",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "583",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "ACI_SMSmgr",
+                            "coding_language": "java",
+                            "project_id": 195,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "197",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "198",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "ACI_SYNCmgr",
+                            "coding_language": "java",
+                            "project_id": 199,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "201",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "202",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "ACI_WORKmgr",
+                            "coding_language": "java",
+                            "project_id": 203,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "205",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "206",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        }
+                    ],
+                    "id": "59",
+                    "applicationName": "MOS-ACI",
+                    "treelevel": "0"
+                },
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 1,
+                            "developer_name": "ZZ009351"
+                        },
+                        {
+                            "devCount": 6,
+                            "developer_name": "kyuwon.sun"
+                        },
+                        {
+                            "devCount": 2,
+                            "developer_name": "dh0293.kim"
+                        },
+                        {
+                            "devCount": 26,
+                            "developer_name": "hc7.kim"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "yh73.yoon"
+                        },
+                        {
+                            "devCount": 33,
+                            "developer_name": "jihye83.le"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "minsungi.b"
+                        },
+                        {
+                            "devCount": 1,
+                            "developer_name": "ZZ100702"
+                        },
+                        {
+                            "devCount": 19,
+                            "developer_name": "hs0247.kim"
+                        },
+                        {
+                            "devCount": 2,
+                            "developer_name": "jh38.jang"
+                        },
+                        {
+                            "devCount": 17,
+                            "developer_name": "cheolhwan."
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "115",
+                        "totalFiles": "42"
+                    },
+                    "project_id": 207,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-4",
+                    "analysisDate": "2017-12-25 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 6,
+                            "depthName": "DM_DCOLmgr",
+                            "coding_language": "java",
+                            "project_id": 208,
+                            "childDepth": [
+                                {
+                                    "file_count": 6,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "210",
+                                    "count": "10",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "211",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "10",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 1,
+                            "depthName": "DM_IFmgr",
+                            "coding_language": "java",
+                            "project_id": 212,
+                            "childDepth": [
+                                {
+                                    "file_count": 1,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "214",
+                                    "count": "1",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "215",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "1",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 35,
+                            "depthName": "DM_RULEmgr",
+                            "coding_language": "java",
+                            "project_id": 216,
+                            "childDepth": [
+                                {
+                                    "file_count": 35,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "218",
+                                    "count": "104",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "219",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "104",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        }
+                    ],
+                    "id": "60",
+                    "applicationName": "MOS-DM",
+                    "treelevel": "0"
+                },
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 5,
+                            "developer_name": "kh0424.lee"
+                        },
+                        {
+                            "devCount": 245,
+                            "developer_name": "ry.song"
+                        },
+                        {
+                            "devCount": 1,
+                            "developer_name": "sw1111.noh"
+                        },
+                        {
+                            "devCount": 6,
+                            "developer_name": "bc0114.kim"
+                        },
+                        {
+                            "devCount": 33,
+                            "developer_name": "hc7.kim"
+                        },
+                        {
+                            "devCount": 3,
+                            "developer_name": "gh0909.nam"
+                        },
+                        {
+                            "devCount": 13,
+                            "developer_name": "hakun.lee"
+                        },
+                        {
+                            "devCount": 1,
+                            "developer_name": "joyobom.jo"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "ZZ102424"
+                        },
+                        {
+                            "devCount": 10,
+                            "developer_name": "mh13.jeong"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "mj0918.kim"
+                        },
+                        {
+                            "devCount": 23,
+                            "developer_name": "ZZ009351"
+                        },
+                        {
+                            "devCount": 8,
+                            "developer_name": "ZZ101205"
+                        },
+                        {
+                            "devCount": 1,
+                            "developer_name": "jaeyoun.ch"
+                        },
+                        {
+                            "devCount": 1,
+                            "developer_name": "changho.my"
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "358",
+                        "totalFiles": "145"
+                    },
+                    "project_id": 220,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-5",
+                    "analysisDate": "2017-12-24 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 37,
+                            "depthName": "LCR_IFmgr",
+                            "coding_language": "java",
+                            "project_id": 221,
+                            "childDepth": [
+                                {
+                                    "file_count": 36,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "223",
+                                    "count": "64",
+                                    "analysisDate": "2017-12-24 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 1,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "224",
+                                    "count": "2",
+                                    "analysisDate": "2017-12-24 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "66",
+                            "analysisDate": "2017-12-24 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 51,
+                            "depthName": "LCR_RULEmgr",
+                            "coding_language": "java",
+                            "project_id": 225,
+                            "childDepth": [
+                                {
+                                    "file_count": 50,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "227",
+                                    "count": "187",
+                                    "analysisDate": "2017-12-24 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 1,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "228",
+                                    "count": "2",
+                                    "analysisDate": "2017-12-24 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "189",
+                            "analysisDate": "2017-12-24 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 57,
+                            "depthName": "LCR_WORKmgr",
+                            "coding_language": "java",
+                            "project_id": 229,
+                            "childDepth": [
+                                {
+                                    "file_count": 56,
+                                    "depthName": "main",
+                                    "coding_language": "java",
+                                    "project_id": "231",
+                                    "count": "97",
+                                    "analysisDate": "2017-12-24 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 1,
+                                    "depthName": "common",
+                                    "coding_language": "java",
+                                    "project_id": "232",
+                                    "count": "6",
+                                    "analysisDate": "2017-12-24 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "103",
+                            "analysisDate": "2017-12-24 ",
+                            "id": 0
+                        }
+                    ],
+                    "id": "61",
+                    "applicationName": "MOS-LCR",
+                    "treelevel": "0"
+                },
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 1195,
+                            "developer_name": "ZZ009627"
+                        },
+                        {
+                            "devCount": 32,
+                            "developer_name": "ZZ009628"
+                        },
+                        {
+                            "devCount": 109,
+                            "developer_name": "ZZ009208"
+                        },
+                        {
+                            "devCount": 5,
+                            "developer_name": "joey85.chu"
+                        },
+                        {
+                            "devCount": 6,
+                            "developer_name": "jtlee1"
+                        },
+                        {
+                            "devCount": 10,
+                            "developer_name": "wh.ahn"
+                        },
+                        {
+                            "devCount": 4,
+                            "developer_name": "sh90.han"
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "1361",
+                        "totalFiles": "83"
+                    },
+                    "project_id": 233,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-6",
+                    "analysisDate": "2017-12-25 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 83,
+                            "depthName": "src",
+                            "coding_language": "java",
+                            "project_id": 234,
+                            "childDepth": [
+                                {
+                                    "file_count": 18,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "236",
+                                    "count": "166",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 65,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "237",
+                                    "count": "1195",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "1361",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        }
+                    ],
+                    "id": "62",
+                    "applicationName": "DEV-HQ_BAT",
+                    "treelevel": "0"
+                },
+                {
+                    "devDetails": [
+                        {
+                            "devCount": 203,
+                            "developer_name": "ZZ009759"
+                        },
+                        {
+                            "devCount": 7,
+                            "developer_name": "ZZ009669"
+                        },
+                        {
+                            "devCount": 17,
+                            "developer_name": "daeseong.b"
+                        },
+                        {
+                            "devCount": 474,
+                            "developer_name": "ZZ009320"
+                        },
+                        {
+                            "devCount": 6,
+                            "developer_name": "ZZ009222"
+                        }
+                    ],
+                    "appSummary": {
+                        "violationCount": "707",
+                        "totalFiles": "96"
+                    },
+                    "project_id": 238,
+                    "coding_language": "java",
+                    "guid": "9f507483-5ecc-4af4-800f-9f507483-5ecc-4af4-800f-7",
+                    "analysisDate": "2017-12-25 ",
+                    "depthCollect": [
+                        {
+                            "file_count": 3,
+                            "depthName": "spc-biz-library",
+                            "coding_language": "java",
+                            "project_id": 239,
+                            "childDepth": [
+                                {
+                                    "file_count": 3,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "242",
+                                    "count": "4",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "243",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "4",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 4,
+                            "depthName": "spc-ees-if",
+                            "coding_language": "java",
+                            "project_id": 244,
+                            "childDepth": [
+                                {
+                                    "file_count": 4,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "247",
+                                    "count": "28",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "248",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "28",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 1,
+                            "depthName": "spc-executor",
+                            "coding_language": "java",
+                            "project_id": 249,
+                            "childDepth": [
+                                {
+                                    "file_count": 1,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "252",
+                                    "count": "1",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "253",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "1",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 1,
+                            "depthName": "spc-extractor",
+                            "coding_language": "java",
+                            "project_id": 254,
+                            "childDepth": [
+                                {
+                                    "file_count": 1,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "257",
+                                    "count": "1",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "258",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "1",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 47,
+                            "depthName": "spc-framework",
+                            "coding_language": "java",
+                            "project_id": 259,
+                            "childDepth": [
+                                {
+                                    "file_count": 47,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "262",
+                                    "count": "491",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "263",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "491",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "spc-interlock-manager",
+                            "coding_language": "java",
+                            "project_id": 264,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "267",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "268",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 29,
+                            "depthName": "spc-library",
+                            "coding_language": "java",
+                            "project_id": 269,
+                            "childDepth": [
+                                {
+                                    "file_count": 29,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "272",
+                                    "count": "100",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "273",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "100",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "spc-maps-interface",
+                            "coding_language": "java",
+                            "project_id": 274,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "277",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "278",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "spc-module-deploy",
+                            "coding_language": "java",
+                            "project_id": 279,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "282",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "283",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "spc-module-parent",
+                            "coding_language": "java",
+                            "project_id": 284,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "288",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "287",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 2,
+                            "depthName": "spc-receive-gateway",
+                            "coding_language": "java",
+                            "project_id": 289,
+                            "childDepth": [
+                                {
+                                    "file_count": 2,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "292",
+                                    "count": "4",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "4",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 2,
+                            "depthName": "spc-send-gateway",
+                            "coding_language": "java",
+                            "project_id": 294,
+                            "childDepth": [
+                                {
+                                    "file_count": 2,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "297",
+                                    "count": "56",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "298",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "56",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 0,
+                            "depthName": "spc-simulator",
+                            "coding_language": "java",
+                            "project_id": 299,
+                            "childDepth": [
+                                {
+                                    "file_count": 0,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "302",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "303",
+                                    "count": "0",
+                                    "analysisDate": "-",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "0",
+                            "analysisDate": "-",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 3,
+                            "depthName": "spc-single-manager",
+                            "coding_language": "java",
+                            "project_id": 304,
+                            "childDepth": [
+                                {
+                                    "file_count": 3,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "307",
+                                    "count": "7",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "308",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "7",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        },
+                        {
+                            "file_count": 4,
+                            "depthName": "spc-stat-engine",
+                            "coding_language": "java",
+                            "project_id": 309,
+                            "childDepth": [
+                                {
+                                    "file_count": 4,
+                                    "depthName": "java",
+                                    "coding_language": "java",
+                                    "project_id": "312",
+                                    "count": "15",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                },
+                                {
+                                    "file_count": 0,
+                                    "depthName": "resources",
+                                    "coding_language": "java",
+                                    "project_id": "313",
+                                    "count": "0",
+                                    "analysisDate": "2017-12-25 ",
+                                    "id": 0
+                                }
+                            ],
+                            "count": "15",
+                            "analysisDate": "2017-12-25 ",
+                            "id": 0
+                        }
+                    ],
+                    "id": "63",
+                    "applicationName": "DEV-SPC",
+                    "treelevel": "0"
+                }
+            ],
+            "status": false
+        },
+        "dataState": 0,
+        "islatestData": false
+    }
+}

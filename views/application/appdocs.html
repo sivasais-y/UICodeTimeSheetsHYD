@@ -87,7 +87,7 @@
                                     </span>
                                 </div>
                                 <br />
-                                <a class="doc-link btn btn-success" document-guid="{{document.document_guid}}" ng-click="downloadDoc(document.document_guid, document.document_name)" download="{{document.document_name}}" ng-class="document.public_access_flg ? '' : 'disabled'">
+                                <a class="doc-link btn btn-success" document-guid="{{document.document_guid}}" ng-click="downloadDoc(document.document_guid, document.document_name)" download="{{document.document_name}}" ng-class="document.public_access_flg || !ui_components.ui_search_auth ? '' : 'disabled'">
                                     <i class="fa fa-download"></i>
                                 </a>
 

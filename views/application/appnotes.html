@@ -47,8 +47,8 @@
                 </uib-accordion-heading>
 
                 <!-- Note Group accordian -->
-                <uib-accordion ng-repeat="noteGroup in appNtndDc.noteGroups | filter:{tags: {tag_desc:search.notesTag.tag_desc}} | orderBy:'created_date':sortOrder ">
-                    <div uib-accordion-group class="panel-default notes-div" is-open="appNtndDc.notesAccordionArray[$index]" >
+                <uib-accordion ng-repeat="noteGroup in appNtndDc.noteGroups| filter:{tags: {tag_desc:search.notesTag.tag_desc}} | orderBy:'created_date':sortOrder ">
+                    <div id="appNoteGroup-{{noteGroup.note_group_guid}}" uib-accordion-group class="panel-default notes-div" is-open="appNtndDc.notesAccordionArray[$index]" >
                         <!-- note Group title -->
                         <uib-accordion-heading>
                             <div style="height:30px;" class="noteGroupDiv">
@@ -58,12 +58,22 @@
                                 <button class="btn btn-warning" style="border-radius: 50px; padding: 5px 5px 0 4px">
                                     <i class="fa fa-expeditedssl" ng-if="noteGroup.sadc_flg" style="font-size: 24px"></i>
                                 </button>
-                                <button class="btn btnNotes btn-danger pull-right"><i ng-disabled="!noteGroup.sadc_flg" class="fa fa-trash"
-                                    ng-click="appNtndDc.deleteNoteGroup($event, noteGroup.note_group_guid)"></i></button>
-                                <button class="btn btnNotes btn-info pull-right"><i ng-disabled="!noteGroup.sadc_flg" class="fa fa-pencil"
-                                    ng-click="appNtndDc.editNoteGroup($event, $index)"></i></button>
-                                <button class="btn btnNotes btn-success pull-right"><i ng-disabled="!noteGroup.sadc_flg" class="fa fa-plus"
-                                    ng-click="appNtndDc.addNewNote($event, noteGroup.note_group_guid)"></i></button>
+                                <button class="btn btnNotes btn-info pull-right">
+                                    <i ng-disabled="!noteGroup.sadc_flg" class="fa fa-cloud-download" style="margin: 2px 3px"
+                                       ng-click="appNtndDc.downloadPDFNote($event,noteGroup.note_group_guid)"></i> 
+                                </button>
+                                <button class="btn btnNotes btn-danger pull-right">
+                                    <i ng-disabled="!noteGroup.sadc_flg" class="fa fa-trash"
+                                            ng-click="appNtndDc.deleteNoteGroup($event, noteGroup.note_group_guid)"></i>
+                                </button>
+                                <button class="btn btnNotes btn-info pull-right">
+                                    <i ng-disabled="!noteGroup.sadc_flg" class="fa fa-pencil"
+                                            ng-click="appNtndDc.editNoteGroup($event, $index)"></i>
+                                </button>
+                                <button class="btn btnNotes btn-success pull-right">
+                                    <i ng-disabled="!noteGroup.sadc_flg" class="fa fa-plus"
+                                            ng-click="appNtndDc.addNewNote($event, noteGroup.note_group_guid)"></i>
+                                </button>
 
                                 <span class="pull-right update-details" style="margin:8px 10px 0 0;">
                                     <i  class="fa fa-user-o" ></i>
@@ -107,7 +117,7 @@
                         </h5>
                         <!-- note group notes -->
                         <dr-app-note ng-repeat="note in noteGroup.notes" refresh-fn="appNtndDc.refreshNoteGroups()"
-                                   note="note" sadc-flg="noteGroup.sadc_flg">
+                                     note="note" sadc-flg="noteGroup.sadc_flg">
 
                         </dr-app-note>
                     </div>

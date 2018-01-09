@@ -1,0 +1,622 @@
+{
+    "fulldata": [{
+            "drillDownInfo": {
+                "series": [{
+                        "data": [{
+                                "drilldown": "0",
+                                "name": "src",
+                                "y": 1862
+                            }],
+                        "name": "[UI]DEV-LOCAL_RPT",
+                        "id": "[UI]DEV-LOCAL_RPT"
+                    }, {
+                        "data": [{
+                                "drilldown": "1",
+                                "name": "uEngine-Standalone",
+                                "y": 59
+                            }],
+                        "name": "[UI]DEV-TPS",
+                        "id": "[UI]DEV-TPS"
+                    }, {
+                        "data": [{
+                                "drilldown": "2",
+                                "name": "src",
+                                "y": 1735
+                            }],
+                        "name": "[UI]DEV-HQ_WP_KPI",
+                        "id": "[UI]DEV-HQ_WP_KPI"
+                    }, {
+                        "data": [{
+                                "drilldown": "3",
+                                "name": "ACI_AMHSmgr",
+                                "y": 0
+                            }, {
+                                "drilldown": "4",
+                                "name": "ACI_DCOLmgr",
+                                "y": 0
+                            }, {
+                                "drilldown": "5",
+                                "name": "ACI_IFmgr",
+                                "y": 0
+                            }, {
+                                "drilldown": "6",
+                                "name": "ACI_RULEmgr",
+                                "y": 0
+                            }, {
+                                "drilldown": "7",
+                                "name": "RULEmgr",
+                                "y": 583
+                            }, {
+                                "drilldown": "8",
+                                "name": "ACI_SMSmgr",
+                                "y": 0
+                            }, {
+                                "drilldown": "9",
+                                "name": "ACI_SYNCmgr",
+                                "y": 0
+                            }, {
+                                "drilldown": "10",
+                                "name": "ACI_WORKmgr",
+                                "y": 0
+                            }],
+                        "name": "MOS-ACI",
+                        "id": "MOS-ACI"
+                    }, {
+                        "data": [{
+                                "drilldown": "11",
+                                "name": "DM_DCOLmgr",
+                                "y": 10
+                            }, {
+                                "drilldown": "12",
+                                "name": "DM_IFmgr",
+                                "y": 1
+                            }, {
+                                "drilldown": "13",
+                                "name": "DM_RULEmgr",
+                                "y": 104
+                            }],
+                        "name": "MOS-DM",
+                        "id": "MOS-DM"
+                    }, {
+                        "data": [{
+                                "drilldown": "14",
+                                "name": "LCR_IFmgr",
+                                "y": 66
+                            }, {
+                                "drilldown": "15",
+                                "name": "LCR_RULEmgr",
+                                "y": 189
+                            }, {
+                                "drilldown": "16",
+                                "name": "LCR_WORKmgr",
+                                "y": 103
+                            }],
+                        "name": "MOS-LCR",
+                        "id": "MOS-LCR"
+                    }, {
+                        "data": [{
+                                "drilldown": "17",
+                                "name": "src",
+                                "y": 1361
+                            }],
+                        "name": "DEV-HQ_BAT",
+                        "id": "DEV-HQ_BAT"
+                    }, {
+                        "data": [{
+                                "drilldown": "18",
+                                "name": "spc-biz-library",
+                                "y": 4
+                            }, {
+                                "drilldown": "19",
+                                "name": "spc-ees-if",
+                                "y": 28
+                            }, {
+                                "drilldown": "20",
+                                "name": "spc-executor",
+                                "y": 1
+                            }, {
+                                "drilldown": "21",
+                                "name": "spc-extractor",
+                                "y": 1
+                            }, {
+                                "drilldown": "22",
+                                "name": "spc-framework",
+                                "y": 491
+                            }, {
+                                "drilldown": "23",
+                                "name": "spc-interlock-manager",
+                                "y": 0
+                            }, {
+                                "drilldown": "24",
+                                "name": "spc-library",
+                                "y": 100
+                            }, {
+                                "drilldown": "25",
+                                "name": "spc-maps-interface",
+                                "y": 0
+                            }, {
+                                "drilldown": "26",
+                                "name": "spc-module-deploy",
+                                "y": 0
+                            }, {
+                                "drilldown": "27",
+                                "name": "spc-module-parent",
+                                "y": 0
+                            }, {
+                                "drilldown": "28",
+                                "name": "spc-receive-gateway",
+                                "y": 4
+                            }, {
+                                "drilldown": "29",
+                                "name": "spc-send-gateway",
+                                "y": 56
+                            }, {
+                                "drilldown": "30",
+                                "name": "spc-simulator",
+                                "y": 0
+                            }, {
+                                "drilldown": "31",
+                                "name": "spc-single-manager",
+                                "y": 7
+                            }, {
+                                "drilldown": "32",
+                                "name": "spc-stat-engine",
+                                "y": 15
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "DEV-SPC"
+                    }, {
+                        "data": [{
+                                "name": "    jtlee1",
+                                "y": 42
+                            }, {
+                                "name": "    wh.ahn",
+                                "y": 877
+                            }, {
+                                "name": "  sh90.han",
+                                "y": 4
+                            }, {
+                                "name": "  ZZ009169",
+                                "y": 49
+                            }, {
+                                "name": "  ZZ009374",
+                                "y": 77
+                            }, {
+                                "name": "  ZZ009608",
+                                "y": 4
+                            }, {
+                                "name": "  ZZ009711",
+                                "y": 9
+                            }, {
+                                "name": "  ZZ009831",
+                                "y": 4
+                            }, {
+                                "name": " abdiel.im",
+                                "y": 776
+                            }, {
+                                "name": "jungbok.ki",
+                                "y": 13
+                            }, {
+                                "name": "sangjin74.",
+                                "y": 7
+                            }],
+                        "name": "[UI]DEV-LOCAL_RPT",
+                        "id": "0"
+                    }, {
+                        "data": [{
+                                "name": "   ZZ10002",
+                                "y": 55
+                            }, {
+                                "name": "ronjino.sh",
+                                "y": 4
+                            }],
+                        "name": "[UI]DEV-TPS",
+                        "id": "1"
+                    }, {
+                        "data": [{
+                                "name": "    jtlee1",
+                                "y": 99
+                            }, {
+                                "name": "    wh.ahn",
+                                "y": 923
+                            }, {
+                                "name": "  sh90.han",
+                                "y": 12
+                            }, {
+                                "name": "  ZZ009169",
+                                "y": 46
+                            }, {
+                                "name": " abdiel.im",
+                                "y": 637
+                            }, {
+                                "name": "jeongsub.s",
+                                "y": 9
+                            }, {
+                                "name": "jungbok.ki",
+                                "y": 9
+                            }],
+                        "name": "[UI]DEV-HQ_WP_KPI",
+                        "id": "2"
+                    }, {
+                        "data": [],
+                        "name": "MOS-ACI",
+                        "id": "3"
+                    }, {
+                        "data": [],
+                        "name": "MOS-ACI",
+                        "id": "4"
+                    }, {
+                        "data": [],
+                        "name": "MOS-ACI",
+                        "id": "5"
+                    }, {
+                        "data": [],
+                        "name": "MOS-ACI",
+                        "id": "6"
+                    }, {
+                        "data": [{
+                                "name": "      kchh",
+                                "y": 18
+                            }, {
+                                "name": "     31822",
+                                "y": 6
+                            }, {
+                                "name": "    mw.ahn",
+                                "y": 71
+                            }, {
+                                "name": "   hc7.kim",
+                                "y": 81
+                            }, {
+                                "name": "   ry.song",
+                                "y": 86
+                            }, {
+                                "name": "  suho.ahn",
+                                "y": 68
+                            }, {
+                                "name": "  ZZ009225",
+                                "y": 4
+                            }, {
+                                "name": "  ZZ009351",
+                                "y": 5
+                            }, {
+                                "name": "  ZZ100353",
+                                "y": 5
+                            }, {
+                                "name": " br22.park",
+                                "y": 12
+                            }, {
+                                "name": " bs50.kang",
+                                "y": 86
+                            }, {
+                                "name": " hkahn.ahn",
+                                "y": 12
+                            }, {
+                                "name": " sunhun.na",
+                                "y": 14
+                            }, {
+                                "name": "dcjames.pa",
+                                "y": 3
+                            }, {
+                                "name": "elfairy.go",
+                                "y": 2
+                            }, {
+                                "name": "hs0247.kim",
+                                "y": 3
+                            }, {
+                                "name": "jihye83.le",
+                                "y": 3
+                            }, {
+                                "name": "jungkyu1.k",
+                                "y": 92
+                            }, {
+                                "name": "mh13.jeong",
+                                "y": 7
+                            }, {
+                                "name": "mj0918.kim",
+                                "y": 5
+                            }],
+                        "name": "MOS-ACI",
+                        "id": "7"
+                    }, {
+                        "data": [],
+                        "name": "MOS-ACI",
+                        "id": "8"
+                    }, {
+                        "data": [],
+                        "name": "MOS-ACI",
+                        "id": "9"
+                    }, {
+                        "data": [],
+                        "name": "MOS-ACI",
+                        "id": "10"
+                    }, {
+                        "data": [{
+                                "name": "   hc7.kim",
+                                "y": 3
+                            }, {
+                                "name": "hs0247.kim",
+                                "y": 7
+                            }],
+                        "name": "MOS-DM",
+                        "id": "11"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009351",
+                                "y": 1
+                            }],
+                        "name": "MOS-DM",
+                        "id": "12"
+                    }, {
+                        "data": [{
+                                "name": "   hc7.kim",
+                                "y": 23
+                            }, {
+                                "name": "  ZZ100702",
+                                "y": 1
+                            }, {
+                                "name": " jh38.jang",
+                                "y": 2
+                            }, {
+                                "name": " yh73.yoon",
+                                "y": 4
+                            }, {
+                                "name": "cheolhwan.",
+                                "y": 17
+                            }, {
+                                "name": "dh0293.kim",
+                                "y": 2
+                            }, {
+                                "name": "hs0247.kim",
+                                "y": 12
+                            }, {
+                                "name": "jihye83.le",
+                                "y": 33
+                            }, {
+                                "name": "kyuwon.sun",
+                                "y": 6
+                            }, {
+                                "name": "minsungi.b",
+                                "y": 4
+                            }],
+                        "name": "MOS-DM",
+                        "id": "13"
+                    }, {
+                        "data": [{
+                                "name": "   hc7.kim",
+                                "y": 33
+                            }, {
+                                "name": "  ZZ009351",
+                                "y": 21
+                            }, {
+                                "name": "  ZZ101205",
+                                "y": 7
+                            }, {
+                                "name": "  ZZ102424",
+                                "y": 4
+                            }, {
+                                "name": "bc0114.kim",
+                                "y": 1
+                            }],
+                        "name": "MOS-LCR",
+                        "id": "14"
+                    }, {
+                        "data": [{
+                                "name": "   ry.song",
+                                "y": 156
+                            }, {
+                                "name": "  ZZ009351",
+                                "y": 2
+                            }, {
+                                "name": "  ZZ101205",
+                                "y": 1
+                            }, {
+                                "name": " hakun.lee",
+                                "y": 13
+                            }, {
+                                "name": "bc0114.kim",
+                                "y": 5
+                            }, {
+                                "name": "changho.my",
+                                "y": 1
+                            }, {
+                                "name": "gh0909.nam",
+                                "y": 3
+                            }, {
+                                "name": "jaeyoun.ch",
+                                "y": 1
+                            }, {
+                                "name": "joyobom.jo",
+                                "y": 1
+                            }, {
+                                "name": "kh0424.lee",
+                                "y": 5
+                            }, {
+                                "name": "sw1111.noh",
+                                "y": 1
+                            }],
+                        "name": "MOS-LCR",
+                        "id": "15"
+                    }, {
+                        "data": [{
+                                "name": "   ry.song",
+                                "y": 89
+                            }, {
+                                "name": "mh13.jeong",
+                                "y": 10
+                            }, {
+                                "name": "mj0918.kim",
+                                "y": 4
+                            }],
+                        "name": "MOS-LCR",
+                        "id": "16"
+                    }, {
+                        "data": [{
+                                "name": "    jtlee1",
+                                "y": 6
+                            }, {
+                                "name": "    wh.ahn",
+                                "y": 10
+                            }, {
+                                "name": "  sh90.han",
+                                "y": 4
+                            }, {
+                                "name": "  ZZ009208",
+                                "y": 109
+                            }, {
+                                "name": "  ZZ009627",
+                                "y": 1195
+                            }, {
+                                "name": "  ZZ009628",
+                                "y": 32
+                            }, {
+                                "name": "joey85.chu",
+                                "y": 5
+                            }],
+                        "name": "DEV-HQ_BAT",
+                        "id": "17"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009320",
+                                "y": 3
+                            }, {
+                                "name": "  ZZ009759",
+                                "y": 1
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "18"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009320",
+                                "y": 28
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "19"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009759",
+                                "y": 1
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "20"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009320",
+                                "y": 1
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "21"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009320",
+                                "y": 433
+                            }, {
+                                "name": "  ZZ009759",
+                                "y": 55
+                            }, {
+                                "name": "daeseong.b",
+                                "y": 3
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "22"
+                    }, {
+                        "data": [],
+                        "name": "DEV-SPC",
+                        "id": "23"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009759",
+                                "y": 86
+                            }, {
+                                "name": "daeseong.b",
+                                "y": 14
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "24"
+                    }, {
+                        "data": [],
+                        "name": "DEV-SPC",
+                        "id": "25"
+                    }, {
+                        "data": [],
+                        "name": "DEV-SPC",
+                        "id": "26"
+                    }, {
+                        "data": [],
+                        "name": "DEV-SPC",
+                        "id": "27"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009759",
+                                "y": 4
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "28"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009759",
+                                "y": 56
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "29"
+                    }, {
+                        "data": [],
+                        "name": "DEV-SPC",
+                        "id": "30"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009669",
+                                "y": 7
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "31"
+                    }, {
+                        "data": [{
+                                "name": "  ZZ009222",
+                                "y": 6
+                            }, {
+                                "name": "  ZZ009320",
+                                "y": 9
+                            }],
+                        "name": "DEV-SPC",
+                        "id": "32"
+                    }]
+            }
+        }],
+    "projectbasedinfo": {
+        "data": [{
+                "drilldown": "[UI]DEV-LOCAL_RPT",
+                "name": "[UI]DEV-LOCAL_RPT",
+                "y": 1862
+            }, {
+                "drilldown": "[UI]DEV-TPS",
+                "name": "[UI]DEV-TPS",
+                "y": 59
+            }, {
+                "drilldown": "[UI]DEV-HQ_WP_KPI",
+                "name": "[UI]DEV-HQ_WP_KPI",
+                "y": 1735
+            }, {
+                "drilldown": "MOS-ACI",
+                "name": "MOS-ACI",
+                "y": 583
+            }, {
+                "drilldown": "MOS-DM",
+                "name": "MOS-DM",
+                "y": 115
+            }, {
+                "drilldown": "MOS-LCR",
+                "name": "MOS-LCR",
+                "y": 358
+            }, {
+                "drilldown": "DEV-HQ_BAT",
+                "name": "DEV-HQ_BAT",
+                "y": 1361
+            }, {
+                "drilldown": "DEV-SPC",
+                "name": "DEV-SPC",
+                "y": 707
+            }],
+        "name": "Applications/Projects",
+        "colorByPoint": true
+    }
+}
